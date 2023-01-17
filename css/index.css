@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Navbar css starts from here */
+#logo {
+  /* margin-top: 35px; */
+  width: 200px;
+  height: 52px;
+}
+.head-nav {
+  display: flex;
+  height: 80px;
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+#logoBar {
+  display: flex;
+}
+#cart-wishlist {
+  text-align: right;
+}
+#search {
+  width: 400px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: -5px;
+  background-color: white;
+  padding-left: 10px;
+  /* border: none; */
+}
+#searchBtn {
+  width: 100px;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: -5px;
+  border: none;
+}
+.fa-solid {
+  width: 20px;
+}
+#cart-wishlist > a {
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+}
+#login a {
+  text-decoration: none;
+  color: black;
+}
+#login a:hover {
+  color: #f43397;
+}
+@media screen and (min-width: 200px) and (max-width: 890px) {
+  /* .fa-magnifying-glass {
+          color: white;
+        } */
+  #searchBtn {
+    border-radius: 10px;
+  }
+  #search {
+    display: none;
+  }
+  #login {
+    display: none;
+  }
+}
