@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --hoverTextColor:#f43397;
+    --textColor :rgb(83, 81, 81) ;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(83, 81, 81);
+}
+img{
+    width: 100%;
+}
+header{
+    height: 75px;
+   outline: solid grey 1px;
+   padding: 0 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-weight: 400;
+}
+.headerLeft, .headerRight{
+display: flex;
+align-items: center;
+}
+#logo-container {
+    width: 155px;
+}
+#serchInputContainer{
+    width: 400px;
+    height: 45px;
+    outline: 1px solid rgb(177, 175, 175);
+  margin-left: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  position: relative;
+}
+#serchIcon{
+    width: 20px;
+    margin: 7px;
+}
+form{
+    width: 100%;
+}
+#inputSerch {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+#searchClose{
+    display: none;
+}
+.serchRecentBox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 45px;
+    background-color: white;
+    height: 300px;
+    width: 100%;
+    display: none;
+    padding: 15px;
+    box-shadow: 0 0 5px rgb(0,0,0, 0.3);
+    z-index: 1;
+}
+
+#serchInputContainer:focus-within .serchRecentBox{
+    display: block;
+}
+
+.recentIcon{
+    width: 20px;
+    margin-right: 10px;
+}
+.recentItem{
+    display: flex;
+    align-items: center;
+}
+
+/* these css are for right side*/
+.downloadContainer {
+display: flex;
+align-items: center;
+position: relative;
+}
+.downloadContainer:hover{
+    color: var(--hoverTextColor);
+}
+.downloadHoverBtnContainer{
+    position: absolute;
+    bottom: 0;
+    top: 55px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+width: 105%;
+display: none;
+height: 170px;
+padding: 10px;
+background-color: white;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 2px;
+border-top-left-radius: 2px;
+
+}
+.downloadContainer:hover .downloadHoverBtnContainer{
+    display: block;
+    color: var(--textColor);
+    z-index: 1;
+}
+.downloadBtn {
+    display: block;
+    width: 150px;
+    margin-top: 5px;
+}
+.mobileIcon{
+    width: 15px;
+    margin: 8px;
+    
+}
+.downloadContainer p{
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    padding-right: 20px;
+}
+ .profileCartContainer{
+    display: flex;
+    align-items: center;
+ }
+
+ .profileIcon,.cartIcon{
+    width: 20px;
+ }
+ .profileContainer{
+    display: relative;
+ }
+ .profileContainer:hover  .profileHoverContainer{
+    display: block;
+    z-index: 1;
+ }
+ .profileHoverContainer{
+    position: absolute;
+    bottom: 0;
+    top: 70px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27,  31, 35, 0.15) 0px 0px 0px 1px;
+ width: 220px;
+   display: none;
+  height: 200px;
+   padding: 15px;
+  background-color: white;
+   border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 2px;
+border-top-left-radius: 2px;
+   color: var(--textColor);
+}
+.profileHoverContainer p{
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+.profileSignUpBtn button{
+    font-size:20px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #F43397;
+    color: white;
+    border-radius: 3px;
+    margin: 20px 0px;
+}
+#bag{
+    margin: 5px;
+}
+.profileHoverContainer h3{
+    margin: 0;
+    padding: 0;
+}
+.profileContainer:hover{
+     color: var(--hoverTextColor);
+ }
+ .profileCartContainer p{
+    margin: 0;
+    padding: 0;
+ }
+ .cartContainer,.profileContainer{
+   padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .sellerContainer{
+    padding: 0 30px;
+    border-left: 1.5px solid rgb(214, 210, 210) ;
+    border-right: 1.5px solid rgb(218, 213, 213) ;
+    font-size: 17px;
+ }
+
+ 
+/**navigation css ***/
+nav{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    height: 54px;
+    
+}
+nav ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    height: 100%;
+    margin: 0; 
+    position: relative;
+    z-index: 0;
+}
+nav ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    /* background-color: red; */
+    border-bottom: 2px solid transparent;
+    cursor: pointer; 
+    
+}
+nav ul li:hover{
+    color:var(--hoverTextColor);
+    border-bottom: 4px solid var(--hoverTextColor);
+}
+
+
+/**module box submenu***/
+.subMenu{
+    position: absolute;
+    /* height: 400px; */
+    top:51px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: none;
+    margin: 0px 10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    padding: 20px;
+}
+
+nav ul li:hover .subMenu{
+    display: block;
+}
+
+.subMenu p{
+    color:var(--textColor)
+
+}
+.submenuList{
+    display: flex;
+
+}
+.column{
+    margin-right: 40px;
+}
+nav ul a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+ /* loewest Price Conainer */
+ .letLowestPriceContainer{
+    padding: 24px 30px;
+    background-color:#F9F9F9 ;
+ }
+ .letLowestPriceContainer h1{
+    font-size: 2.5rem;
+    margin: 0;
+ }
+.lowestPriceContainer {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    align-items: center;    
+}
+
+.lowestPriceBanner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.lowestPriceImageBanner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    font-weight: 500;
+}
+.lowestPriceImageBanner img{
+    width: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+   margin: 8px;
+   background-color: #f43397;
+}
+.downloadPlayButton {
+    display: flex;
+    width: 60%;
+    padding: 8px;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: var(--hoverTextColor);
+    color: white;
+    font-weight: 500;
+    
+}
+.downloadPlayButton span{
+margin: 5px 15px ;
+}
+.downloadPlayButton img{
+    padding-left: 5px;
+}
+
+.rightlowestPricePoster img{
+    width: 100%;
+}
+
+
+   /* <!-- Top Categories to Choose From --> */
+   .topCategoriesHeader{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+   }

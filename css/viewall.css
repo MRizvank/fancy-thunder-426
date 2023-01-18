@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); 
+
+.Rproducts{
+    width: 70%;
+    /* border: 1px solid red; */
+    display: grid;
+    margin: auto;
+    margin-top: 80px;
+    gap: 10px 10px ;
+  
+    grid-template-columns: repeat(4,1fr);
+
+}
+.Rfilters{
+    width: 20%;
+}
+.Rcontainer{
+    display: flex;
+}
+.Rcard img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+.Rcard{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    width: 90%;
+    margin: auto;
+    border-radius: 8px;
+    height: 390px;
+}
+.title{
+    color: #8c8c8c;
+}
+span{
+    font-weight: bold;
+    font-size: 23px;
+    font-family: "Montserrat",sans-serif;
+}
+.delivery{
+    border-radius: 8px ;
+    width: 40%;
+    font-size: small;
+    background-color: #f2f2f2;
+    color: #8c8c8c;
+    margin-bottom: 10px;
+    height: 20px;
+}
+.delivery,.title,span,.rating{
+    margin-left: 15px;
+}
+.rating{
+    width: 54px;
+    height: 28px;
+    line-height: 24px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+@media screen and (min-width:451px) and (max-width:800px) {
+    .Rproducts{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    
+    }
+
+    
+}
+@media screen  and (max-width:450px) {
+    .Rproducts{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+
+    
+}
+/* @media screen and (max-width:300px) {
+    .Rproducts{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+
+    
+} */
