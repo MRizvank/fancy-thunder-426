@@ -275,10 +275,18 @@ nav ul li:hover .subMenu{
 .column{
     margin-right: 40px;
 }
+nav ul a{
+    text-decoration: none;
+    color: var(--textColor);
+}
  /* loewest Price Conainer */
  .letLowestPriceContainer{
     padding: 24px 30px;
     background-color:#F9F9F9 ;
+ }
+ .letLowestPriceContainer h1{
+    font-size: 2.5rem;
+    margin: 0;
  }
 .lowestPriceContainer {
     display: flex;
@@ -292,13 +300,17 @@ nav ul li:hover .subMenu{
     display: flex;
     width: 100%;
     align-items: center;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
 }
 
 .lowestPriceImageBanner {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 15px;
+    font-weight: 500;
 }
 .lowestPriceImageBanner img{
     width: 30px;
@@ -309,9 +321,31 @@ nav ul li:hover .subMenu{
 }
 .downloadPlayButton {
     display: flex;
+    width: 60%;
+    padding: 8px;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: var(--hoverTextColor);
+    color: white;
+    font-weight: 500;
+    
 }
-
+.downloadPlayButton span{
+margin: 5px 15px ;
+}
+.downloadPlayButton img{
+    padding-left: 5px;
+}
 
 .rightlowestPricePoster img{
     width: 100%;
 }
+
+
+   /* <!-- Top Categories to Choose From --> */
+   .topCategoriesHeader{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+   }
