@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        #header{
+            width: 100%;
+            height: 10%;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        #right{
+            display: flex;
+            margin: 3px;
+            padding: 3px;
+        }
+        #imag {
+        display: flex;
+        
+       
+        }
+        #imag:hover{
+            color: lightcoral;
+        }
+        #imag img{
+        width: 10%;
+        }
+        #body{
+            width: 100%;
+            height: 120vh;
+            background-color: hsl(351, 100%, 86%);
+            padding-left: 20px;
+            
+        }
+        #card{
+            width: 35%;
+            margin: auto;
+            height: 32%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding-top: 20px;
+
+            
+        }
+        #card img{
+            width: 100%;
+        }
+        #details{
+            width: 20%;
+          margin: auto;
+            height: 63%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            background-color: white;
+            padding-left: 5%;
+            padding-right: 10%;
+            
+            
+        }
+        #details>div{
+            padding-top: 15px;
+        }
+        #phone{
+            display: flex;
+            justify-content: space-around;
+        }
+        #otp{
+            font-size: 20px;
+            width: 90%;
+            margin: auto;
+           margin-left: 40px;
+           margin-top: 60px; 
+           padding-top: 10px;
+           padding-bottom: 10px;
+           margin-bottom: 120px;
+           background-color: crimson;;
+        }
+        input{
+            width:280px;
+            height: 40px;
+        }
+        #tc{
+           margin-top: 40px;
+           text-align: center;
+           font-size: 12px;
+        }
+        #last{
+            margin-top: 300px;
+        }
+        #msg{
+            font-size: 20px;
+            padding-top: 30px;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+   <!-- header section -->
+    <div id="header">
+        <div id="left">
+        <!-- <img src="project logo1.jpg"/> -->
+        <input placeholder=" Try Saree,Kurti or Search by Product Code"/>
+        </div>
+        <div id="right">
+            <div id="imag">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAEsCAMAAABgwwj8AAAAulBMVEXy8vIzMzP///8SEhIoKCjk5OT39/eMjIwiIiIZGRm0tLTY2NgyMTIyMDEXFxcxMTArKyuTk5Pr6+thYWFDQ0M/UkR2dnY9RzhDV0ienp5VVVUeHh5FUkFVYW5ESVFBT0I3OjVBWkc+SD49TT1IVldGS01TZmlYbHNKUFhBQ0dSXGlXZXBNVGJCSzxCVUdCVUA8QTlra2vMzMyAgIA8Pz5HUVFJXF1OWV5RXmVOZmhXa3M6Q0RGS1Y6PEH0OsV3AAAEbUlEQVR4nO3XbVPiSBiF4e7exMQQkxCyvMqIgiMIjO6uiIsz//9vbXdeAAXHqe2zRbbq3OUHtVLNVU/TJAj1tkbgtTJ54rKWFzTewcT+H2lTRn4Sn9opZZz457LpfgBN25FTA2RV7ETt9Bi0Fzmntr0viXoHUNEfnJp1rEFfvIW6cXJq0/GS2N2Huk5NnVrquDuoqOs8TUksttB+jZ1a2q+gvVqeo12DXgFNI7t1wm0XB4XFFXIkQ4tXiNIc2rba+HB0s1xeLa+qft81Hl/dlJfcdEYW0qRtoK7dQMPlcnlp+vat2y1+utd5Dw8Pl+OO8XU6WmrzIpGroU3LG1LpvOwWyO71HvRhPNbQkYZ2rKBOU0Ol3f1dT/QqH2i37HqbGWk50Y4dNJZKNCyPkpSPjzd7mffpuKzTeTTOUI/U6j2q974hAt8Wmls+qrgiHIVWTukHwqv1h31V4olWjR5BPy5uiZN/7/i1MnFqwa/2f4Q6fg1LDqF+L6hhfyQH0N/Ss/qlPOcQ6or6dUYoOELREYqOUHSEoiMUHaHoCEVHKDpC0RGKjlB0hKIjFB2h6AhFRyg6QtERio5QdISiIxQdoegIRUcoOkLREYqOUHSEoiMUHaHoCEVHKDpC0RGKjlB0hKIjFB2h6AhFRyg6QtERio5QdISiIxQdoegIRUcoOkLREYqOUHSEoiMUHaHoCEVHKDpC0RGKjlB0hKIjFB2h6AhFRyg6QtERio5QdISiIxQdoegIRUcoOkLREYqOUHSEoiMUHaHoCEVHKDpC0RGKjlB0hKIjFB2h6AhFRyg6QtERio5QdISiIxQdoegIRUcoOkLREYqOUHSEoiMUHaHoCEVHKDpC0RGKjlB0hKIjFB2h6AhFRyg6QtERio5QdISiIxQdoegIRUcoOkLREYqOUHTHoWenZh12DHr+Z6OG/ZUcQOXgvIZVzn1ovSMUnchAC4Wx7uJt8UUIWl1mohUj1nnKsuzWtDJNtq1eLxDLy7glvOTzyz7rqVJO1pP1+ln31WR+eZ482a8vZeKJwLdepWRO13nPL1+L/tY/GjoBOKUfiEZku0gxz9XKKF9MFdSkpSvA7keuUNL2TZrN8nlOC+Z8Pr+ryqUTwObHUgnVdD6/8KfNZrlzOr1/uR9q53yzuduU0HzzX62hTlNDXdu9n82+GOf6XjccGqeuGGl+oiav1h8skauhqm157jX0i4YuFiXUzPRuB53YTzRpKwNNLUdqoN9LaCHdFEPdFAO1P/ZRmkNVb2C1zA8N1dLFwlCHwx21dN7anvpBTxVQ1bfb/Bz6fVFI7wvpPP+gel7rm5MlUyZ9VUFFbCf9YaCF1FBfqtbaeWvtjMUWqlzHShrq7Tfv1KJpXn6zun2VtvueOK7aQZVrOVNpnp3C/AlqL/0PS6aeZ+GsoEr07U7Uf9SgvwWqql5ke4uC50S9LW8HVWk7ciAPp5hiJ2qn6hhUU5sy8pMaYOPEj2TT3be9gZpTFXgt1LeTf13W8oLGO9g/8+XL2RWE+6AAAAAASUVORK5CYII="/>
+               
+               
+                <h4>Download App</h4>
+               </div> 
+            
+            <div>
+                <h4>Become a Supplier</h4>
+            </div>
+
+        </div>
+    </div>
+    <!-- body section-->
+    <div id="body">
+     <div id="card">
+    <div>
+    <img src="https://images.meesho.com/images/marketing/1661417516766.webp"/>
+    
+    </div>
+   
+     </div>
+     <div id="details">
+    
+    </div>
+    </div>
+    
+</body>
+</html>
+<script src="login.js"></script>
