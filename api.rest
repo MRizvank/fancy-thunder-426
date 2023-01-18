@@ -1,11 +1,12 @@
-###
+
 POST https://sleepy-puce-greyhound.cyclic.app/products
+Content-Type: application/json
 
   {
-    "id": 900,
+    "id": 10150,
     "category": "Sarees",
-    "title": "WETLESS RAINBOW ZARI",
-    "original_price": 416,
+    "name": "WETLESS RAINBOW ZARI",
+    "original_price": 4156,
     "discounted_price": 316,
     "sizes": [
       "Free Size"
@@ -13,7 +14,7 @@ POST https://sleepy-puce-greyhound.cyclic.app/products
     "images": [
       "https://images.meesho.com/images/products/72024275/9cvk9_512.jpg",
       "https://images.meesho.com/images/products/72349131/ndz0q_512.jpg",
-      "https://images.meesho.com/images/products/72349131/tzpv8_512.jpg",
+     
       "https://images.meesho.com/images/products/72349131/9dvpk_512.jpg"
     ],
     "details": {
@@ -22,6 +23,15 @@ POST https://sleepy-puce-greyhound.cyclic.app/products
       "Multipack": "Single",
       "Description": "Best qaualtiy "
     },
-    "rating": 3.9,
     "seller_id": 1
   }
+###
+POST https://sleepy-puce-greyhound.cyclic.app/user/login
+Content-Type: application/json
+method:POST 
+  {
+    "username":"admin",
+    "password":"admin"
+  }
+
+
