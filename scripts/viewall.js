@@ -1,35 +1,36 @@
+let products=JSON.parse(localStorage.getItem("products"))||[]
 
-
-fetch("https://sleepy-puce-greyhound.cyclic.app/products")
+fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=2&_limit=15")//?_page=3&_limit=10
     .then((res) => {
         return res.json();
     })
     .then((data) => {
         showData(data)
+        // renderCards(data)
 
 
     })
 
 function showData(data) {
-    let card = "";
-    for (let item of data) {
-        card += `
-                        <div class="Rcard">
-                        <img src="${item.images[0]}" alt="${item.images[0]}">
-                        <p class="title">${item.title.substr(0, 20)}</p>
+    let cards = "";
+        data.forEach((element,index) => {
+            let card = `
+                        <div class="Rcard" data-id="${element.id}">
+                        <img src="${element.images[0]}" alt="${element.images[0]}">
+                        <p class="title">${element.name.substr(0, 20)}</p>
                         <p class="price">
                         <span>₹</span>
-                        <span >${item.original_price}</span>
+                        <span >${element.original_price}</span>
                         </p>
                         <div class="delivery">Free Delivery</div>
-                        <div class="rating">${item.rating}<i class="fa-solid fa-star"></i></div>
+                        <div class="rating">${element.rating}<i class="fa-solid fa-star"></i></div>
                         </div>
             
                         `;
-
-    }
-
-    document.querySelector(".Rproducts").innerHTML = card;
+        cards += card
+        });
+        
+    document.querySelector(".Rproducts").innerHTML = cards;
     let rating = document.querySelectorAll(".rating");
     for (let item of rating) {
         if (+item.textContent >= 4.0) {
@@ -43,7 +44,40 @@ function showData(data) {
             item.style.backgroundColor = "#ee7212"
         }
     }
+    let divs = document.querySelectorAll(".Rcard")
+    for (let item of divs) {
+        item.addEventListener("click", (e) => {
+            e.preventDefault();
+            if(e.target.dataset.id!=undefined){
+                products.unshift(e.target.dataset.id)
+                console.log(products)
+                localStorage.setItem("products",JSON.stringify(products))
+                window.location.replace("./product.html");
+            }
+            
+        })
+    }
 
-
+}
+function getCard(id, image, name, price, rating) {
+    let card = `
+     <div class="Rcard" data-id="${id}">
+    <img src="${image[0]}" alt="${image[0]}">
+    <p class="title">${name.substr(0, 20)}</p>
+    <p class="price">
+    <span>₹</span>
+    <span >${price}</span>
+    </p>
+    <div class="delivery">Free Delivery</div>
+    <div class="rating">${rating}<i class="fa-solid fa-star"></i></div>
+    </div>`;
     return card;
+}
+function renderCards(data){
+    let cardList=`
+    <div class="card-list">
+    ${data.map(item => getCard(item.id, item.images, item.name, item.original_price,item.rating)).join("")}
+    </div>
+    `
+    document.querySelector(".Rproducts").innerHTML = cardList
 }
