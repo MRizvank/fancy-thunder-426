@@ -1,4 +1,24 @@
 
+//backTohome
+let logo = document.getElementById("logo")
+logo.addEventListener("click", () => {
+    location.href = "index.html"
+})
+//gettheDownloadBTn
+document.querySelector(".downloadPlayButton").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("playStore").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("appStore").addEventListener("click", () => {
+    location.href = "https://apps.apple.com/us/app/meesho/id1457958492"
+})
+// go to seller page
+document.querySelector(".sellerContainer").addEventListener("click", () => {
+    location.href = "BecomeSupplier.html"
+})
+
 let inputSearch = document.getElementById("inputSerch")
 let serachClose = document.getElementById("searchClose")
 let formInput = document.getElementById("form")
@@ -47,8 +67,8 @@ fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=2&_limit=15")//?_
 
 function showData(data) {
     let cards = "";
-        data.forEach((element,index) => {
-            let card = `
+    data.forEach((element, index) => {
+        let card = `
                         <div class="Rcard" data-id="${element.id}">
                         <img src="${element.images[0]}" alt="${element.images[0]}">
                         <p class="product-title">${element.name.substr(0, 20)}</p>
@@ -62,8 +82,8 @@ function showData(data) {
             
                         `;
         cards += card
-        });
-        
+    });
+
     document.querySelector(".productscard-container").innerHTML = cards;
     let rating = document.querySelectorAll(".rating");
     for (let item of rating) {
@@ -82,13 +102,13 @@ function showData(data) {
     for (let item of divs) {
         item.addEventListener("click", (e) => {
             e.preventDefault();
-            if(e.target.dataset.id!=undefined){
+            if (e.target.dataset.id != undefined) {
                 products.unshift(e.target.dataset.id)
                 console.log(products)
-                localStorage.setItem("products",JSON.stringify(products))
+                localStorage.setItem("products", JSON.stringify(products))
                 window.location.replace("./product.html");
             }
-            
+
         })
     }
 

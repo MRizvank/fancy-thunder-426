@@ -374,23 +374,106 @@
         </ul>
 
     </nav>
-    <section class="Rcontainer">
-        <div class="Rfilters">
-          <!-- <h2>Women Ethnic Wear</h2>
-          <h5>Number of products </h5>
-          <select name="sortby" id="relevence" title="sort">
-            <option value="Relevance">Relevance</option>
+    <div class="productPageContainer">
+       <div class="leftFuncnalityContainer">
+        <div class="sortContainer">
+          <label for="sort">Sort by:</label>
+          <select name="sort" id="sorting">
+            <option value="">Relevance</option>
             <option value="New Arrivals">New Arrivals</option>
-            <option value="Price (High to Low)">Price (High to Low)</option>
+            <option value="l2h">Price(Low to High)</option>
+            <option value="h2l">Price(High to Low)</option>
+            <option value="">Ratings</option>
+            <option value="">Discount</option>
           </select>
-          <select name="sortby" id="category" title="sort">
-           <input type="checkbox" name="abaya" id="abaya">
-           <input type="checkbox" name="Blouses" id="Blouses">
-           <input type="checkbox" name="churidaar" id="churidaar">
-          </select> -->
         </div>
+        <div class="filterContainer">
+          <h3>FILTERS</h3>
+          <p style="font-size: 12px; color: grey">1000+Products</p>
+          <div>
+            <!-- category section -->
+            <h3>Category</h3>
+            <input type="checkbox" id="saree" value="Sarees" />
+            <span class="itemName">Saree</span>
+            <br />
+            <input type="checkbox" id="menswar" value="Mens Top Were" />
+            <span class="itemName">Mens Top Were</span>
+            <br />
+            <input
+              type="checkbox"
+              id="beauty&Health"
+              value="Beauty and health"
+            />
+            <span class="itemName">Mens Top Were</span>
+            <br />
+            <input
+              type="checkbox"
+              id="bags&Footwear"
+              value="Bags and Footwear"
+            />
+            <span class="itemName">Bags and Footwear</span>
+            <br />
+            <input type="checkbox" id="dresses" value="Dresses" />
+            <span class="itemName">Dresses</span>
+            <br />
+            <input type="checkbox" id="jewellery" value="Jewellery" />
+            <span class="itemName">Jewellery</span>
+            <br />
+            <!-- fabricSection -->
+            <h3>Fabric</h3>
+            <input type="checkbox" id="chiffon" value="Chiffon" />
+            <span class="itemName">Chiffon</span>
+            <br />
+            <input type="checkbox" id="brass" value="Brass" />
+            <span class="itemName">Brass</span>
+            <br />
+            <input type="checkbox" id="cotton" value="Cotton" />
+            <span class="itemName">Cotton</span>
+            <br />
+            <input type="checkbox" id="deodrent" value="Deodrent" />
+            <span class="itemName">Deodrent</span>
+            <br />
+            <input type="checkbox" id="leather" value="Sweat Leather" />
+            <span class="itemName">Sweat Leather</span>
+            <br />
+            <!-- priceSection -->
+            <h3>Price</h3>
+            <input type="checkbox" id="u149" value="149" />
+            <span class="itemName">Under 149</span>
+            <br />
+            <input type="checkbox" id="u199" value="199" />
+            <span class="itemName">Under 199</span>
+            <br />
+            <input type="checkbox" id="u249" value="249" />
+            <span class="itemName">Under 249</span>
+            <br />
+            <input type="checkbox" id="u399" value="399" />
+            <span class="itemName">Under 399</span>
+            <br />
+            <input type="checkbox" id="u499" value="499" />
+            <span class="itemName">Under 499</span>
+            <br />
+            <input type="checkbox" id="a500" value="500" />
+            <span class="itemName">Above 500+</span>
+            <br />
+            <h3>Rating</h3>
+            <input type="checkbox" id="rating2.0" value="2.0" />
+            <span class="itemName">2.0 and above</span>
+            <br />
+            <input type="checkbox" id="rating3.0" value="3.0" />
+            <span class="itemName">3.0 and above</span>
+            <br />
+            <input type="checkbox" id="rating3.5" value="3.5" />
+            <span class="itemName">3.5 and above</span>
+            <br />
+            <input type="checkbox" id="rating4.0" value="4.0" />
+            <span class="itemName">4.0 and above</span>
+            <br />
+          </div>
+        </div>
+         </div>
         <div class="Rproducts"></div>
-    </section>
+    </div>
 
 <script src="./scripts/script.js"></script>
 <script src="./scripts/viewall.js"></script>

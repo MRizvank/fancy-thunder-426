@@ -1,0 +1,239 @@
+/* #header {
+        width: 100%;
+        height: 10%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      #right {
+        display: flex;
+        margin: 3px;
+        padding: 3px;
+      }
+      #imag {
+        display: flex;
+      }
+      #imag:hover {
+        color: lightcoral;
+      }
+      #imag img {
+        width: 10%;
+      } */
+* {
+  box-sizing: border-box;
+}
+:root {
+  --hoverTextColor: #f43397;
+  --textColor: rgb(83, 81, 81);
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+}
+header {
+  height: 75px;
+  border-bottom: 0.1px solid grey;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+}
+nav {
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+#logo-container {
+  width: 155px;
+}
+#serchInputContainer {
+  width: 400px;
+  height: 45px;
+  outline: 1px solid rgb(177, 175, 175);
+  margin-left: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  position: relative;
+}
+#serchIcon {
+  width: 20px;
+  margin: 7px;
+}
+form {
+  width: 100%;
+}
+#inputSerch {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+#searchClose {
+  display: none;
+}
+.serchRecentBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 45px;
+  background-color: white;
+  height: 300px;
+  width: 100%;
+  display: none;
+  padding: 15px;
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#serchInputContainer:focus-within .serchRecentBox {
+  display: block;
+}
+
+.recentIcon {
+  width: 20px;
+  margin-right: 10px;
+}
+.recentItem {
+  display: flex;
+  align-items: center;
+}
+.downloadContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.downloadContainer:hover {
+  color: var(--hoverTextColor);
+}
+.downloadHoverBtnContainer {
+  position: absolute;
+  bottom: 0;
+  top: 55px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  width: 105%;
+  display: none;
+  height: 170px;
+  padding: 10px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.downloadContainer:hover .downloadHoverBtnContainer {
+  display: block;
+  color: black;
+  z-index: 1;
+}
+.downloadBtn {
+  display: block;
+  width: 150px;
+  margin-top: 5px;
+}
+.mobileIcon {
+  width: 15px;
+  margin: 8px;
+}
+.downloadContainer p {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  padding-right: 20px;
+}
+
+.sellerContainer {
+  padding: 0 30px;
+  border-left: 1.5px solid rgb(214, 210, 210);
+  border-right: 1.5px solid rgb(218, 213, 213);
+  font-size: 17px;
+}
+
+/* //////////////////////////// */
+#body {
+  width: 100%;
+  height: 120vh;
+  background-color: #fdeced;
+  padding-left: 20px;
+}
+#card {
+  width: 35%;
+  margin: auto;
+  height: 32%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-top: 20px;
+}
+#card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#details {
+  width: 35%;
+  margin: auto;
+  height: 63%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  padding-left: 5%;
+  padding-right: 10%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#details > div {
+  padding-top: 15px;
+}
+#phone {
+  display: flex;
+  justify-content: space-around;
+}
+#otp {
+  font-size: 20px;
+  width: 90%;
+  margin: auto;
+  margin-left: 40px;
+  margin-top: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 120px;
+  background-color: #f43397;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+input {
+  width: 280px;
+  height: 40px;
+}
+#tc {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+}
+/* #last {
+  margin-top: 300px;
+} */
+#msg {
+  font-size: 20px;
+  padding-top: 30px;
+}
