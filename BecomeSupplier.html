@@ -1,323 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iskra Supplier: Sell online on Messho at 0% commission</title>
-    <link rel="icon" href="./feviIcon/android-chrome-512x512.png" />
-</head>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
     #navfather {
-        background-color: #fff;
-        position: sticky;
-        top: 0px;
+      background-color: #fff;
+      position: sticky;
+      top: 0px;
     }
 
     #nav {
-        display: flex;
-        width: 80%;
-        height: 90px;
-        margin: auto;
-        justify-content: space-between;
-        align-items: center;
+      display: flex;
+      width: 80%;
+      height: 90px;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
     }
 
     #navlinks {
-        display: flex;
-        width: 55%;
-        justify-content: space-between;
+      display: flex;
+      width: 55%;
+      justify-content: space-between;
     }
 
     #navlinks span {
-        font-size: 15px;
-        font-family: Arial, sans-serif;
+      font-size: 15px;
+      font-family: Arial, sans-serif;
     }
 
     #navlinks span:hover {
-        cursor: pointer;
-        color: #f43397;
+      cursor: pointer;
+      color: #f43397;
     }
 
     #selling {
-        background-color: #f43397;
-        color: #fff;
-        padding: 10px 25px;
-        border: 1px solid #f43397;
-        border-radius: 5px;
-        font-size: 14px;
+      background-color: #f43397;
+      color: #fff;
+      padding: 10px 25px;
+      border: 1px solid #f43397;
+      border-radius: 5px;
+      font-size: 14px;
     }
 
     #login {
-        padding: 10px 25px;
-        border: 1px solid #f43397;
-        border-radius: 5px;
-        background-color: #fff;
-        color: #f43397;
-        font-size: 14px;
+      padding: 10px 25px;
+      border: 1px solid #f43397;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #f43397;
+      font-size: 14px;
     }
 
     #login:hover {
-        cursor: pointer;
-        background-color: #f43397;
-        color:  #fdf7f9;
+      cursor: pointer;
+      background-color: #f43397;
+      color: white;
     }
 
     #selling:hover {
-        cursor: pointer;
-        background-color: #fff;
-        color: #f43397
+      cursor: pointer;
+      background-color: #fff;
+      color: #f43397;
     }
 
     #container {
-        background-color: #fdf7f9;
-        display: flex;
-        padding: 20px;
+      background-color: #fdf7f9;
+      display: flex;
+      padding: 20px;
     }
 
     #rightcontainer {
-        background-image: url("https://supplier.meesho.com/images/Desktop-Background-1.png");
-        background-size: 100%;
-        background-color: #fff4fa;
-        display: flex;
-        justify-content: center;
-        /* position: absolute;
+      background-image: url("https://supplier.meesho.com/images/Desktop-Background-1.png");
+      background-size: 100%;
+      background-color: #fff4fa;
+      display: flex;
+      justify-content: center;
+      /* position: absolute;
         left: auto;
         top: auto;
         right: 0%;bottom: 10%;z-index: -1;max-width: 60%; */
     }
 
     #rightcontainer img {
-        width: 100%;
+      width: 100%;
     }
 
     #heading {
-        width: 50%;
-        margin: auto;
-        font-family: Poppins, sans-serif;
+      width: 50%;
+      margin: auto;
+      font-family: Poppins, sans-serif;
     }
 
     .paragraph-2 {
-        font-family: Poppins, sans-serif;
-        font-size: 15px;
-        line-height: 24px;
+      font-family: Poppins, sans-serif;
+      font-size: 15px;
+      line-height: 24px;
     }
 
     #number {
-        height: 28px;
-        min-width: 320px;
-        padding-left: 50px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        font-family: Poppins, sans-serif;
-        font-size: 14px;
-        border: 1px solid #cccccc;
-        padding: 8px 12px;
+      height: 28px;
+      min-width: 320px;
+      padding-left: 50px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      border: 1px solid #cccccc;
+      padding: 8px 12px;
     }
 
     #numbutton {
-        height: 46px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        background-color: #f43397;
-        font-family: Poppins, sans-serif;
-        display: inline-block;
-        padding: 9px 15px;
-        color: white;
-        border: 0;
-        cursor: pointer;
+      height: 46px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #f43397;
+      font-family: Poppins, sans-serif;
+      display: inline-block;
+      padding: 9px 15px;
+      color: white;
+      border: 0;
+      cursor: pointer;
     }
 
     #boxes {
-        width: 80%;
-        margin: auto;
-        display: flex;
-        margin-bottom: 80px;
-        margin-top: 80px;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      margin-bottom: 80px;
+      margin-top: 80px;
     }
 
     #boxes div {
-        width: 20%;
-        margin: auto;
-        background-color: #f6f7f9;
-        border-radius: 10px;
-        padding: 25px;
+      width: 20%;
+      margin: auto;
+      background-color: #f6f7f9;
+      border-radius: 10px;
+      padding: 25px;
     }
 
     #suppliers {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 80%;
-        margin: auto;
-        align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 80%;
+      margin: auto;
+      align-items: center;
     }
 
     #list {
-        padding: 0px 45px;
-        border: solid #e7eeff 2px;
-        border-radius: 10px;
+      padding: 0px 45px;
+      border: solid #e7eeff 2px;
+      border-radius: 10px;
     }
 
     .listitems {
-        display: flex;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        border-bottom: 2px solid #e7eeff;
-        font-family: Poppins, sans-serif;
+      display: flex;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-bottom: 2px solid #e7eeff;
+      font-family: Poppins, sans-serif;
     }
 
     .listitemtitle {
-        margin-bottom: 10px;
-        color: #000;
-        font-size: 18px;
-        font-weight: 600;
+      margin-bottom: 10px;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
     }
-    .main2{
-        padding-right: 15px;
-        padding-left: 15px;
+    .main2 {
+      padding-right: 15px;
+      padding-left: 15px;
     }
-    .bluebg{
-        background-color: rgba(231, 238, 255, 0.4);
+    .bluebg {
+      background-color: rgba(231, 238, 255, 0.4);
     }
-    .leftheading{
-        padding-top: 80px;
-        width: 33.33333333%;
+    .leftheading {
+      padding-top: 80px;
+      width: 33.33333333%;
     }
-</style>
+  </style>
 
-<body>
-
+  <body>
     <div id="navfather">
-        <div id="nav">
-            <div>
-                <a href="./index.html"><img src="./img/project logo1.jpg"  style="width:160px" alt="" id="logo"></a>
-            </div>
-            <div id="navlinks">
-                <span>Sell Online</span>
-                <span>How It Works</span>
-                <span>Pricing & Commission</span>
-                <span>Shipping & Returns</span>
-                <span>Grow Business</span>
-            </div>
-            <div>
-                <button id="login">Login</button>
-                <button id="selling">Start Selling</button>
-            </div>
+      <div id="nav">
+        <div>
+          <img
+            id="logo"
+            src="./img/project logo1.jpg"
+            style="width: 160px"
+            alt=""
+          />
         </div>
+        <div id="navlinks">
+          <span>Sell Online</span>
+          <span>How It Works</span>
+          <span>Pricing & Commission</span>
+          <span>Shipping & Returns</span>
+          <span>Grow Business</span>
+        </div>
+        <div>
+          <button id="login">Login</button>
+          <button id="selling">Start Selling</button>
+        </div>
+      </div>
     </div>
 
-
     <div id="container">
-
-        <div id="heading">
-            <h1 style="font-size: 36px;">Sell online to 11Cr+ customers at</h1>
-            <h1 style="color: #f43397;font-size: 36px;">0% Commission</h1>
-            <p class="paragraph-2">Become a Meesho seller and grow your business across India</p>
-            <div style="display: flex;">
-                <input id="number" type="tel" placeholder="Enter Your Mobile Number">
-                <input id="numbutton" value="Start Selling" type="submit">
-            </div>
-            
-
+      <div id="heading">
+        <h1 style="font-size: 36px">Sell online to 11Cr+ customers at</h1>
+        <h1 style="color: #f43397; font-size: 36px">0% Commission</h1>
+        <p class="paragraph-2">
+          Become a Meesho seller and grow your business across India
+        </p>
+        <div style="display: flex">
+          <input
+            id="number"
+            type="tel"
+            placeholder="Enter Your Mobile Number"
+          />
+          <input id="numbutton" value="Start Selling" type="submit" />
         </div>
-        <div id="rightcontainer">
-            <div style="width:50%">
-                <img src="https://supplier.meesho.com/images/Desktop-Pic.png" alt="">
-            </div>
-            
+      </div>
+      <div id="rightcontainer">
+        <div style="width: 50%">
+          <img
+            src="https://supplier.meesho.com/images/Desktop-Pic.png"
+            alt=""
+          />
         </div>
+      </div>
     </div>
 
     <div id="boxes">
-        <div>
-            <h1 style="color:#f43397;font-family: Poppins, sans-serif;">6 lakh+ </h1>
-            <h1 style="font-family: Poppins, sans-serif;font-size: 22px;">Trust Meesho to sell online</h1>
-        </div>
-        <div>
-            <h1 style="color:#f43397;font-family: Poppins, sans-serif;">11 Crore+</h1>
-            <h1 style="font-family: Poppins, sans-serif;font-size: 22px;">Customers buying across India</h1>
-        </div>
-        <div>
-            <h1 style="color:#f43397;font-family: Poppins, sans-serif;">28000+</h1>
-            <h1 style="font-family: Poppins, sans-serif;font-size: 22px;">Pincode Supported for delivery</h1>
-        </div>
-        <div>
-            <h1 style="color:#f43397;font-family: Poppins, sans-serif;">700+</h1>
-            <h1 style="font-family: Poppins, sans-serif;font-size: 22px;">Categories to sell online</h1>
-        </div>
+      <div>
+        <h1 style="color: #f43397; font-family: Poppins, sans-serif">
+          6 lakh+
+        </h1>
+        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+          Trust Meesho to sell online
+        </h1>
+      </div>
+      <div>
+        <h1 style="color: #f43397; font-family: Poppins, sans-serif">
+          11 Crore+
+        </h1>
+        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+          Customers buying across India
+        </h1>
+      </div>
+      <div>
+        <h1 style="color: #f43397; font-family: Poppins, sans-serif">28000+</h1>
+        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+          Pincode Supported for delivery
+        </h1>
+      </div>
+      <div>
+        <h1 style="color: #f43397; font-family: Poppins, sans-serif">700+</h1>
+        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+          Categories to sell online
+        </h1>
+      </div>
     </div>
 
     <div id="suppliers">
-        <div style="width: 460px;font-family: Poppins, sans-serif;">
-            <h2 style="font-size: 28px;">Why Suppliers Love Meesho</h2>
-            <p style="font-size: 17px;line-height: 26px;">All the benefits that come with selling on Meesho are designed
-                to help you sell more, and make it easier to grow your business.</p>
+      <div style="width: 460px; font-family: Poppins, sans-serif">
+        <h2 style="font-size: 28px">Why Suppliers Love Meesho</h2>
+        <p style="font-size: 17px; line-height: 26px">
+          All the benefits that come with selling on Meesho are designed to help
+          you sell more, and make it easier to grow your business.
+        </p>
+      </div>
+      <div id="list">
+        <div class="listitems">
+          <div style="margin-right: 10px">
+            <img src="https://supplier.meesho.com/images/icon-10.svg" alt="" />
+          </div>
+
+          <div>
+            <div class="listitemtitle">0% Commission Fee</div>
+            <div>
+              Suppliers selling on Meesho keep 100% of their profit by not
+              paying any commission
+            </div>
+          </div>
         </div>
-        <div id="list">
-            <div class="listitems">
-                <div style="margin-right: 10px;">
-                    <img src="https://supplier.meesho.com/images/icon-10.svg" alt="">
-                </div>
 
-                <div>
-                    <div class="listitemtitle">0% Commission Fee</div>
-                    <div> Suppliers selling on Meesho keep 100% of their profit by not paying any commission</div>
-                </div>
+        <div class="listitems">
+          <div style="margin-right: 10px">
+            <img src="https://supplier.meesho.com/images/icon-16.svg" alt="" />
+          </div>
 
+          <div>
+            <div class="listitemtitle">0 Penalty Charges</div>
+            <div>
+              Sell online without the fear of order cancellation charges with 0
+              Penalty for late dispatch or order cancellations.
             </div>
-
-            <div class="listitems">
-                <div style="margin-right: 10px;">
-                    <img src="https://supplier.meesho.com/images/icon-16.svg" alt="">
-                </div>
-
-                <div>
-                    <div class="listitemtitle">0 Penalty Charges</div>
-                    <div>Sell online without the fear of order cancellation charges with 0 Penalty for late dispatch or
-                        order cancellations.</div>
-                </div>
-
-            </div>
-            <div class="listitems">
-                <div style="margin-right: 10px;">
-                    <img src="https://supplier.meesho.com/images/icon-11.svg" alt="">
-                </div>
-
-                <div>
-                    <div class="listitemtitle">Growth for Every Supplier</div>
-                    <div>From small to large and unbranded to branded, all suppliers have grown their businesses on
-                        Meesho
-                    </div>
-                </div>
-
-            </div>
-            <div class="listitems">
-                <div style="margin-right: 10px;">
-                    <img src="https://supplier.meesho.com/images/icon-12.svg" alt="">
-                </div>
-
-                <div>
-                    <div class="listitemtitle">Ease of Doing Business</div>
-                    <div>tick
-                        Easy Product Listing
-                        tick
-                        Lowest Cost Shipping
-                        tick
-                        7-Day Payment Cycle from the delivery date</div>
-                </div>
-
-            </div>
+          </div>
         </div>
+        <div class="listitems">
+          <div style="margin-right: 10px">
+            <img src="https://supplier.meesho.com/images/icon-11.svg" alt="" />
+          </div>
+
+          <div>
+            <div class="listitemtitle">Growth for Every Supplier</div>
+            <div>
+              From small to large and unbranded to branded, all suppliers have
+              grown their businesses on Meesho
+            </div>
+          </div>
+        </div>
+        <div class="listitems">
+          <div style="margin-right: 10px">
+            <img src="https://supplier.meesho.com/images/icon-12.svg" alt="" />
+          </div>
+
+          <div>
+            <div class="listitemtitle">Ease of Doing Business</div>
+            <div>
+              tick Easy Product Listing tick Lowest Cost Shipping tick 7-Day
+              Payment Cycle from the delivery date
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="main2">
-        <div class="bluebg">
-            <div class="leftheading">
-                <h2 style="font-size: 28px;font-family: Poppins, sans-serif;">Exclusive Supplier+ Rewards for the first 30 days</h2>
-            </div>
+      <div class="bluebg">
+        <div class="leftheading">
+          <h2 style="font-size: 28px; font-family: Poppins, sans-serif">
+            Exclusive Supplier+ Rewards for the first 30 days
+          </h2>
         </div>
+      </div>
     </div>
-</body>
-
+    <script>
+      document.getElementById("logo").addEventListener("click", () => {
+        location.href = "index.html";
+      });
+    </script>
+  </body>
 </html>

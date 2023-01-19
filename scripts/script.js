@@ -1,9 +1,10 @@
+
 let inputSearch = document.getElementById("inputSerch")
 let serachClose = document.getElementById("searchClose")
 let formInput = document.getElementById("form")
 let recentSearchList = document.querySelector(".recentSerchList")
 let recentSrearch = [];
-let singleProduct=JSON.parse(localStorage.getItem("products"))||[]
+let singleProduct = JSON.parse(localStorage.getItem("products")) || []
 
 
 inputSearch.addEventListener("keydown", () => {
@@ -13,6 +14,8 @@ inputSearch.addEventListener("keydown", () => {
         serachClose.style.display = "none"
     }
 })
+
+
 
 formInput.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -34,7 +37,7 @@ formInput.addEventListener("submit", (e) => {
     recentSearchList.innerHTML = recentSerchListEl
 })
 
-fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=2&_limit=15")//?_page=3&_limit=10
+fetch("https://sleepy-puce-greyhound.cyclic.app/products")//?_page=3&_limit=10
     .then((res) => {
         return res.json();
     })
@@ -47,8 +50,8 @@ fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=2&_limit=15")//?_
 
 function showData(data) {
     let cards = "";
-        data.forEach((element,index) => {
-            let card = `
+    data.forEach((element, index) => {
+        let card = `
                         <div class="Rcard" data-id="${element.id}">
                         <img src="${element.images[0]}" alt="${element.images[0]}">
                         <p class="product-title">${element.name.substr(0, 20)}</p>
@@ -62,9 +65,9 @@ function showData(data) {
             
                         `;
         cards += card
-        });
-        
-    document.querySelector(".productscard-container").innerHTML=cards;
+    });
+
+    document.querySelector(".productscard-container").innerHTML = cards;
     let rating = document.querySelectorAll(".rating");
     for (let item of rating) {
         if (+item.textContent >= 4.0) {
@@ -82,14 +85,49 @@ function showData(data) {
     for (let item of divs) {
         item.addEventListener("click", (e) => {
             e.preventDefault();
-            if(e.target.dataset.id!=undefined){
-                singleProduct.unshift(e.target.dataset.id)
-                console.log(singleProduct)
-                localStorage.setItem("products",JSON.stringify(singleProduct))
+            if (e.target.dataset.id != undefined) {
+                products.unshift(e.target.dataset.id)
+                console.log(products)
+                localStorage.setItem("products", JSON.stringify(products))
                 window.location.replace("./product.html");
             }
-            
+
         })
     }
 
+}
+
+
+//backTohome
+let logo = document.getElementById("logo")
+logo.addEventListener("click", () => {
+    location.href = "index.html"
+})
+//gettheDownloadBTn
+document.querySelector(".downloadPlayButton").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("playStore").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("appStore").addEventListener("click", () => {
+    location.href = "https://apps.apple.com/us/app/meesho/id1457958492"
+})
+
+document.querySelector(".sellerContainer").addEventListener("click", () => {
+    location.href = "BecomeSupplier.html"
+})
+
+
+
+//checkin for funcanality
+let category = document.querySelectorAll(".category")
+for (let item of category) {
+    item.addEventListener("change", () => {
+        if (item.checked) {
+            console.log(item.value)
+        } else {
+            console.error("not")
+        }
+    })
 }
