@@ -515,10 +515,15 @@
     margin: auto;
 }
 
+.w-row{
+    display: flex;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
 .Am-headingdiv {
     box-sizing: border-box;
-    position: relative;
-    float: left;
+    display: flex;
     padding-left: 10px;
     padding-right: 10px;
     width: 41.66666667%;
@@ -533,8 +538,6 @@
 
 .Am-paradiv {
     box-sizing: border-box;
-    position: relative;
-    float: left;
     padding-left: 10px;
     padding-right: 10px;
     width: 58.33333333%;
@@ -574,7 +577,7 @@
     line-height: 20px;
     font-family: Poppins, sans-serif;
     box-sizing: border-box;
-    margin-top: 350px;
+    margin-top: 100px;
     padding-top: 80px;
     padding-bottom: 80px;
     background-color: #f6f7f9;
