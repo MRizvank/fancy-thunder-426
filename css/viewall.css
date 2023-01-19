@@ -209,6 +209,10 @@ border-top-left-radius: 2px;
     border-right: 1.5px solid rgb(218, 213, 213) ;
     font-size: 17px;
  }
+ .sellerContainer a{
+    text-decoration: none;
+    color: var(--textColor);
+ }
 
  
 /**navigation css ***/
@@ -377,6 +381,7 @@ margin: 5px 15px ;
     margin: auto;
     border-radius: 8px;
     height: 390px;
+    cursor: pointer;
 }
 .title{
     color: #8c8c8c;

@@ -221,7 +221,10 @@ border-top-left-radius: 2px;
     border-right: 1.5px solid rgb(218, 213, 213) ;
     font-size: 17px;
  }
-
+ .sellerContainer a{
+    text-decoration: none;
+    color: var(--textColor);
+ }
  
 /**navigation css ***/
 nav{
@@ -557,6 +560,7 @@ margin: 5px 15px ;
     margin: auto;
     border-radius: 8px;
     height: 390px;
+    cursor: pointer;
 }
 .product-title{
     color: #8c8c8c;
@@ -616,3 +620,25 @@ margin: 5px 15px ;
     gap: 20px;
 }
 
+
+/***Media Queries **/
+
+
+@media screen and (min-width:451px) and (max-width:800px) {
+    .productscard-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    
+    }
+
+    
+}
+@media screen  and (max-width:450px) {
+    .productscard-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    
+    }
+
+    
+}

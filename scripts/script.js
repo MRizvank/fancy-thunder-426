@@ -1,9 +1,9 @@
-
 let inputSearch = document.getElementById("inputSerch")
 let serachClose = document.getElementById("searchClose")
 let formInput = document.getElementById("form")
 let recentSearchList = document.querySelector(".recentSerchList")
 let recentSrearch = [];
+let singleProduct=JSON.parse(localStorage.getItem("products"))||[]
 
 
 inputSearch.addEventListener("keydown", () => {
@@ -64,7 +64,7 @@ function showData(data) {
         cards += card
         });
         
-    document.querySelector(".productscard-container").innerHTML = cards;
+    document.querySelector(".productscard-container").innerHTML=cards;
     let rating = document.querySelectorAll(".rating");
     for (let item of rating) {
         if (+item.textContent >= 4.0) {
@@ -83,9 +83,9 @@ function showData(data) {
         item.addEventListener("click", (e) => {
             e.preventDefault();
             if(e.target.dataset.id!=undefined){
-                products.unshift(e.target.dataset.id)
-                console.log(products)
-                localStorage.setItem("products",JSON.stringify(products))
+                singleProduct.unshift(e.target.dataset.id)
+                console.log(singleProduct)
+                localStorage.setItem("products",JSON.stringify(singleProduct))
                 window.location.replace("./product.html");
             }
             
