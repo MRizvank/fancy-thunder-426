@@ -59,6 +59,7 @@
     #login:hover {
       cursor: pointer;
       background-color: #f43397;
+      color: white;
     }
 
     #selling:hover {
@@ -187,7 +188,12 @@
     <div id="navfather">
       <div id="nav">
         <div>
-          <img alt="" src="./img/project logo1.jpg" style="width: 160px" />
+          <img
+            id="logo"
+            src="./img/project logo1.jpg"
+            style="width: 160px"
+            alt=""
+          />
         </div>
         <div id="navlinks">
           <span>Sell Online</span>
@@ -222,8 +228,8 @@
       <div id="rightcontainer">
         <div style="width: 50%">
           <img
-            alt=""
             src="https://supplier.meesho.com/images/Desktop-Pic.png"
+            alt=""
           />
         </div>
       </div>
@@ -334,5 +340,10 @@
         </div>
       </div>
     </div>
+    <script>
+      document.getElementById("logo").addEventListener("click", () => {
+        location.href = "index.html";
+      });
+    </script>
   </body>
 </html>

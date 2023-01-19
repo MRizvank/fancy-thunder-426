@@ -11,6 +11,7 @@ line2.innerText = "Change Number";
 line2.style.color = "crimson";
 let input = document.createElement("input");
 input.setAttribute("id", "input");
+input.setAttribute("placeholder", "Enter the OTP")
 let password = JSON.parse(localStorage.getItem("myotp"));
 
 

@@ -1,29 +1,10 @@
 
-//backTohome
-let logo = document.getElementById("logo")
-logo.addEventListener("click", () => {
-    location.href = "index.html"
-})
-//gettheDownloadBTn
-document.querySelector(".downloadPlayButton").addEventListener("click", () => {
-    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
-})
-document.getElementById("playStore").addEventListener("click", () => {
-    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
-})
-document.getElementById("appStore").addEventListener("click", () => {
-    location.href = "https://apps.apple.com/us/app/meesho/id1457958492"
-})
-// go to seller page
-document.querySelector(".sellerContainer").addEventListener("click", () => {
-    location.href = "BecomeSupplier.html"
-})
-
 let inputSearch = document.getElementById("inputSerch")
 let serachClose = document.getElementById("searchClose")
 let formInput = document.getElementById("form")
 let recentSearchList = document.querySelector(".recentSerchList")
 let recentSrearch = [];
+let singleProduct = JSON.parse(localStorage.getItem("products")) || []
 
 
 inputSearch.addEventListener("keydown", () => {
@@ -33,6 +14,8 @@ inputSearch.addEventListener("keydown", () => {
         serachClose.style.display = "none"
     }
 })
+
+
 
 formInput.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -54,7 +37,7 @@ formInput.addEventListener("submit", (e) => {
     recentSearchList.innerHTML = recentSerchListEl
 })
 
-fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=2&_limit=15")//?_page=3&_limit=10
+fetch("https://sleepy-puce-greyhound.cyclic.app/products")//?_page=3&_limit=10
     .then((res) => {
         return res.json();
     })
@@ -112,4 +95,39 @@ function showData(data) {
         })
     }
 
+}
+
+
+//backTohome
+let logo = document.getElementById("logo")
+logo.addEventListener("click", () => {
+    location.href = "index.html"
+})
+//gettheDownloadBTn
+document.querySelector(".downloadPlayButton").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("playStore").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("appStore").addEventListener("click", () => {
+    location.href = "https://apps.apple.com/us/app/meesho/id1457958492"
+})
+
+document.querySelector(".sellerContainer").addEventListener("click", () => {
+    location.href = "BecomeSupplier.html"
+})
+
+
+
+//checkin for funcanality
+let category = document.querySelectorAll(".category")
+for (let item of category) {
+    item.addEventListener("change", () => {
+        if (item.checked) {
+            console.log(item.value)
+        } else {
+            console.error("not")
+        }
+    })
 }
