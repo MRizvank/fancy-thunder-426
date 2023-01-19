@@ -18,7 +18,7 @@
     <header>
         <div class="headerLeft">
           <div id="logo-container">
-            <a href="./index.html"><img src="./img/project logo1.jpg" alt="" id="logo"></a>
+            <img src="./img/project logo1.jpg" alt="" id="logo">
         </div>
         <!--Search box-->
         <div id="serchInputContainer">
@@ -48,16 +48,16 @@
             <div class="downloadHoverBtnContainer">
               <h3>Download From</h3>
 
-              <a href="" class="downloadBtn">
+              <a href="" class="downloadBtn" id="playStore">
                 <img src="https://images.meesho.com/images/pow/playstore-icon-big.webp" alt="playstore">
               </a>
-              <a href=""  class="downloadBtn">
+              <a href=""  class="downloadBtn" id="appStore">
                 <img src="https://images.meesho.com/images/pow/appstore-icon-big.webp" alt="appStore">
               </a>
             </div>
           </div>  
           <div class="sellerContainer">
-            <p><a href="./BecomeSupplier.html">Become a Supplier</p></a>
+            <p>Become a Supplier</p>
           </div>
 
           <div class="profileCartContainer">
@@ -393,16 +393,17 @@
           <div>
             <!-- category section -->
             <h3>Category</h3>
-            <input type="checkbox" id="saree" value="Sarees" />
+            <input type="checkbox" id="saree" class="category" value="Sarees" />
             <span class="itemName">Saree</span>
             <br />
-            <input type="checkbox" id="menswar" value="Mens Top Were" />
+            <input type="checkbox" id="menswar" class="category" value="Mens Top Were" />
             <span class="itemName">Mens Top Were</span>
             <br />
             <input
               type="checkbox"
               id="beauty&Health"
               value="Beauty and health"
+              class="category"
             />
             <span class="itemName">Mens Top Were</span>
             <br />
@@ -410,13 +411,14 @@
               type="checkbox"
               id="bags&Footwear"
               value="Bags and Footwear"
+              class="category"
             />
             <span class="itemName">Bags and Footwear</span>
             <br />
-            <input type="checkbox" id="dresses" value="Dresses" />
+            <input type="checkbox" id="dresses" class="category" value="Dresses" />
             <span class="itemName">Dresses</span>
             <br />
-            <input type="checkbox" id="jewellery" value="Jewellery" />
+            <input type="checkbox" id="jewellery" class="category" value="Jewellery" />
             <span class="itemName">Jewellery</span>
             <br />
             <!-- fabricSection -->
@@ -474,8 +476,9 @@
          </div>
         <div class="Rproducts"></div>
     </div>
+    <div class="page-container"></div>
 
-<script src="./scripts/script.js"></script>
+
 <script src="./scripts/viewall.js"></script>
 <script src="https://kit.fontawesome.com/89893932a7.js" crossorigin="anonymous"></script>
 

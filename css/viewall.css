@@ -406,6 +406,27 @@ span,
   font-weight: bold;
   text-align: center;
 }
+.page-container{
+  width: 30%;
+  margin: auto;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 70px;
+
+  justify-content: space-evenly;
+}
+.pages{
+border-radius: 50px;
+height: 40px;
+width: 40px;
+border: 0;
+background-color: white;
+cursor: pointer;
+}
+.pages:hover{
+  background-color: #f43397;
+  color: #f2f2f2;
+}
 
 @media screen and (min-width: 451px) and (max-width: 800px) {
   .Rproducts {

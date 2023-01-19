@@ -22,7 +22,7 @@ function showProduct(data){
     let card=`
     <div class="item">
     <img class="product-image"src="${data.images[0]}" alt="">
-    <p>${data.name}</p>
+    <p>${data.title}</p>
     <span class="price">₹</span>
     <span class="price">${data.original_price}
     </span>

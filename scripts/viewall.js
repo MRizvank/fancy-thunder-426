@@ -5,15 +5,12 @@ backtoHOme.addEventListener("click", () => {
 
 let products = JSON.parse(localStorage.getItem("products")) || []
 
-fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=2&_limit=15")//?_page=3&_limit=10
+fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=1&_limit=20")//?_page=3&_limit=10
     .then((res) => {
         return res.json();
     })
     .then((data) => {
         showData(data)
-        // renderCards(data)
-
-
     })
 
 function showData(data) {
@@ -22,7 +19,7 @@ function showData(data) {
         let card = `
                         <div class="Rcard" data-id="${element.id}">
                         <img src="${element.images[0]}" alt="${element.images[0]}">
-                        <p class="title">${element.name.substr(0, 20)}</p>
+                        <p class="title">${element.title ?element.title.substr(0, 20):"No tittle"}</p>
                         <p class="price">
                         <span class="price">₹</span>
                         <span class="price">${element.original_price}</span>
@@ -81,8 +78,88 @@ function getCard(id, image, name, price, rating) {
 function renderCards(data) {
     let cardList = `
     <div class="card-list">
-    ${data.map(item => getCard(item.id, item.images, item.name, item.original_price, item.rating)).join("")}
+    ${data.map(item => getCard(item.id, item.images, item.title, item.original_price, item.rating)).join("")}
     </div>
     `
     document.querySelector(".Rproducts").innerHTML = cardList
 }
+
+
+
+
+
+// document.querySelector(".downloadPlayButton").addEventListener("click", () => {
+//     location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+// })
+document.getElementById("playStore").addEventListener("click", () => {
+    location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+})
+document.getElementById("appStore").addEventListener("click", () => {
+    location.href = "https://apps.apple.com/us/app/meesho/id1457958492"
+})
+
+document.querySelector(".sellerContainer").addEventListener("click", () => {
+    location.href = "BecomeSupplier.html"
+})
+
+//filtering
+ let category = document.querySelectorAll(".category")
+for (let item of category) {
+    item.addEventListener("change", () => {
+        if (item.checked) {
+            console.log(item.value)
+        } else {
+            console.error("not")
+        }
+    })
+}
+
+
+//pagination code 
+let primaryButtons=[
+    {text:"1",'data-id':1},
+    {text:"2",'data-id':2},
+    {text:"3",'data-id':3},
+    {text:"4",'data-id':4},
+    {text:"5",'data-id':5},
+    {text:"6",'data-id':6}
+    // {text:"7",'data-id':7},
+    // {text:"8",'data-id':8},
+    // {text:"9",'data-id':9},
+    // {text:"10",'data-id':10},
+    // {text:"11",'data-id':11}
+];
+
+function getAsButton(text,dataid){
+    return `<button class="pages" data-id=${dataid}>${text}</button>`
+}
+
+function renderButtons(){
+    document.querySelector(".page-container").innerHTML=`
+    ${primaryButtons.map(button=>{
+        return getAsButton(button.text,button["data-id"])
+    }).join("")}
+
+    `
+}
+
+renderButtons()
+//giving functionality to buttons 
+
+let buttons=document.querySelectorAll(".pages");
+for(let item of buttons){
+    item.addEventListener("click",(e)=>{
+        e.preventDefault()
+        fetch(`https://sleepy-puce-greyhound.cyclic.app/products?_page=${e.target.dataset.id}&_limit=20`)
+    .then((res) => {
+        return res.json();
+    })
+    .then((data) => {
+        showData(data)
+    })
+
+        
+
+    })
+}
+

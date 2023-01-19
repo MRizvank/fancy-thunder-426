@@ -54,10 +54,10 @@ function showData(data) {
         let card = `
                         <div class="Rcard" data-id="${element.id}">
                         <img src="${element.images[0]}" alt="${element.images[0]}">
-                        <p class="product-title">${element.name.substr(0, 20)}</p>
+                        <p class="product-title">${element.title ? element.title.substr(0, 20):"No tittle"}</p>
                         <p class="price">
                         <span class="price">₹</span>
-                        <span  class="price">${element.original_price}</span>
+                        <span class="price">${element.original_price}</span>
                         </p>
                         <div class="delivery">Free Delivery</div>
                         <div class="rating">${element.rating}<i class="fa-solid fa-star"></i></div>
@@ -103,7 +103,7 @@ let logo = document.getElementById("logo")
 logo.addEventListener("click", () => {
     location.href = "index.html"
 })
-//gettheDownloadBTn
+
 document.querySelector(".downloadPlayButton").addEventListener("click", () => {
     location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
 })
