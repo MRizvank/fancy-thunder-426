@@ -1,349 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    #navfather {
-      background-color: #fff;
-      position: sticky;
-      top: 0px;
-    }
 
-    #nav {
-      display: flex;
-      width: 80%;
-      height: 90px;
-      margin: auto;
-      justify-content: space-between;
-      align-items: center;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iskra Supplier: Sell online on Messho at 0% commission</title>
+  <link rel="icon" href="./feviIcon/android-chrome-512x512.png" />
+  <link rel="stylesheet" href="./css/becomesupplier.css" />
+</head>
 
-    #navlinks {
-      display: flex;
-      width: 55%;
-      justify-content: space-between;
-    }
+<body>
+  <div id="navfather">
+    <div id="nav">
+      <div>
+        <img id="logo" src="./img/project logo1.jpg" style="width: 160px" alt="" />
+      </div>
+      <div id="navlinks">
+        <span>Sell Online</span>
+        <span>How It Works</span>
+        <span>Pricing & Commission</span>
+        <span>Shipping & Returns</span>
+        <span>Grow Business</span>
+      </div>
+      <div>
+        <button id="login">Login</button>
+        <button id="selling">Start Selling</button>
+      </div>
+    </div>
+  </div>
 
-    #navlinks span {
-      font-size: 15px;
-      font-family: Arial, sans-serif;
-    }
+  <div id="container">
+    <div id="heading">
+      <h1 style="font-size: 36px">Sell online to 11Cr+ customers at</h1>
+      <h1 style="color: #f43397; font-size: 36px">0% Commission</h1>
+      <p class="paragraph-2">
+        Become a Meesho seller and grow your business across India
+      </p>
+      <div style="display: flex">
+        <input id="number" type="tel" placeholder="Enter Your Mobile Number" />
+        <input id="numbutton" value="Start Selling" type="submit" />
+      </div>
+    </div>
+    <div id="rightcontainer">
+      <div style="width: 50%">
+        <img src="https://supplier.meesho.com/images/Desktop-Pic.png" alt="" />
+      </div>
+    </div>
+  </div>
 
-    #navlinks span:hover {
-      cursor: pointer;
-      color: #f43397;
-    }
+  <div id="boxes">
+    <div>
+      <h1 style="color: #f43397; font-family: Poppins, sans-serif">
+        6 lakh+
+      </h1>
+      <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+        Trust Meesho to sell online
+      </h1>
+    </div>
+    <div>
+      <h1 style="color: #f43397; font-family: Poppins, sans-serif">
+        11 Crore+
+      </h1>
+      <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+        Customers buying across India
+      </h1>
+    </div>
+    <div>
+      <h1 style="color: #f43397; font-family: Poppins, sans-serif">28000+</h1>
+      <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+        Pincode Supported for delivery
+      </h1>
+    </div>
+    <div>
+      <h1 style="color: #f43397; font-family: Poppins, sans-serif">700+</h1>
+      <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
+        Categories to sell online
+      </h1>
+    </div>
+  </div>
 
-    #selling {
-      background-color: #f43397;
-      color: #fff;
-      padding: 10px 25px;
-      border: 1px solid #f43397;
-      border-radius: 5px;
-      font-size: 14px;
-    }
+  <div id="suppliers">
+    <div style="width: 460px; font-family: Poppins, sans-serif">
+      <h2 style="font-size: 28px">Why Suppliers Love Meesho</h2>
+      <p style="font-size: 17px; line-height: 26px">
+        All the benefits that come with selling on Meesho are designed to help
+        you sell more, and make it easier to grow your business.
+      </p>
+    </div>
+    <div id="list">
+      <div class="listitems">
+        <div style="margin-right: 10px">
+          <img src="https://supplier.meesho.com/images/icon-10.svg" alt="" />
+        </div>
 
-    #login {
-      padding: 10px 25px;
-      border: 1px solid #f43397;
-      border-radius: 5px;
-      background-color: #fff;
-      color: #f43397;
-      font-size: 14px;
-    }
-
-    #login:hover {
-      cursor: pointer;
-      background-color: #f43397;
-      color: white;
-    }
-
-    #selling:hover {
-      cursor: pointer;
-      background-color: #fff;
-      color: #f43397;
-    }
-
-    #container {
-      background-color: #fdf7f9;
-      display: flex;
-      padding: 20px;
-    }
-
-    #rightcontainer {
-      background-image: url("https://supplier.meesho.com/images/Desktop-Background-1.png");
-      background-size: 100%;
-      background-color: #fff4fa;
-      display: flex;
-      justify-content: center;
-      /* position: absolute;
-        left: auto;
-        top: auto;
-        right: 0%;bottom: 10%;z-index: -1;max-width: 60%; */
-    }
-
-    #rightcontainer img {
-      width: 100%;
-    }
-
-    #heading {
-      width: 50%;
-      margin: auto;
-      font-family: Poppins, sans-serif;
-    }
-
-    .paragraph-2 {
-      font-family: Poppins, sans-serif;
-      font-size: 15px;
-      line-height: 24px;
-    }
-
-    #number {
-      height: 28px;
-      min-width: 320px;
-      padding-left: 50px;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      font-family: Poppins, sans-serif;
-      font-size: 14px;
-      border: 1px solid #cccccc;
-      padding: 8px 12px;
-    }
-
-    #numbutton {
-      height: 46px;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
-      background-color: #f43397;
-      font-family: Poppins, sans-serif;
-      display: inline-block;
-      padding: 9px 15px;
-      color: white;
-      border: 0;
-      cursor: pointer;
-    }
-
-    #boxes {
-      width: 80%;
-      margin: auto;
-      display: flex;
-      margin-bottom: 80px;
-      margin-top: 80px;
-    }
-
-    #boxes div {
-      width: 20%;
-      margin: auto;
-      background-color: #f6f7f9;
-      border-radius: 10px;
-      padding: 25px;
-    }
-
-    #suppliers {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 80%;
-      margin: auto;
-      align-items: center;
-    }
-
-    #list {
-      padding: 0px 45px;
-      border: solid #e7eeff 2px;
-      border-radius: 10px;
-    }
-
-    .listitems {
-      display: flex;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      border-bottom: 2px solid #e7eeff;
-      font-family: Poppins, sans-serif;
-    }
-
-    .listitemtitle {
-      margin-bottom: 10px;
-      color: #000;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .main2 {
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-    .bluebg {
-      background-color: rgba(231, 238, 255, 0.4);
-    }
-    .leftheading {
-      padding-top: 80px;
-      width: 33.33333333%;
-    }
-  </style>
-
-  <body>
-    <div id="navfather">
-      <div id="nav">
         <div>
-          <img
-            id="logo"
-            src="./img/project logo1.jpg"
-            style="width: 160px"
-            alt=""
-          />
+          <div class="listitemtitle">0% Commission Fee</div>
+          <div>
+            Suppliers selling on Meesho keep 100% of their profit by not
+            paying any commission
+          </div>
         </div>
-        <div id="navlinks">
-          <span>Sell Online</span>
-          <span>How It Works</span>
-          <span>Pricing & Commission</span>
-          <span>Shipping & Returns</span>
-          <span>Grow Business</span>
+      </div>
+
+      <div class="listitems">
+        <div style="margin-right: 10px">
+          <img src="https://supplier.meesho.com/images/icon-16.svg" alt="" />
+        </div>
+
+        <div>
+          <div class="listitemtitle">0 Penalty Charges</div>
+          <div>
+            Sell online without the fear of order cancellation charges with 0
+            Penalty for late dispatch or order cancellations.
+          </div>
+        </div>
+      </div>
+      <div class="listitems">
+        <div style="margin-right: 10px">
+          <img src="https://supplier.meesho.com/images/icon-11.svg" alt="" />
+        </div>
+
+        <div>
+          <div class="listitemtitle">Growth for Every Supplier</div>
+          <div>
+            From small to large and unbranded to branded, all suppliers have
+            grown their businesses on Meesho
+          </div>
+        </div>
+      </div>
+      <div class="listitems">
+        <div style="margin-right: 10px">
+          <img src="https://supplier.meesho.com/images/icon-12.svg" alt="" />
+        </div>
+
+        <div>
+          <div class="listitemtitle">Ease of Doing Business</div>
+          <div>
+            tick Easy Product Listing tick Lowest Cost Shipping tick 7-Day
+            Payment Cycle from the delivery date
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main2">
+    <div class="bluebg">
+      <div class="leftheading">
+        <h2 style="font-size: 28px; font-family: Poppins, sans-serif">
+          Exclusive Supplier+ Rewards for the first 30 days
+        </h2>
+      </div>
+      <div class="Am-main2-sub">
+        <div class="Am-main2-sub-1">
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-1.svg" loading="lazy" alt="Icon 1" class="block-v3-icon">
+            <h5 class="block-v3-title">Free catalog visibility of ₹1200</h5>
+            <p class="block-v3-text">Run advertisements for your catalogs to increase the visibility of your products and get more orders</p>
+          </div>
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-6.svg" loading="lazy" alt="Icon 6" class="block-v3-icon">
+            <h5 class="block-v3-title">Free Return Shipping</h5>
+            <p class="block-v3-text">Send out your orders stress-free with zero fees on return shipping for the first month</p>
+          </div>
+        </div>
+        
+        <div  class="Am-main2-sub-2">
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-5.svg" loading="lazy" alt="Icon 5" class="block-v3-icon">
+            <h5 class="block-v3-title">Dedicated Catalog Manager</h5>
+            <p class="block-v3-text">Clear all your cataloging doubts like how to upload catalogs, correct quality check errors and more</p>
+          </div>
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-7.svg" loading="lazy" alt="Icon 7" class="block-v3-icon">
+            <h5 class="block-v3-title">No Order Cancellation Charges</h5>
+            <p class="block-v3-text">Cancel orders that you can’t fulfil for unforeseen reasons without worrying about penalties</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Day3 -->
+
+  <div class="main4">
+    <h2 class="heading4">Experiences suppliers love to talk about</h2>
+    <div class="gridlayout">
+      <div class="blockv2">
+        <img src="https://supplier.meesho.com/images/rajat-amit-jain-testimonials.png" alt="">
+
+        <div class="padding-20">
+          <h4 class="block-v2-title">Amit and Rajat Jain</h4>
+          <h6 class="block-v2-subtitle">Smartees, Tiruppur</h6>
+          <p class="block-v2-text">Our business has grown beyond our imagination, getting upto 10,000 orders
+            consistently during sale days. We are now constantly bringing new products thanks to Meesho's
+            insights.</p>
+        </div>
+      </div>
+      <div class="blockv2">
+        <img src="https://supplier.meesho.com/images/suman-testimonial-p-500.png" alt="">
+
+        <div class="padding-20">
+          <h4 class="block-v2-title">Suman</h4>
+          <h6 class="block-v2-subtitle">Keshav Fashion, Hisar</h6>
+          <p class="block-v2-text">I started selling on Meesho with 4-5 orders on the very first day. In no
+            time I was getting over 1000 orders a day, like a dream come true.</p>
+        </div>
+      </div>
+      <div class="blockv2">
+        <img src="https://supplier.meesho.com/images/rathi-family-testimonial.png" alt="">
+
+        <div class="padding-20">
+          <h4 class="block-v2-title">Mohit Rathi</h4>
+          <h6 class="block-v2-subtitle">Meira Jewellery, Ahmedabad</h6>
+          <p class="block-v2-text">Meesho made it extremely simple to transition to online business during
+            lockdown. Suddenly we were all over India to our surprise, seeing up to 5X growth on sale days.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main5">
+    <div class="space-40"></div>
+    <h2 class="heading5">How it works</h2>
+    <div class="space-20"></div>
+    <div class="grey-background">
+      <div class="main5grid">
+        <div class="block-v4">
+          <div class="block-v4-number">
+            <div>1</div>
+            <div class="block-v4-line"></div>
+          </div>
+          <div>
+            <div class="block-v4-titlle">Create Account</div>
+            <div class="block-v4-text">All you need is :</div>
+            <ul role="list" class="block-v4-list">
+              <li class="list-item-pink">
+                <div class="grey-color">GSTIN</div>
+              </li>
+              <li class="list-item-pink">
+                <div class="grey-color">Bank Account</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="block-v4">
+          <div class="block-v4-number">
+            <div>2</div>
+            <div class="block-v4-line"></div>
+          </div>
+          <div>
+            <div class="block-v4-titlle">List Products</div>
+            <div class="block-v4-text">List the products you want to sell in your supplier panel</div>
+          </div>
+        </div>
+        <div class="block-v4">
+          <div class="block-v4-number">
+            <div>3</div>
+            <div class="block-v4-line"></div>
+          </div>
+          <div>
+            <div class="block-v4-titlle">Get Orders</div>
+            <div class="block-v4-text">Start getting orders from crores of Indians actively shopping on our
+              platform.</div>
+          </div>
+        </div>
+        <div class="block-v4">
+          <div class="block-v4-number">
+            <div>4</div>
+            <div class="block-v4-line"></div>
+          </div>
+          <div>
+            <div class="block-v4-titlle">Lowest Cost Shipping</div>
+            <div class="block-v4-text">Products are shipped to customers at lowest costs</div>
+          </div>
+        </div>
+        <div class="block-v4">
+          <div class="block-v4-number">
+            <div>5</div>
+          </div>
+          <div>
+            <div class="block-v4-titlle">Receive Payments</div>
+            <div class="block-v4-text">Payments are deposited directly to your bank account following a
+              7-day payment cycle from order delivery.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space-80"></div>
+  </div>
+
+  <div class="Am-grey-background">
+    <div class="Am-main6">
+      <div class="Am-main6-inside">
+        <div class="Am-main6-sub"><img src="https://supplier.meesho.com/images/learn-hub.svg">
+          <h2 class="Am-heading">Learn how to sell and grow your business on Meesho</h2>
+        </div>
+        <div class="Am-Buttondiv">
+          <a href="https://supplier.meesho.com/learning-hub/?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            target="_blank" class="Am-button"><img src="https://supplier.meesho.com/images/play.svg">
+            <div>Visit Learning Hub</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height:150px"></div>
+
+  <div class="main2">
+    <div class="bluebg">
+      <div class="leftheading">
+        <h2 style="font-size: 28px; font-family: Poppins, sans-serif">
+          Grow Your Business With Meesho
+        </h2>
+      </div>
+      <div class="Am-main2-sub">
+        <div class="Am-main2-sub-1">
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-3.svg" loading="lazy" alt="Icon 1" class="block-v3-icon">
+            <h5 class="block-v3-title">Lowest Shipping Costs</h5>
+            <p class="block-v3-text">Sell your products across India to over 28,000+ pincodes at lowest delivery cost.</p>
+          </div>
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-8.svg" loading="lazy" alt="Icon 6" class="block-v3-icon">
+            <h5 class="block-v3-title">Next Day Dispatch Program</h5>
+            <p class="block-v3-text">Sign up for the quick Next Day Dispatch (NDD) Program and get higher visibility and your own Account Manager</p>
+          </div>
+        </div>
+        
+        <div  class="Am-main2-sub-2">
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-2.svg" loading="lazy" alt="Icon 5" class="block-v3-icon">
+            <h5 class="block-v3-title">Ads to grow more</h5>
+            <p class="block-v3-text">Use selling tools like Meesho Ads to be more visible and sell more products</p>
+          </div>
+          <div class="block-v3"><img src="https://supplier.meesho.com/images/icon-9.svg" loading="lazy" alt="Icon 7" class="block-v3-icon">
+            <h5 class="block-v3-title">Business Insights</h5>
+            <p class="block-v3-text">Use product & price recommendations so that you’re always on top of your business</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Am-main8">
+    <h2 class="Am-heading-main8">Popular Categories to Sell Online</h2>
+    <div class="Am-main8-sub">
+      <div class="Am-main8-grid">
+        <a href="https://supplier.meesho.com/sell-online/sarees?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Sarees Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/jewellery?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Jewellery Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/tshirts?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Tshirts Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/shirts?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Shirts Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/watches?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Watches Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/electronics?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Electronics Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/clothes?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Clothes Online</div>
+        </a>
+        <a href="https://supplier.meesho.com/sell-online/socks?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+          class="Am-main8-link">
+          <div>Sell Socks Online</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="Am-grey-background">
+    <div class="space-60"></div>
+    <div class="Am-main9">
+      <div class="w-row">
+        <div class="Am-headingdiv">
+          <h2 class="Am-heading9">Meesho Supplier Support Available 24/7</h2>
+        </div>
+        <div class="Am-paradiv">
+          <p class="para9">Meesho supplier support is available to solve all your doubts and issues
+            before and after you start your online selling business.</p>
+          <div class="space-30"></div>
+          <div class="email-wrap">
+            <div><img src="https://supplier.meesho.com/images/email.svg" loading="lazy" alt="Email" class="email-icon"
+                style="margin-right: 15px;"></div>
+            <div>
+              <p class="email-text">You can reach out to</p>
+              <a href="mailto:sell@meesho.com?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+                class="normal-link">sell@meesho.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space-60"></div>
+  </div>
+
+  <div class="Am-main10">
+    <div class="Am-main10-sub">
+      <div class="Am-main10-grid">
+        <div><img src="https://supplier.meesho.com/images/footer-logo.svg" loading="lazy" alt="Logo"
+            class="footer-logo">
+          <p class="Am-footer-text">Sell your products to crores of customers on Meesho at 0% commission</p>
+          <a data-position="footer"
+            href="https://supplier.meesho.com/panel/v2/new/signup?ref=supplier_website&amp;utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"><button
+              id="selling">Start Selling</button></a>
+        </div>
+        <div id="w-node-_56e1e3b0-5d79-51bb-79e9-13175659d6ab-088bf3ae"></div>
+        <div>
+          <h5 class="footer-title">Sell on Meesho</h5>
+          <a href="https://supplier.meesho.com/sell-online?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">Sell Online</a>
+          <a href="https://supplier.meesho.com/pricing?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">Pricing &amp; Commission</a>
+          <a href="https://supplier.meesho.com/how-it-works?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">How it works</a>
+          <a href="https://supplier.meesho.com/shipping?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">Shipping &amp; Returns</a>
+          <a href="https://supplier.meesho.com/grow-your-business?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">Grow Your Business</a>
+          <a href="https://supplier.meesho.com/learning-hub/?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">Learning Hub</a>
+          <a href="https://supplier.meesho.com/ads?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">Meesho Ads</a>
+          <a href="https://www.meesho.com/?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            target="_blank" class="footer-link">Shop Online on Meesho</a>
         </div>
         <div>
-          <button id="login">Login</button>
-          <button id="selling">Start Selling</button>
+          <h5 class="footer-title">Contact Us</h5>
+          <a href="mailto:sell@meesho.com?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+            class="footer-link">sell@meesho.com</a>
+          <div class="socialnetworkdiv">
+            <a href="https://www.instagram.com/sellonmeesho/?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+              target="_blank" class="socialnetwork"><img src="https://supplier.meesho.com/images/instagram.svg"></a>
+            <a href="https://www.facebook.com/SellOnMeeshoIndia/?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+              target="_blank" class="socialnetwork"><img src="https://supplier.meesho.com/images/facebook.svg"></a>
+            <a href="https://www.youtube.com/c/MeeshoSupplierHub?utm_source=meesho&amp;utm_medium=website&amp;utm_campaign=header"
+              target="_blank" class="socialnetwork"><img src="https://supplier.meesho.com/images/Youtube-Icon.svg"></a>
+          </div>
         </div>
       </div>
+      <div class="line"></div>
+      <p>© 2015-22 Meesho Inc. All Rights Reserved.</p>
     </div>
+  </div>
 
-    <div id="container">
-      <div id="heading">
-        <h1 style="font-size: 36px">Sell online to 11Cr+ customers at</h1>
-        <h1 style="color: #f43397; font-size: 36px">0% Commission</h1>
-        <p class="paragraph-2">
-          Become a Meesho seller and grow your business across India
-        </p>
-        <div style="display: flex">
-          <input
-            id="number"
-            type="tel"
-            placeholder="Enter Your Mobile Number"
-          />
-          <input id="numbutton" value="Start Selling" type="submit" />
-        </div>
-      </div>
-      <div id="rightcontainer">
-        <div style="width: 50%">
-          <img
-            src="https://supplier.meesho.com/images/Desktop-Pic.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
+  
+  <script>
+    document.getElementById("logo").addEventListener("click", () => {
+      location.href = "index.html";
+    });
+  </script>
+</body>
 
-    <div id="boxes">
-      <div>
-        <h1 style="color: #f43397; font-family: Poppins, sans-serif">
-          6 lakh+
-        </h1>
-        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
-          Trust Meesho to sell online
-        </h1>
-      </div>
-      <div>
-        <h1 style="color: #f43397; font-family: Poppins, sans-serif">
-          11 Crore+
-        </h1>
-        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
-          Customers buying across India
-        </h1>
-      </div>
-      <div>
-        <h1 style="color: #f43397; font-family: Poppins, sans-serif">28000+</h1>
-        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
-          Pincode Supported for delivery
-        </h1>
-      </div>
-      <div>
-        <h1 style="color: #f43397; font-family: Poppins, sans-serif">700+</h1>
-        <h1 style="font-family: Poppins, sans-serif; font-size: 22px">
-          Categories to sell online
-        </h1>
-      </div>
-    </div>
-
-    <div id="suppliers">
-      <div style="width: 460px; font-family: Poppins, sans-serif">
-        <h2 style="font-size: 28px">Why Suppliers Love Meesho</h2>
-        <p style="font-size: 17px; line-height: 26px">
-          All the benefits that come with selling on Meesho are designed to help
-          you sell more, and make it easier to grow your business.
-        </p>
-      </div>
-      <div id="list">
-        <div class="listitems">
-          <div style="margin-right: 10px">
-            <img src="https://supplier.meesho.com/images/icon-10.svg" alt="" />
-          </div>
-
-          <div>
-            <div class="listitemtitle">0% Commission Fee</div>
-            <div>
-              Suppliers selling on Meesho keep 100% of their profit by not
-              paying any commission
-            </div>
-          </div>
-        </div>
-
-        <div class="listitems">
-          <div style="margin-right: 10px">
-            <img src="https://supplier.meesho.com/images/icon-16.svg" alt="" />
-          </div>
-
-          <div>
-            <div class="listitemtitle">0 Penalty Charges</div>
-            <div>
-              Sell online without the fear of order cancellation charges with 0
-              Penalty for late dispatch or order cancellations.
-            </div>
-          </div>
-        </div>
-        <div class="listitems">
-          <div style="margin-right: 10px">
-            <img src="https://supplier.meesho.com/images/icon-11.svg" alt="" />
-          </div>
-
-          <div>
-            <div class="listitemtitle">Growth for Every Supplier</div>
-            <div>
-              From small to large and unbranded to branded, all suppliers have
-              grown their businesses on Meesho
-            </div>
-          </div>
-        </div>
-        <div class="listitems">
-          <div style="margin-right: 10px">
-            <img src="https://supplier.meesho.com/images/icon-12.svg" alt="" />
-          </div>
-
-          <div>
-            <div class="listitemtitle">Ease of Doing Business</div>
-            <div>
-              tick Easy Product Listing tick Lowest Cost Shipping tick 7-Day
-              Payment Cycle from the delivery date
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="main2">
-      <div class="bluebg">
-        <div class="leftheading">
-          <h2 style="font-size: 28px; font-family: Poppins, sans-serif">
-            Exclusive Supplier+ Rewards for the first 30 days
-          </h2>
-        </div>
-      </div>
-    </div>
-    <script>
-      document.getElementById("logo").addEventListener("click", () => {
-        location.href = "index.html";
-      });
-    </script>
-  </body>
 </html>
