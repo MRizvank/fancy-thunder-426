@@ -124,13 +124,25 @@ document.querySelector(".sellerContainer").addEventListener("click", () => {
 
 
 //checkin for funcanality
-// let category = document.querySelectorAll(".category")
-// for (let item of category) {
-//     item.addEventListener("change", () => {
-//         if (item.checked) {
-//             console.log(item.value)
-//         } else {
-//             console.error("not")
-//         }
-//     })
-// }
+
+let category = document.querySelectorAll(".category")
+for (let item of category) {
+    item.addEventListener("change", () => {
+        if (item.checked) {
+            console.log(item.value)
+        } else {
+            console.error("not")
+        }
+    })
+}
+let phone=JSON.parse(localStorage.getItem("Phn"));
+let myValue=JSON.parse(localStorage.getItem("enteredvalue"));
+let password=JSON.parse(localStorage.getItem("myotp"));
+// console.log(password[password.length-1]);
+// console.log(myValue);
+// console.log(phone);
+if(password[password.length-1]==myValue){
+    document.querySelector("#rkaccess").innerText=phone;
+    console.log(phone);
+}
+

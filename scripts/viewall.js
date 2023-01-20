@@ -117,19 +117,17 @@ for (let item of category) {
 }
 
 
+
+
 //pagination code 
-let primaryButtons = [
-    { text: "1", 'data-id': 1 },
-    { text: "2", 'data-id': 2 },
-    { text: "3", 'data-id': 3 },
-    { text: "4", 'data-id': 4 },
-    { text: "5", 'data-id': 5 },
-    { text: "6", 'data-id': 6 }
-    // {text:"7",'data-id':7},
-    // {text:"8",'data-id':8},
-    // {text:"9",'data-id':9},
-    // {text:"10",'data-id':10},
-    // {text:"11",'data-id':11}
+
+let primaryButtons=[
+    {text:"1",'data-id':1},
+    {text:"2",'data-id':2},
+    {text:"3",'data-id':3},
+    {text:"4",'data-id':4},
+    {text:"5",'data-id':5},
+    {text:"6",'data-id':6}
 ];
 
 function getAsButton(text, dataid) {
