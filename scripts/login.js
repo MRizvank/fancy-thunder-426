@@ -4,7 +4,7 @@ document.getElementById("logo-container").addEventListener("click", () => {
 let num = localStorage.getItem("Phn");
 console.log(num);
 let msg = document.createElement("p");
-msg.innerText = "Enter otp sent to :" + " " + num;
+msg.innerText = "Enter OTP sent to :" + " " + num;
 msg.setAttribute("id", "msg");
 let line2 = document.createElement("p");
 line2.innerText = "Change Number";
@@ -13,7 +13,17 @@ let input = document.createElement("input");
 input.setAttribute("id", "input");
 input.setAttribute("placeholder", "Enter the OTP")
 let password = JSON.parse(localStorage.getItem("myotp"));
-
+let x=document.createElement("h6");
+//x.innerText="hii";
+let timeup=30;
+let timer=setInterval(function(){
+timeup--;
+x.innerText= "00:"+ timeup;
+if(timeup<=0){
+    clearInterval(timer);
+    location.href="signup.html";
+}
+},1000)
 
 let btn = document.createElement("button");
 btn.innerText = "Verify OTP";
@@ -33,10 +43,12 @@ btn.addEventListener("click", () => {
     }
 
 })
+let count=30;
+
 let last = document.createElement("p");
 last.innerText = "By continuing,you agree to Meesho's Terms & conditions and Privacy Policy";
 last.setAttribute("id", "last");
 
 
 
-details.append(msg, line2, input, btn, last);
+details.append(msg, line2,x, input,btn, last);
