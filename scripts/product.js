@@ -64,7 +64,7 @@ document.querySelector(".cartContainer").addEventListener("click",()=>{
 // cart functionality 
 setTimeout(() => {
   document.getElementById("addto-cart").addEventListener("click",()=>{
-    console.log("hiii");
+  
       let Incart=false;
       for(let item of cart){
         if(item.id==product){
@@ -81,7 +81,7 @@ setTimeout(() => {
         for(let item of cart){
           if( item.id==product){
             item.user_qty++;
-            console.log(item);
+          
             localStorage.setItem("cart",JSON.stringify(cart));
             alert("product added to cart")
             return
