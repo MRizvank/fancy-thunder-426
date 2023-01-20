@@ -4,6 +4,7 @@ let serachClose = document.getElementById("searchClose")
 let formInput = document.getElementById("form")
 let recentSearchList = document.querySelector(".recentSerchList")
 let recentSrearch = [];
+
 let singleProduct = JSON.parse(localStorage.getItem("products")) || []
 
 
@@ -37,7 +38,7 @@ formInput.addEventListener("submit", (e) => {
     recentSearchList.innerHTML = recentSerchListEl
 })
 
-fetch("https://sleepy-puce-greyhound.cyclic.app/products")//?_page=3&_limit=10
+fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=3&_limit=10")//?_page=3&_limit=10
     .then((res) => {
         return res.json();
     })
@@ -54,7 +55,7 @@ function showData(data) {
         let card = `
                         <div class="Rcard" data-id="${element.id}">
                         <img src="${element.images[0]}" alt="${element.images[0]}">
-                        <p class="product-title">${element.title ? element.title.substr(0, 20):"No tittle"}</p>
+                        <p class="product-title">${element.title ? element.title.substr(0, 20) : "No tittle"}</p>
                         <p class="price">
                         <span class="price">₹</span>
                         <span class="price">${element.original_price}</span>
@@ -90,6 +91,8 @@ function showData(data) {
                 console.log(singleProduct)
                 localStorage.setItem("products", JSON.stringify(singleProduct))
                 window.location.replace("./product.html");
+            } else {
+                console.log("thakur to gayo")
             }
 
         })
@@ -121,6 +124,7 @@ document.querySelector(".sellerContainer").addEventListener("click", () => {
 
 
 //checkin for funcanality
+
 let category = document.querySelectorAll(".category")
 for (let item of category) {
     item.addEventListener("change", () => {
@@ -141,3 +145,4 @@ if(password[password.length-1]==myValue){
     document.querySelector("#rkaccess").innerText=phone;
     console.log(phone);
 }
+
