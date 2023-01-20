@@ -106,6 +106,11 @@ let logo = document.getElementById("logo")
 logo.addEventListener("click", () => {
     location.href = "index.html"
 })
+//cart
+
+document.querySelector(".cartContainer").addEventListener("click",()=>{
+    location.href="cart.html"
+})
 
 document.querySelector(".downloadPlayButton").addEventListener("click", () => {
     location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"

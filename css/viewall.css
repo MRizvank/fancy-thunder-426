@@ -372,6 +372,7 @@ nav ul a {
   margin: auto;
   border-radius: 8px;
   height: 390px;
+  cursor:  pointer;
 }
 .title {
   color: #8c8c8c;
