@@ -642,3 +642,10 @@ padding-right: 10px;
   font-weight: 500 ;
  padding: 5px;
 }
+#rkaccess{
+  font-size: 20px;
+}
+#rkhello{
+  font-size: 20px;
+  color: red;
+}

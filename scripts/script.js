@@ -143,6 +143,7 @@ let password=JSON.parse(localStorage.getItem("myotp"));
 // console.log(phone);
 if(password[password.length-1]==myValue){
     document.querySelector("#rkaccess").innerText=phone;
-    console.log(phone);
+    document.querySelector("#rkhello").innerText="Hello Resham";
+    document.querySelector("#rksignup").innerText="Log Out";
 }
 
