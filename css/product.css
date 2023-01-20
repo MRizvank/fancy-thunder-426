@@ -1,4 +1,106 @@
+.prodcutOrderContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+ margin-top: 50px;
+}
+.productImageArea{
+  padding: 20px;
+  
+}
 
-.product-image{
-  width: 350px;
+.productImageArea img{
+  width: 400px;
+height: 500px;
+border: 1px solid grey;
+}
+.btuttons{
+  display: flex;
+}
+.btuttons button{
+  height: 50px;
+  width: 185px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px;
+  margin: 7px;
+} 
+.atcBtn button{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.buyNowBtn button{
+  background-color: #f43397;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.productDetailsArea {
+  padding: 25px;
+  margin-top: 25px;
+  width: 60%;
+}
+.productDetailsArea h3,p,h1,span{
+  margin: 0;
+  padding: 0;
+}
+.aboutDetails,.sizeDetails ,.productDetails{
+  border: 1px solid grey;
+  padding: 25px;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+/* foooter part */
+.footerContainer{
+  display: flex;
+
+  margin: auto;justify-content: space-between;
+  margin-top: 50px;
+ 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 20px;
+}
+.footerContainer p{
+  color: var(--textColor);
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+.detailsAppDownloadContainer{
+  display: flex;
+  margin-top: 20px;
+}
+.detailsAppDownloadContainer img{
+width: 200px;
+padding-right: 10px;
+}
+.socialMediaPoster{
+  display: flex;
+  align-items: center;
+}
+
+.socialMediaPoster img{
+  width: 30px;
+  padding-right: 5px;
+}
+
+.detailsContainer5 p{
+  font-size: 13px;
+}
+
+.detailsContainer2,.detailsContainer3{
+  margin-top: 25px;
+}
+.detailsContainer2,.detailsContainer3 p{
+  font-weight: 500 ;
+ padding: 5px;
 }

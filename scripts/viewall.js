@@ -19,7 +19,7 @@ function showData(data) {
         let card = `
                         <div class="Rcard" data-id="${element.id}">
                         <img src="${element.images[0]}" alt="${element.images[0]}">
-                        <p class="title">${element.title ?element.title.substr(0, 20):"No tittle"}</p>
+                        <p class="title">${element.title ? element.title.substr(0, 20) : "No tittle"}</p>
                         <p class="price">
                         <span class="price">₹</span>
                         <span class="price">${element.original_price}</span>
@@ -46,6 +46,8 @@ function showData(data) {
             item.style.backgroundColor = "#ee7212"
         }
     }
+
+    
     let divs = document.querySelectorAll(".Rcard")
     for (let item of divs) {
         item.addEventListener("click", (e) => {
@@ -103,7 +105,7 @@ document.querySelector(".sellerContainer").addEventListener("click", () => {
 })
 
 //filtering
- let category = document.querySelectorAll(".category")
+let category = document.querySelectorAll(".category")
 for (let item of category) {
     item.addEventListener("change", () => {
         if (item.checked) {
@@ -116,13 +118,13 @@ for (let item of category) {
 
 
 //pagination code 
-let primaryButtons=[
-    {text:"1",'data-id':1},
-    {text:"2",'data-id':2},
-    {text:"3",'data-id':3},
-    {text:"4",'data-id':4},
-    {text:"5",'data-id':5},
-    {text:"6",'data-id':6}
+let primaryButtons = [
+    { text: "1", 'data-id': 1 },
+    { text: "2", 'data-id': 2 },
+    { text: "3", 'data-id': 3 },
+    { text: "4", 'data-id': 4 },
+    { text: "5", 'data-id': 5 },
+    { text: "6", 'data-id': 6 }
     // {text:"7",'data-id':7},
     // {text:"8",'data-id':8},
     // {text:"9",'data-id':9},
@@ -130,14 +132,14 @@ let primaryButtons=[
     // {text:"11",'data-id':11}
 ];
 
-function getAsButton(text,dataid){
+function getAsButton(text, dataid) {
     return `<button class="pages" data-id=${dataid}>${text}</button>`
 }
 
-function renderButtons(){
-    document.querySelector(".page-container").innerHTML=`
-    ${primaryButtons.map(button=>{
-        return getAsButton(button.text,button["data-id"])
+function renderButtons() {
+    document.querySelector(".page-container").innerHTML = `
+    ${primaryButtons.map(button => {
+        return getAsButton(button.text, button["data-id"])
     }).join("")}
 
     `
@@ -146,19 +148,19 @@ function renderButtons(){
 renderButtons()
 //giving functionality to buttons 
 
-let buttons=document.querySelectorAll(".pages");
-for(let item of buttons){
-    item.addEventListener("click",(e)=>{
+let buttons = document.querySelectorAll(".pages");
+for (let item of buttons) {
+    item.addEventListener("click", (e) => {
         e.preventDefault()
         fetch(`https://sleepy-puce-greyhound.cyclic.app/products?_page=${e.target.dataset.id}&_limit=20`)
-    .then((res) => {
-        return res.json();
-    })
-    .then((data) => {
-        showData(data)
-    })
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                showData(data)
+            })
 
-        
+
 
     })
 }
