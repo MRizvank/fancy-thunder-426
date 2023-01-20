@@ -86,9 +86,9 @@ function showData(data) {
         item.addEventListener("click", (e) => {
             e.preventDefault();
             if (e.target.dataset.id != undefined) {
-                products.unshift(e.target.dataset.id)
-                console.log(products)
-                localStorage.setItem("products", JSON.stringify(products))
+                singleProduct.unshift(e.target.dataset.id)
+                console.log(singleProduct)
+                localStorage.setItem("products", JSON.stringify(singleProduct))
                 window.location.replace("./product.html");
             }
 
