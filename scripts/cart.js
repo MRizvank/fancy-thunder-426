@@ -17,10 +17,12 @@ function showCartData(data){
         <div class="card-image"> <img src="${element.images[0]}" alt=""></div>
         <div class="details">
         <p>${element.title}</p>
-        <p>Size:${element.sizes[0]} Qty:${element.user_qty}</p>
+        <p>Size:${element.sizes[0]} &nbsp&nbsp Qty:${element.user_qty}</p>
         <p>₹${element.original_price}</p>
         <button id="remove">REMOVE</button>
         </div>
+        <hr>
+        <div>Supplier: ABC &nbsp Free delivery</div>
         </div>
         `
         // let btn=document.createElement("button")

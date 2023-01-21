@@ -54,6 +54,8 @@ function showProduct(data) {
   document.querySelector(".prodcutOrderContainer").innerHTML = card;
 }
 
+
+
 //cart
 
 document.querySelector(".cartContainer").addEventListener("click",()=>{
@@ -61,10 +63,13 @@ document.querySelector(".cartContainer").addEventListener("click",()=>{
 })
 
 
+// let price =document.getElementsByName("prating")
+// console.log(price);
+
 // cart functionality 
 setTimeout(() => {
   document.getElementById("addto-cart").addEventListener("click",()=>{
-    console.log("hiii");
+  
       let Incart=false;
       for(let item of cart){
         if(item.id==product){
@@ -81,7 +86,7 @@ setTimeout(() => {
         for(let item of cart){
           if( item.id==product){
             item.user_qty++;
-            console.log(item);
+          
             localStorage.setItem("cart",JSON.stringify(cart));
             alert("product added to cart")
             return
