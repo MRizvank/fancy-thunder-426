@@ -21,25 +21,23 @@ input.setAttribute("placeholder", "Enter the OTP")
 let password = JSON.parse(localStorage.getItem("myotp")) || [];
 let x = document.createElement("h6");
 //x.innerText="hii";
-let y = document.createElement("h3");
-let timeup = 5;
-let timer = setInterval(function () {
-    timeup--;
-    x.innerText = "00:" + timeup;
-    if (timeup <= 0) {
-        x.innerText = null
-        clearInterval(timer);
-        // location.href="signup.html";
-    }
-}, 1000);
-let resendtime = setTimeout(function () {
-    y.innerText = "Resend OTP";
-    y.style.color = "red";
-    y.addEventListener("click", () => {
-        let newOTP = Math.floor(Math.random() * 9000 + 1000);
-        password.push(newOTP)
-        localStorage.setItem("myotp", JSON.stringify(password))
-        alert(newOTP)
+
+let y=document.createElement("h3");
+let timeup=5;
+let timer=setInterval(function(){
+timeup--;
+x.innerText= "00:"+ timeup;
+if(timeup<=0){
+    clearInterval(timer);
+   // location.href="signup.html";
+}
+},1000);
+let resendtime=setTimeout(function(){
+    y.innerText="resend otp";
+    y.style.color="red";
+    y.addEventListener("click",()=>{
+        alert(Math.floor(Math.random() * 9000 + 1000));
+
         if (password[password.length - 1] == finalvalue) {
             let loginValue = true;
             localStorage.setItem("login", JSON.stringify(loginValue));
@@ -47,11 +45,14 @@ let resendtime = setTimeout(function () {
 
             window.location.href = "index.html";
         } else {
+            console.log("hii");
             alert("Please fill correct otp");
             // window.location.href = "login.html"
         }
     })
-}, 6000);
+
+},6000);
+
 
 let btn = document.createElement("button");
 btn.innerText = "Verify OTP";
