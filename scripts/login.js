@@ -16,7 +16,7 @@ let password = JSON.parse(localStorage.getItem("myotp"));
 let x=document.createElement("h6");
 //x.innerText="hii";
 let y=document.createElement("h3");
-let timeup=30;
+let timeup=5;
 let timer=setInterval(function(){
 timeup--;
 x.innerText= "00:"+ timeup;
@@ -34,11 +34,12 @@ let resendtime=setTimeout(function(){
             alert("login Successful");
             window.location.href = "index.html";
         } else {
+            console.log("hii");
             alert("Please fill correct otp");
            // window.location.href = "login.html"
         }
     })
-},31000);
+},6000);
 
 let btn = document.createElement("button");
 btn.innerText = "Verify OTP";
