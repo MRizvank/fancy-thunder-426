@@ -1,6 +1,12 @@
 document.getElementById("logo-container").addEventListener("click", () => {
     location.href = "index.html"
 })
+// checking for login function
+
+
+
+
+// here is writin code for OTP thing
 let num = localStorage.getItem("Phn");
 console.log(num);
 let msg = document.createElement("p");
@@ -12,33 +18,40 @@ line2.style.color = "crimson";
 let input = document.createElement("input");
 input.setAttribute("id", "input");
 input.setAttribute("placeholder", "Enter the OTP")
-let password = JSON.parse(localStorage.getItem("myotp"));
-let x=document.createElement("h6");
+let password = JSON.parse(localStorage.getItem("myotp")) || [];
+let x = document.createElement("h6");
 //x.innerText="hii";
-let y=document.createElement("h3");
-let timeup=30;
-let timer=setInterval(function(){
-timeup--;
-x.innerText= "00:"+ timeup;
-if(timeup<=0){
-    clearInterval(timer);
-   // location.href="signup.html";
-}
-},1000);
-let resendtime=setTimeout(function(){
-    y.innerText="resend otp";
-    y.style.color="red";
-    y.addEventListener("click",()=>{
-        alert(Math.floor(Math.random() * 9000 + 1000));
+let y = document.createElement("h3");
+let timeup = 5;
+let timer = setInterval(function () {
+    timeup--;
+    x.innerText = "00:" + timeup;
+    if (timeup <= 0) {
+        x.innerText = null
+        clearInterval(timer);
+        // location.href="signup.html";
+    }
+}, 1000);
+let resendtime = setTimeout(function () {
+    y.innerText = "Resend OTP";
+    y.style.color = "red";
+    y.addEventListener("click", () => {
+        let newOTP = Math.floor(Math.random() * 9000 + 1000);
+        password.push(newOTP)
+        localStorage.setItem("myotp", JSON.stringify(password))
+        alert(newOTP)
         if (password[password.length - 1] == finalvalue) {
-            alert("login Successful");
+            let loginValue = true;
+            localStorage.setItem("login", JSON.stringify(loginValue));
+            alert("Login Successful");
+
             window.location.href = "index.html";
         } else {
             alert("Please fill correct otp");
-           // window.location.href = "login.html"
+            // window.location.href = "login.html"
         }
     })
-},31000);
+}, 6000);
 
 let btn = document.createElement("button");
 btn.innerText = "Verify OTP";
@@ -50,15 +63,17 @@ btn.addEventListener("click", () => {
     let finalvalue = localStorage.getItem("enteredvalue");
 
     if (password[password.length - 1] == finalvalue) {
-        alert("login Successful");
+        let loginValue = true;
+        localStorage.setItem("login", JSON.stringify(loginValue));
+        alert("Login Successful");
         window.location.href = "index.html";
     } else {
         alert("Please fill correct otp");
-       // window.location.href = "login.html"
+        // window.location.href = "login.html"  
     }
 
 })
-let count=30;
+let count = 30;
 
 let last = document.createElement("p");
 last.innerText = "By continuing,you agree to Meesho's Terms & conditions and Privacy Policy";
@@ -66,4 +81,4 @@ last.setAttribute("id", "last");
 
 
 
-details.append(msg, line2,x,y, input,btn, last);
+details.append(msg, line2, x, y, input, btn, last);
