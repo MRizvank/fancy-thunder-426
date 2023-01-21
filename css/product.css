@@ -9,6 +9,12 @@
   padding: 20px;
   
 }
+.cartContainer{
+  cursor: pointer;
+}
+.profileContainer{
+  cursor: pointer;
+}
 
 .productImageArea img{
   width: 400px;
@@ -31,12 +37,14 @@ border: 1px solid grey;
   color: black;
   border: 1px solid black;
   border-radius: 5px;
+  cursor: pointer;
 }
 .buyNowBtn button{
   background-color: #f43397;
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .productDetailsArea {

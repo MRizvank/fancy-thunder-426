@@ -1,0 +1,200 @@
+.nav {
+    padding-left: 70px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 50px;
+}
+
+.Am-main {
+    display: flex;
+    width: 960px;
+    margin: auto;
+}
+
+.Am-sub {
+    font-size: 25px;
+}
+
+.container {
+    margin-left: 100px;
+    width: 500px;
+    padding-right: 23px;
+}
+
+.qwe1 {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.Am-title {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    padding: 0px 12px 0px 0px;
+}
+
+
+.asd {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(211, 244, 234);
+}
+
+.icon-1 {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+
+
+.text-1 {
+    font-family: Poppins, sans-serif;
+    margin-left: 5px;
+}
+
+.icondiv-2 {
+    width: 45px;
+    height: 45px;
+    margin-left: 100px;
+}
+
+.icon-2 {
+    width: 30px;
+    height: 30px;
+    margin-left: 100px;
+    margin-top: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.pricedetail {
+    padding: 15px;
+    margin: 10px;
+    margin-top: 35px;
+    padding-left: 16px;
+    width: 336px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.abc {
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+}
+
+.abc2 {
+    text-size-adjust: 100%;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-bottom: 12px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: inherit;
+}
+
+.abc3 {
+    text-size-adjust: 100%;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-top: 16px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: inherit;
+}
+
+.abc4 {
+    text-size-adjust: 100%;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+}
+
+#continue-btn {
+    cursor: pointer;
+
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    background: rgb(244, 51, 151);
+    border: none;
+    padding: 12px;
+    width: 80%;
+}
+
+.discount-div {
+    text-size-adjust: 100%;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 48px;
+    background: rgb(211, 244, 234);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.abc5 {
+    text-align: center;
+}
+
+.abc5-sub1 {
+    margin-bottom: 20px;
+}

@@ -1,5 +1,6 @@
 let products = JSON.parse(localStorage.getItem("products")) || [];
-
+let cart=JSON.parse(localStorage.getItem("cart"))||[];
+let item={}
 let product = products[0];
 fetch(`https://sleepy-puce-greyhound.cyclic.app/products/${product}`)
   .then((res) => {
@@ -7,7 +8,7 @@ fetch(`https://sleepy-puce-greyhound.cyclic.app/products/${product}`)
   })
   .then((data) => {
     showProduct(data)
-    console.log(data);
+   item=data
     if (products.length > 10) {
       products.pop()
       localStorage.setItem("products", JSON.stringify(products))
@@ -21,7 +22,7 @@ function showProduct(data) {
           <img src="${data.images[0]}" alt="">
           <div class="btuttons">
             <div class="atcBtn">
-              <button><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+              <button id="addto-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
             </div>
             <div class="buyNowBtn">
               <button><i class="fa-solid fa-angles-right"></i>Buy Now</button>
@@ -53,3 +54,49 @@ function showProduct(data) {
   document.querySelector(".prodcutOrderContainer").innerHTML = card;
 }
 
+
+
+//cart
+
+document.querySelector(".cartContainer").addEventListener("click",()=>{
+  location.href="cart.html"
+})
+
+
+// let price =document.getElementsByName("prating")
+// console.log(price);
+
+// cart functionality 
+setTimeout(() => {
+  document.getElementById("addto-cart").addEventListener("click",()=>{
+  
+      let Incart=false;
+      for(let item of cart){
+        if(item.id==product){
+          Incart=true;
+          break;
+        }
+      }
+      if(Incart==false){
+        cart.push({...item,user_qty:1});
+        localStorage.setItem("cart",JSON.stringify(cart))
+        console.log(cart);
+        alert("product added to cart")
+      }else{
+        for(let item of cart){
+          if( item.id==product){
+            item.user_qty++;
+          
+            localStorage.setItem("cart",JSON.stringify(cart));
+            alert("product added to cart")
+            return
+           }
+        }
+       
+        
+          
+      
+      }
+
+  })
+}, 2000)

@@ -154,6 +154,7 @@ form {
 }
 .profileContainer {
   display: relative;
+  cursor: pointer;
 }
 .profileContainer:hover .profileHoverContainer {
   display: block;
@@ -213,6 +214,7 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: pointer;
 }
 .sellerContainer {
   padding: 0 30px;
@@ -538,6 +540,7 @@ nav ul li:hover .subMenu {
   margin: auto;
   border-radius: 8px;
   height: 390px;
+  cursor: pointer;
 }
 .product-title {
   color: #8c8c8c;
@@ -642,10 +645,12 @@ padding-right: 10px;
   font-weight: 500 ;
  padding: 5px;
 }
+
+
 #rkaccess{
-  font-size: 20px;
+ font-weight: 700;
 }
 #rkhello{
-  font-size: 20px;
-  color: red;
+  color: var(--hoverTextColor);
+  margin: 0;
 }
