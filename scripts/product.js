@@ -54,12 +54,17 @@ function showProduct(data) {
   document.querySelector(".prodcutOrderContainer").innerHTML = card;
 }
 
+
+
 //cart
 
 document.querySelector(".cartContainer").addEventListener("click",()=>{
   location.href="cart.html"
 })
 
+
+// let price =document.getElementsByName("prating")
+// console.log(price);
 
 // cart functionality 
 setTimeout(() => {
