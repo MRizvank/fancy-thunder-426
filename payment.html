@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Section</title>
+    <link rel="icon" href="./feviIcon/android-chrome-512x512.png" />
+    <link rel="stylesheet" href="./css/payment.css" />
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="index.html"><img id="logo" src="./img/project logo1.jpg" style="width: 150px" alt="" /></a>
+    </div>
+
+
+
+    <div class="Am-main">
+
+        <div class="container">
+            <div class="qwe1">
+                <span class="Am-title">Payment Method</span>
+            </div>
+            <hr style="background-color:black">
+
+
+            <div class="asd">
+                <div class="icon-1">
+                    <img class="icon-1"
+                        src="https://img.freepik.com/premium-vector/green-color-dollar-currency-banknote-icon-cash-icon-dollar-bill-flat-vector-illustration_646737-727.jpg?w=740"
+                        alt="">
+                </div>
+                <span class="text-1">Cash on Delivery</span>
+
+                <div class="icondiv-2">
+                    <input class="icon-2" type="checkbox" id="payment-check1" onclick="check1()">
+                </div>
+            </div>
+
+            <div class="asd">
+                <div class="icon-1">
+                    <img class="icon-1"
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/upi-icon.png"
+                        alt="">
+                </div>
+                <span class="text-1">UPI Payment</span>
+
+                <div class="icondiv-2">
+                    <input style="margin-left: 125px;" class="icon-2" type="checkbox" id="payment-check2"
+                        onclick="check2()">
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="pricedetail">
+            <div style="width: inherit;">
+                <div class="abc">
+                    <span>Price Details</span>
+                    <div class="abc2">
+                        <div class="abc3">
+                            <div>
+                                <p>Total Product Price :</p>
+                            </div>
+
+                            <p id="sub-total">₹0</p>
+                        </div>
+                        <div class="abc3" style="color: rgb(3, 141, 99);">
+                            <p>Total Discounts :</p>
+                            <p id="discount">- ₹0</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="abc4">
+                        <div class="abc3"><span>Order Total :</span><span id="total">₹0</span>
+                        </div>
+                        <div class="discount-div">
+                            <picture>
+                                <img src="https://images.meesho.com/images/marketing/1657272960496.png" alt=""
+                                    width="15" height="15">
+                            </picture>
+                            <span>Yay! Your total discount is <span id="discount2">₹0</span> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="abc5">
+                <div>
+                    <button id="continue-btn">Continue</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    let btn = document.getElementById("continue-btn");
+    let qwe = document.querySelectorAll(".asd");
+    let checkbox = document.getElementById("payment-check1");
+    let checkbox2 = document.getElementById("payment-check2");
+    let subtotal = document.getElementById("sub-total");
+    let mytotal = document.getElementById("total");
+    let mydiscount= document.getElementById("discount");
+    let mydiscount2=document.getElementById("discount2")
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    btn.addEventListener("click", () => {
+
+        alert("Processing")
+        setTimeout(() => {
+            alert("Order Successfull")
+        }, 2000)
+    })
+
+
+    function check1() {
+        if (checkbox.checked == true) {
+            qwe[0].style.background = "rgb(76, 243, 193)"
+        }
+        else {
+            qwe[0].style.background = "rgb(211, 244, 234)"
+        }
+    }
+
+    function check2() {
+        if (checkbox2.checked == true) {
+            qwe[1].style.background = "rgb(76, 243, 193)"
+        }
+        else {
+            qwe[1].style.background = "rgb(211, 244, 234)"
+        }
+    }
+
+    function price() {
+        let total = 0;
+        
+        cart.forEach(element => {
+            total += element.original_price * element.user_qty;
+        });
+        subtotal.innerText = "₹" + total;
+
+        let discount= 0.1*total;
+        
+        mydiscount2.innerText="₹"+discount;
+        mydiscount.innerText="₹"+discount;
+        mytotal.innerText = "₹" + (total-discount);
+    }
+    price();
+
+</script>
+
+</html>
