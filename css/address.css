@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -44,21 +46,16 @@ nav {
 #logo-container {
   width: 155px;
 }
-
-
 /* address section starts from here */
-
 .addressContainer{
     display: flex;
     width: 80%;
     margin: auto;
     justify-content: space-around;
-
 }
 .leftInputContainer h3{
     margin-left: 70px;
 }
-
 .formDetailsContainer{
     border: 1px solid black;
     border-radius: 10px;
@@ -80,12 +77,9 @@ nav {
 }
  .formDetailsContainer input::placeholder{
     font-size: 1rem;
-
 }
 #city,#state{
-    width: 42%;
- 
-   
+    width: 42%;  
 }
 #state{
  margin-left: 25px;
@@ -93,7 +87,6 @@ nav {
 .formDetailsContainer h2 {
     margin: 2px;
     padding: 3px;
-    
 }
   #icon{
     margin-right: 5px;
@@ -120,6 +113,7 @@ nav {
   width: 80%;
   margin-bottom: 80px;
   border-radius: 5px;
+  font-family: "Montserrat",sans-serif;
 }
 #continue{
   border: 0px ;

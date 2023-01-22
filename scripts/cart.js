@@ -4,8 +4,12 @@ let productTotal=document.getElementById("product-total");
 let oderTotal=document.getElementById("oder-total");
 let cartTotal=document.getElementById("item-count");
 
+if(cart.length==0){
+    document.querySelector(".main").style.display="none"
+}else{
+    showCartData(cart)
+}
 
-showCartData(cart)
 
 //showing into the dom 
 

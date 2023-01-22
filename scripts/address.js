@@ -3,19 +3,17 @@ let submitBtn = document.getElementById("submitBtn");
 let form = document.getElementById("addressForm")
 let div=document.querySelector(".formDetailsContainer");
 let addrdiv=document.querySelector(".show")
-
 let len=address.length;
-document.getElementById("add-add").addEventListener("click",()=>{
-len++;
-div.style.display="block"
-console.log(len);
-})
-console.log(len);
-if(address.length==len){
-  div.style.display="none";
 
+document.getElementById("add-add").addEventListener("click",()=>{
+div.style.display="block"
+})
+
+if(address.length!==0){
+  div.style.display="none";
   showAddress(address)
 }else{
+  addrdiv.style.display="none"
   document.getElementById("addressForm").addEventListener("submit", (e) => {
   e.preventDefault()
   obj = {
@@ -27,12 +25,10 @@ if(address.length==len){
     city: form.city.value,
     state:form.state.value,
     nearbylocation: form.nearby.value
-
   }
   address.push(obj)
   localStorage.setItem("address", JSON.stringify(address));
   location.href = "payment.html"
-
 })
 }
 
