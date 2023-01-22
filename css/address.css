@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --hoverTextColor: #f43397;
+  --textColor: rgb(83, 81, 81);
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+img {
+  width: 100%;
+}
+header {
+  height: 75px;
+  border-bottom: 0.1px solid grey;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+}
+nav {
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+}
+.headerLeft,
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+#logo-container {
+  width: 155px;
+}
+
+
+/* address section starts from here */
+
+.addressContainer{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+
+}
+.leftInputContainer h3{
+    margin-left: 70px;
+}
+
+.formDetailsContainer{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    padding: 7px;
+}
+.formDetailsContainer input{
+    font-size: 1.5rem;
+    margin: 10px;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+}
+.formDetailsContainer input:focus{
+    color: #f43397;
+    border-bottom: 1.5px solid #f43397;
+}
+ .formDetailsContainer input::placeholder{
+    font-size: 1rem;
+
+}
+#city,#state{
+    width: 42%;
+ 
+   
+}
+#state{
+ margin-left: 25px;
+}
+.formDetailsContainer h2 {
+    margin: 2px;
+    padding: 3px;
+    
+}
+  #icon{
+    margin-right: 5px;
+}
+#submitBtn{
+    padding: 15px;
+    width: 85%;
+    margin-left: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background-color: #f43397;
+    border: none;
+    border-radius: 5px;
+}

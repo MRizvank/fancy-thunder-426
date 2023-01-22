@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+     <link rel="icon" href="./feviIcon/android-chrome-512x512.png" />
+    <link rel="stylesheet" href="./css/address.css" />
+    <title>Iskra/checkout/address</title>
+</head>
+<body>
+        <header>
+      <div class="headerLeft">
+        <div id="logo-container">
+          <img src="./img/project logo1.jpg" alt="" id="logo" />
+        </div>
+    </header>
+
+    <div class="addressContainer">
+        <div class="leftInputContainer">
+            <h3>Select Delivery Address </h3>
+            <div class="formDetailsContainer">
+                <h2><i id="icon" class="fa-solid fa-phone"></i>Contact Details</h2>
+                <form id="addressForm">
+                    <input type="text"  id="name" placeholder="Name" required><br>
+                    <input type="tel" id="phoneNumber" placeholder="Phone Number" maxlength="10" required><br>
+                    <h2><i id="icon"  class="fa-solid fa-location-pin"></i>Address</h2>
+                    <input type="text"  id="houseNo" placeholder="House no./Building Name" required><br>
+                    <input type="text" id="area" placeholder="Road Name/Area/Colony" required><br>
+                    <input type="number" id="pinCode" placeholder="Pincode"><br>
+                    <input type="text" id="city" placeholder="City" required> <input type="text" id="state" placeholder="State" required><br>
+                    <input type="text"  id="nearby" placeholder="Nearby Location(optional)"><br>
+                        <input type="submit" id="submitBtn" value="Save Addrss & Continue">
+                </form>
+            </div>
+        </div>
+        <div class="rightPaymentPage">
+           <p>Price Details</p>
+        </div>
+    </div>
+  
+</body>
+</html>
