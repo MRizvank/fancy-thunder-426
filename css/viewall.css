@@ -433,19 +433,6 @@ cursor: pointer;
   color: #f2f2f2;
 }
 
-@media screen and (min-width: 451px) and (max-width: 800px) {
-  .Rproducts {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 450px) {
-  .Rproducts {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 
 /* foooter part */
 .footerContainer{
@@ -492,4 +479,18 @@ padding-right: 10px;
 .detailsContainer2,.detailsContainer3 p{
   font-weight: 500 ;
  padding: 5px;
+}
+
+
+@media screen and (min-width: 451px) and (max-width: 800px) {
+  .Rproducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .Rproducts {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
