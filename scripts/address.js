@@ -3,7 +3,13 @@ let submitBtn = document.getElementById("submitBtn");
 let form = document.getElementById("addressForm")
 let div=document.querySelector(".formDetailsContainer");
 let addrdiv=document.querySelector(".show")
-let len=address.length;
+let directPayment=JSON.parse(localStorage.getItem("buynow"))||[];   
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let productTotal=document.getElementById("product-total");
+let oderTotal=document.getElementById("oder-total");
+let abc=JSON.parse(localStorage.getItem("page"))
+
 
 document.getElementById("add-add").addEventListener("click",()=>{
 div.style.display="block"
@@ -57,3 +63,30 @@ document.getElementById("continue").addEventListener("click",()=>{
 })
 
 },2000)
+
+//product total
+function showCarttotal(){
+
+  let total=0
+
+  if(abc==true){
+    cart.forEach(element => {
+    total += element.original_price * element.user_qty;
+  });
+
+  }else{
+    directPayment.forEach((element) => {
+    total += element.original_price;
+   
+    
+  });
+  }
+
+
+  productTotal.textContent="₹"+total;
+  oderTotal.textContent="₹"+total;
+  
+
+
+}
+showCarttotal();
