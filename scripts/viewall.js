@@ -2,11 +2,11 @@ let backtoHOme = document.getElementById("logo-container")
 backtoHOme.addEventListener("click", () => {
     location.href = "index.html"
 })
-let sorting=document.getElementById("sorting");
+let sorting = document.getElementById("sorting");
 
 let products = JSON.parse(localStorage.getItem("products")) || []
-var productData=[]
-sorting.addEventListener("change",sorted)
+var productData = []
+sorting.addEventListener("change", sorted)
 
 fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=1&_limit=20")//?_page=3&_limit=10
     .then((res) => {
@@ -14,8 +14,8 @@ fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=1&_limit=20")//?_
     })
     .then((data) => {
         showData(data)
-        productData=data;
-    
+        productData = data;
+
     })
 
 function showData(data) {
@@ -52,7 +52,7 @@ function showData(data) {
         }
     }
 
-    
+
     let divs = document.querySelectorAll(".Rcard")
     for (let item of divs) {
         item.addEventListener("click", (e) => {
@@ -96,13 +96,13 @@ for (let item of category) {
 
 //pagination code 
 
-let primaryButtons=[
-    {text:"1",'data-id':1},
-    {text:"2",'data-id':2},
-    {text:"3",'data-id':3},
-    {text:"4",'data-id':4},
-    {text:"5",'data-id':5},
-    {text:"6",'data-id':6}
+let primaryButtons = [
+    { text: "1", 'data-id': 1 },
+    { text: "2", 'data-id': 2 },
+    { text: "3", 'data-id': 3 },
+    { text: "4", 'data-id': 4 },
+    { text: "5", 'data-id': 5 },
+    { text: "6", 'data-id': 6 }
 ];
 
 function getAsButton(text, dataid) {
@@ -131,9 +131,9 @@ for (let item of buttons) {
             })
             .then((data) => {
                 showData(data)
-            
-                productData=data;
-                
+
+                productData = data;
+
             })
 
 
@@ -145,22 +145,79 @@ for (let item of buttons) {
 
 //sorting functionality 
 
-function sorted(){
-    let value=sorting.value;
-    let data=productData;
-    if(value=="l2h"){
-        ascending=data.sort((a,b)=> a.original_price-b.original_price)
+function sorted() {
+    let value = sorting.value;
+    let data = productData;
+    if (value == "l2h") {
+        ascending = data.sort((a, b) => a.original_price - b.original_price)
         showData(ascending)
-    }else if(value=="h2l"){
-        descending=data.sort((a,b)=> b.original_price-a.original_price)
+    } else if (value == "h2l") {
+        descending = data.sort((a, b) => b.original_price - a.original_price)
         showData(descending)
-    }else if(value=="rating"){
-        rating=data.sort((a,b)=>b.rating-a.rating)
+    } else if (value == "rating") {
+        rating = data.sort((a, b) => b.rating - a.rating)
         showData(rating)
-    }else{
+    } else {
         showData(data);
-        
+
     }
-    
+
 
 }
+
+
+
+function ratingfilter() {
+
+    let rating20 = document.getElementById("rating2.0");
+    let rating30 = document.getElementById("rating3.0");
+    let rating35 = document.getElementById("rating3.5");
+    let rating40 = document.getElementById("rating4.0");
+
+
+    rating20.addEventListener("change", () => {
+        if (rating20.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 2) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+    rating30.addEventListener("change", () => {
+        if (rating30.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 3) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+    rating35.addEventListener("change", () => {
+        if (rating35.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 3.5) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+    rating40.addEventListener("change", () => {
+        if (rating40.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 4) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+}
+ratingfilter()
