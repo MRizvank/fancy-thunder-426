@@ -2,8 +2,11 @@ let backtoHOme = document.getElementById("logo-container")
 backtoHOme.addEventListener("click", () => {
     location.href = "index.html"
 })
+let sorting=document.getElementById("sorting");
 
 let products = JSON.parse(localStorage.getItem("products")) || []
+var productData=[]
+sorting.addEventListener("change",sorted)
 
 fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=1&_limit=20")//?_page=3&_limit=10
     .then((res) => {
@@ -11,6 +14,8 @@ fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=1&_limit=20")//?_
     })
     .then((data) => {
         showData(data)
+        productData=data;
+    
     })
 
 function showData(data) {
@@ -63,36 +68,6 @@ function showData(data) {
     }
 
 }
-function getCard(id, image, name, price, rating) {
-    let card = `
-     <div class="Rcard" data-id="${id}">
-    <img src="${image[0]}" alt="${image[0]}">
-    <p class="title">${name.substr(0, 20)}</p>
-    <p class="price">
-    <span>₹</span>
-    <span >${price}</span>
-    </p>
-    <div class="delivery">Free Delivery</div>
-    <div class="rating">${rating}<i class="fa-solid fa-star"></i></div>
-    </div>`;
-    return card;
-}
-function renderCards(data) {
-    let cardList = `
-    <div class="card-list">
-    ${data.map(item => getCard(item.id, item.images, item.title, item.original_price, item.rating)).join("")}
-    </div>
-    `
-    document.querySelector(".Rproducts").innerHTML = cardList
-}
-
-
-
-
-
-// document.querySelector(".downloadPlayButton").addEventListener("click", () => {
-//     location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
-// })
 document.getElementById("playStore").addEventListener("click", () => {
     location.href = "https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
 })
@@ -156,6 +131,9 @@ for (let item of buttons) {
             })
             .then((data) => {
                 showData(data)
+            
+                productData=data;
+                
             })
 
 
@@ -163,3 +141,26 @@ for (let item of buttons) {
     })
 }
 
+
+
+//sorting functionality 
+
+function sorted(){
+    let value=sorting.value;
+    let data=productData;
+    if(value=="l2h"){
+        ascending=data.sort((a,b)=> a.original_price-b.original_price)
+        showData(ascending)
+    }else if(value=="h2l"){
+        descending=data.sort((a,b)=> b.original_price-a.original_price)
+        showData(descending)
+    }else if(value=="rating"){
+        rating=data.sort((a,b)=>b.rating-a.rating)
+        showData(rating)
+    }else{
+        showData(data);
+        
+    }
+    
+
+}
