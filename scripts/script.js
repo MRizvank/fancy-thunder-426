@@ -7,6 +7,8 @@ let formInput = document.getElementById("form")
 let recentSearchList = document.querySelector(".recentSerchList")
 let recentSrearch = [];
 var productData = []
+let sorting = document.getElementById("sorting");
+sorting.addEventListener("change", sorted)
 
 let singleProduct = JSON.parse(localStorage.getItem("products")) || []
 
@@ -169,6 +171,28 @@ cartBtn.addEventListener("click", () => {
         location.href = "signup.html"
     }
 })
+
+
+//sorting
+function sorted() {
+    let value = sorting.value;
+    let data = productData;
+    if (value == "l2h") {
+        ascending = data.sort((a, b) => a.original_price - b.original_price)
+        showData(ascending)
+    } else if (value == "h2l") {
+        descending = data.sort((a, b) => b.original_price - a.original_price)
+        showData(descending)
+    } else if (value == "rating") {
+        rating = data.sort((a, b) => b.rating - a.rating)
+        showData(rating)
+    } else {
+        showData(data);
+
+    }
+
+
+}
 
 function categoryfilter(){
 
