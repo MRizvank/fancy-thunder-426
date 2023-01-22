@@ -5,7 +5,8 @@ let oderTotal=document.getElementById("oder-total");
 let cartTotal=document.getElementById("item-count");
 
 if(cart.length==0){
-    document.querySelector(".main").style.display="none"
+    document.querySelector(".main").innerHTML="YOUR CART IS EMPTY!!!!!"
+  
 }else{
     showCartData(cart)
 }
