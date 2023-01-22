@@ -1,3 +1,7 @@
+// accesing local storage
+let userLogin = JSON.parse(localStorage.getItem("login"));
+
+
 let backtoHOme = document.getElementById("logo-container")
 backtoHOme.addEventListener("click", () => {
     location.href = "index.html"
@@ -47,18 +51,21 @@ function showData(data) {
         }
     }
 
-    
+
     let divs = document.querySelectorAll(".Rcard")
     for (let item of divs) {
         item.addEventListener("click", (e) => {
             e.preventDefault();
-            if (e.target.dataset.id != undefined) {
-                products.unshift(e.target.dataset.id)
-                console.log(products)
-                localStorage.setItem("products", JSON.stringify(products))
-                window.location.replace("./product.html");
+            if (userLogin) {
+                if (e.target.dataset.id != undefined) {
+                    products.unshift(e.target.dataset.id)
+                    console.log(products)
+                    localStorage.setItem("products", JSON.stringify(products))
+                    window.location.replace("./product.html");
+                }
+            } else {
+                location.href = "signup.html"
             }
-
         })
     }
 
@@ -116,18 +123,63 @@ for (let item of category) {
     })
 }
 
+// cart
+document.querySelector(".cartContainer").addEventListener("click", () => {
+    if (userLogin) {
+        location.href = "cart.html"
+    } else {
+        location.href = "signup.html"
+    }
 
+})
+
+//checking for login
+let phone = JSON.parse(localStorage.getItem("Phn"));
+let myValue = JSON.parse(localStorage.getItem("enteredvalue"));
+let password = JSON.parse(localStorage.getItem("myotp"));
+let profileLoginContainer = document.querySelector(".profileHoverContainer")
+if (userLogin == true && password[password.length - 1] == myValue) {
+    profileLoginContainer.innerHTML = `
+           <h4 id="rkhello" >Hello User</h4>
+              <ph3 id="rkaccess">${phone}</h3>
+              <div class="profileSignUpBtn">
+                  <button id="rksignup">Log Out</button>
+              </div>
+              <h3 id="cart">
+                <i class="fa-solid fa-bag-shopping" id="bag"></i> My Cart
+              </h3>
+    `
+}
+if (userLogin) {
+    let logOutBtn = document.querySelector("#rksignup")
+    logOutBtn.addEventListener("click", () => {
+        userLogin = false;
+        location.href = "index.html"
+        localStorage.setItem("login", JSON.stringify(userLogin))
+    })
+
+}
+
+// access to cart
+let cartBtn = document.getElementById("cart")
+cartBtn.addEventListener("click", () => {
+    if (userLogin) {
+        location.href = "cart.html"
+    } else {
+        location.href = "signup.html"
+    }
+})
 
 
 //pagination code 
 
-let primaryButtons=[
-    {text:"1",'data-id':1},
-    {text:"2",'data-id':2},
-    {text:"3",'data-id':3},
-    {text:"4",'data-id':4},
-    {text:"5",'data-id':5},
-    {text:"6",'data-id':6}
+let primaryButtons = [
+    { text: "1", 'data-id': 1 },
+    { text: "2", 'data-id': 2 },
+    { text: "3", 'data-id': 3 },
+    { text: "4", 'data-id': 4 },
+    { text: "5", 'data-id': 5 },
+    { text: "6", 'data-id': 6 }
 ];
 
 function getAsButton(text, dataid) {
