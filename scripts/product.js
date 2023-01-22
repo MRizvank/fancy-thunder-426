@@ -1,6 +1,7 @@
 let products = JSON.parse(localStorage.getItem("products")) || [];
 let cart=JSON.parse(localStorage.getItem("cart"))||[];
-let directPayment=JSON.parse(localStorage.getItem("buynow"))||[];           
+let directPayment=JSON.parse(localStorage.getItem("buynow"))||[];  
+let userLogin = JSON.parse(localStorage.getItem("login"));         
 let item={}
 let product = products[0];
 fetch(`https://sleepy-puce-greyhound.cyclic.app/products/${product}`)
@@ -105,3 +106,41 @@ setTimeout(() => {
       location.href="payment.html";
   })
 }, 2000)
+
+
+//checking for login
+let phone = JSON.parse(localStorage.getItem("Phn"));
+let myValue = JSON.parse(localStorage.getItem("enteredvalue"));
+let password = JSON.parse(localStorage.getItem("myotp"));
+let profileLoginContainer = document.querySelector(".profileHoverContainer")
+if (userLogin == true && password[password.length - 1] == myValue) {
+    profileLoginContainer.innerHTML = `
+           <h4 id="rkhello" >Hello User</h4>
+              <ph3 id="rkaccess">${phone}</h3>
+              <div class="profileSignUpBtn">
+                  <button id="rksignup">Log Out</button>
+              </div>
+              <h3 id="cart">
+                <i class="fa-solid fa-bag-shopping" id="bag"></i> My Cart
+              </h3>
+    `
+}
+if (userLogin) {
+    let logOutBtn = document.querySelector("#rksignup")
+    logOutBtn.addEventListener("click", () => {
+        userLogin = false;
+        location.href = "index.html"
+        localStorage.setItem("login", JSON.stringify(userLogin))
+    })
+
+}
+
+// access to cart
+let cartBtn = document.getElementById("cart")
+cartBtn.addEventListener("click", () => {
+    if (userLogin) {
+        location.href = "cart.html"
+    } else {
+        location.href = "signup.html"
+    }
+})

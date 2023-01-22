@@ -46,8 +46,7 @@ fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=3&_limit=10")//?_
     })
     .then((data) => {
         showData(data)
-        // showDataOnCategory(data)
-        // renderCards(data)
+
         productData = data;
     })
 
@@ -134,13 +133,6 @@ document.querySelector(".sellerContainer").addEventListener("click", () => {
     location.href = "BecomeSupplier.html"
 })
 
-
-
-//checkin for funcanality
-
-
-
-
 //checking for login
 let phone = JSON.parse(localStorage.getItem("Phn"));
 let myValue = JSON.parse(localStorage.getItem("enteredvalue"));
@@ -177,75 +169,6 @@ cartBtn.addEventListener("click", () => {
         location.href = "signup.html"
     }
 })
-
-
-
-
-
-// let category = document.querySelectorAll(".category")
-// for (let item of category) {
-//     // function showDataOnCategory(data) {
-//     item.addEventListener("change", () => {
-//         if (item.checked) {
-//             console.log(item.value)
-//             let cards = document.querySelector(".productscard-container").innerHTML;
-//             cards = null;
-//             data.forEach((element, index) => {
-//                 if (element.category == item.value) {
-//                     data.forEach((element, index) => {
-//                         let card = `
-//                     <div class="Rcard" data-id="${element.id}">
-//                     <img src="${element.images[0]}" alt="${element.images[0]}">
-//                     <p class="product-title">${element.title ? element.title.substr(0, 20) : "No tittle"}</p>
-//                     <p class="price">
-//                     <span class="price">₹</span>
-//                     <span class="price">${element.original_price}</span>
-//                     </p>
-//                     <div class="delivery">Free Delivery</div>
-//                     <div class="rating">${element.rating}<i class="fa-solid fa-star"></i></div>
-//                     </div>
-//                     `;
-//                         cards += card
-//                     });
-
-
-//                     let rating = document.querySelectorAll(".rating");
-//                     for (let item of rating) {
-//                         if (+item.textContent >= 4.0) {
-//                             item.style.backgroundColor = "#038d63"
-//                         } else if (+item.textContent >= 3.4 && +item.textContent < 4.0) {
-//                             item.style.backgroundColor = "#23bb75"
-//                         } else if (+item.textContent >= 2.4 && +item.textContent < 3.4) {
-//                             item.style.backgroundColor = "#f4b619"
-//                         } else {
-//                             item.style.backgroundColor = "#ee7212"
-//                         }
-//                     }
-//                     let divs = document.querySelectorAll(".Rcard")
-//                     for (let item of divs) {
-//                         item.addEventListener("click", (e) => {
-//                             e.preventDefault();
-//                             if (userLogin) {
-//                                 if (e.target.dataset.id != undefined) {
-//                                     singleProduct.unshift(e.target.dataset.id)
-//                                     console.log(singleProduct)
-//                                     localStorage.setItem("products", JSON.stringify(singleProduct))
-//                                     window.location.replace("./product.html");
-//                                 }
-//                             } else {
-//                                 location.href = "signup.html"
-//                             }
-//                         })
-//                     }
-//                 }
-//             })
-//         } else {
-//             console.error("not")
-//         }
-
-//     })
-//     // }
-// }
 
 function categoryfilter(){
 
