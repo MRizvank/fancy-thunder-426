@@ -62,8 +62,8 @@ function price() {
 
     let discount= 0.1*total;
     
-    mydiscount2.innerText="₹"+discount;
-    mydiscount.innerText="₹"+discount;
+    mydiscount2.innerText="₹"+discount.toFixed(1);
+    mydiscount.innerText="₹"+discount.toFixed(1);
     mytotal.innerText = "₹" + (total-discount);
 }
 price();

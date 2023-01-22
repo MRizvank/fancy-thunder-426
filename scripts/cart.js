@@ -20,11 +20,11 @@ function showCartData(data){
         let card=`
         <div class="card-item"> 
         <div class="card-image"> <img src="${element.images[0]}" alt=""></div>
-        <div class="details">
+        <div class="details" >
         <p>${element.title}</p>
         <p>Size:${element.sizes[0]} &nbsp&nbsp Qty:${element.user_qty}</p>
         <p>₹${element.original_price}</p>
-        <button id="remove">REMOVE</button>
+        <button id="remove" data-id=${element.id}>REMOVE</button>
         </div>
         <hr>
         <div>Supplier: ABC &nbsp Free delivery</div>
@@ -52,11 +52,29 @@ function showCarttotal(){
     productTotal.textContent="₹"+pTotal;
     oderTotal.textContent="₹"+cTotal;
     cartTotal.textContent=cart.length;
-
-
 }
 
 document.getElementById("continue").addEventListener("click",()=>{
     location.href="address.html"
+})
+
+setTimeout(()=>{
+    document.getElementById("remove").addEventListener("click",(e)=>{
+        e.preventDefault()
+        cart.forEach((elemen,index)=>{
+            if(elemen.id==e.target.dataset.id){
+                cart.splice(index,1)
+                localStorage.setItem("cart",JSON.stringify(cart))
+                if(cart.length==0){
+                    document.querySelector(".main").innerHTML="YOUR CART IS EMPTY!!!!!"
+                  
+                }else{
+                    showCartData(cart)
+                }
+                showCarttotal();
+            }
+        })
+        
+    })
 })
 showCarttotal();
