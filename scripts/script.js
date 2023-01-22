@@ -257,7 +257,6 @@ function categoryfilter(){
     let jewellery=document.getElementById("jewellery");
 
     saree.addEventListener("change", () => {
-        console.log(productData)
         if (saree.checked) {
             let abcd = productData.filter((element) => {
                 if (element.category == "Sarees") {
@@ -342,7 +341,6 @@ function pricefilter(){
     let above500 = document.getElementById("a500");
 
     under149.addEventListener("change", () => {
-        console.log(productData)
         if (under149.checked) {
             let abcd = productData.filter((element) => {
                 if (element.original_price < 149) {
