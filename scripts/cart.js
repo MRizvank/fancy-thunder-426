@@ -58,6 +58,8 @@ document.getElementById("continue").addEventListener("click",()=>{
     location.href="address.html"
 })
 
+
+//removing item from cart
 setTimeout(()=>{
     document.getElementById("remove").addEventListener("click",(e)=>{
         e.preventDefault()
