@@ -18,7 +18,7 @@ btn.addEventListener("click", () => {
         window.location.href = "index.html" 
     }, 2000)
    cart.forEach((element,index)=>{
-    cart.splice(index,1)
+    cart.splice(index,cart.length)
     localStorage.setItem("cart",JSON.stringify(cart));
    })
 })
