@@ -1,720 +1,618 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Online Shopping Site for Fashion, Electronics, Home & More | Meesho
-    </title>
-    <!--fontawesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!--Roboto font family-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./feviIcon/android-chrome-512x512.png" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="headerLeft">
-        <div id="logo-container">
-          <img src="./img/project logo1.jpg" alt="" id="logo" />
-        </div>
-        <!--Search box-->
-        <div id="serchInputContainer">
-          <div id="serchIcon">
-            <img src="./img/search.png" alt="" />
-          </div>
-          <form id="form">
-            <input
-              type="text"
-              autocomplete="off"
-              placeholder="Try Saree, Kurti or Search by Product Code"
-              id="inputSerch"
-            />
-          </form>
-          <div id="serchInputClose">
-            <i class="fa-solid fa-xmark" id="searchClose"></i>
-          </div>
 
-          <div class="serchRecentBox">
-            <h3>Recent Serches</h3>
-            <div class="recentSerchList"></div>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Online Shopping Site for Fashion, Electronics, Home & More | Meesho
+  </title>
+  <!--fontawesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Roboto font family-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./feviIcon/android-chrome-512x512.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="headerLeft">
+      <div id="logo-container">
+        <img src="./img/project logo1.jpg" alt="" id="logo" />
       </div>
-      <div class="headerRight">
-        <div class="downloadContainer">
-          <div class="mobileIcon">
-            <img src="./img/mobile.png" alt="" />
-          </div>
-          <p>Download App</p>
-          <div class="downloadHoverBtnContainer">
-            <h3>Download From</h3>
-
-            <a
-              href="https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
-              class="downloadBtn"
-            >
-              <img
-                src="https://images.meesho.com/images/pow/playstore-icon-big.webp"
-                alt="playstore"
-              />
-            </a>
-            <a
-              href="https://apps.apple.com/us/app/meesho/id1457958492"
-              class="downloadBtn"
-            >
-              <img
-                src="https://images.meesho.com/images/pow/appstore-icon-big.webp"
-                alt="appStore"
-              />
-            </a>
-          </div>
+      <!--Search box-->
+      <div id="serchInputContainer">
+        <div id="serchIcon">
+          <img src="./img/search.png" alt="" />
         </div>
-        <div class="sellerContainer">
-          <p>Become a Supplier</p>
+        <form id="form">
+          <input type="text" autocomplete="off" placeholder="Try Saree, Kurti or Search by Product Code"
+            id="inputSerch" />
+        </form>
+        <div id="serchInputClose">
+          <i class="fa-solid fa-xmark" id="searchClose"></i>
         </div>
 
-        <div class="profileCartContainer">
-          <div class="profileContainer">
-            <div class="profileIcon">
-              <img src="./img/user.png" alt="" />
-            </div>
-            <p>Profile</p>
-            <div class="profileHoverContainer">
-              <h3  >Hello User</h3>
-              <p >To access your iskra account</p>
-              <div class="profileSignUpBtn">
-                <a href="signup.html">
-                  <button>Sign Up</button>
-                </a>
-              </div>
-              <h3 id="cart">
-                <i class="fa-solid fa-bag-shopping" id="bag" ></i>My Orders
-              </h3>
-            </div>
-          </div>
-          <div class="cartContainer">
-            <div class="cartIcon">
-              <img src="./img/cart.png" alt="" />
-            </div>
-            <p>Cart</p>
-          </div>
+        <div class="serchRecentBox">
+          <h3>Recent Serches</h3>
+          <div class="recentSerchList"></div>
         </div>
-      </div>
-    </header>
-    <!-- navigation code -->
-    <nav>
-      <ul>
-        <li>
-          Women Ethnic
-          <div class="subMenu">
-            <div id="womenEthic" class="submenuList">
-              <div class="column">
-                <h4>All Women Ethnic</h4>
-                <p><a href="./viewall.html">View All</a></p>
-              </div>
-              <div class="column">
-                <h4>Sarees</h4>
-                <p>All Sarees</p>
-                <p>Silk Sarees</p>
-                <p>Cotton Silk Sarees</p>
-                <p>Cotton Sarees</p>
-                <p>Georgette Sarees</p>
-                <p>Chiffon Sarees</p>
-                <p>Satin Sarees</p>
-                <p>Embroidered Sarees</p>
-              </div>
-              <div class="column">
-                <h4>Kurtis</h4>
-                <p>All Kurtis</p>
-                <p>Anarkali</p>
-                <p>Kurtis</p>
-                <p>Rayon Kurtis</p>
-                <p>Cotton Kurtis</p>
-                <p>Embroidered Kurtis</p>
-              </div>
-              <div class="column">
-                <h4>Kurta Sets</h4>
-                <p>All Kurta Sets</p>
-              </div>
-              <div class="column">
-                <h4>Other Ethnic</h4>
-                <p>All Suits & Dress Material</p>
-                <p>Cotton Suits</p>
-                <p>Embroidered Suits</p>
-                <p>Chanderi Suits</p>
-              </div>
-              <div class="column">
-                <h4>Suits & Dress Material</h4>
-                <p>Blouses</p>
-                <p>Dupattas</p>
-                <p>Lehanga</p>
-                <p>Gown</p>
-                <p>Ethnic Bottomwear</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Women Western
-          <div class="subMenu">
-            <div id="womenWestern" class="submenuList">
-              <div class="column">
-                <h4>Topwear</h4>
-                <p>Tops</p>
-                <p>Dresses</p>
-                <p>Sweaters</p>
-                <p>Jumpsuits</p>
-              </div>
-              <div class="column">
-                <h4>Bottomwear</h4>
-                <p>Jeans</p>
-                <p>Jeggings</p>
-                <p>Palazzos</p>
-                <p>Shorts</p>
-                <p>Skirts</p>
-              </div>
-              <div class="column">
-                <h4>Innerwear</h4>
-                <p>Bra</p>
-                <p>Briefs</p>
-              </div>
-              <div class="column">
-                <h4>Sleepwear</h4>
-                <p>Nightsuits</p>
-                <p>Babydolls</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Men
-          <div class="subMenu">
-            <div id="men" class="submenuList">
-              <div class="column">
-                <h4>Top Wear</h4>
-                <p>All Top Wear</p>
-                <p>Tshirts</p>
-                <p>Shirts</p>
-              </div>
-              <div class="column">
-                <h4>Bottom Wear</h4>
-                <p>Track Pants</p>
-                <p>Jeans</p>
-                <p>Trousers</p>
-              </div>
-              <div class="column">
-                <h4>Men Accessories</h4>
-                <p>All Men Accessories</p>
-                <p>Watches</p>
-                <p>Belts</p>
-                <p>Wallets</p>
-                <p>Jewellery</p>
-                <p>Sunglasses</p>
-                <p>Bags</p>
-              </div>
-              <div class="column">
-                <h4>Men Footwear</h4>
-                <p>Casual Shoes</p>
-                <p>Sports Shoes</p>
-                <p>Sandals</p>
-                <p>Formal Shoes</p>
-              </div>
-              <div class="column">
-                <h4>Ethnic Wear</h4>
-                <p>Men Kurtas</p>
-                <p>Ethnic Jackets</p>
-              </div>
-              <div class="column">
-                <h4>Inner & Sleep Wear</h4>
-                <p>All Inner & Sleep Wear</p>
-                <p>Vests</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Kids
-          <div class="subMenu">
-            <div id="kids" class="submenuList">
-              <div class="column">
-                <h4>Boys & Girls 2+ Years</h4>
-                <p>Dresses</p>
-              </div>
-              <div class="column">
-                <h4>Infant 0-2 Years</h4>
-                <p>Rompers</p>
-              </div>
-              <div class="column">
-                <h4>Toys & Accessories</h4>
-                <p>Soft Toys</p>
-                <p>Footwear</p>
-                <p>Stationery</p>
-                <p>Watches</p>
-                <p>Bags & Backpacks</p>
-              </div>
-              <div class="column">
-                <h4>Baby Care</h4>
-                <p>All Baby Care</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Home & Kitchen
-          <div class="subMenu">
-            <div id="HomeAndKitchen" class="submenuList">
-              <div class="column">
-                <h4>Home Furnishing</h4>
-                <p>Bedsheets</p>
-                <p>Doormats</p>
-                <p>Curtains & Sheers</p>
-                <p>Cushions & Cushion Covers</p>
-                <p>Mattress Protectors</p>
-              </div>
-              <div class="column">
-                <h4>Home Decor</h4>
-                <p>All Home Decor</p>
-                <p>Doormats</p>
-                <p>Stickers</p>
-                <p>Clocks</p>
-                <p>Showpieces</p>
-              </div>
-              <div class="column">
-                <h4>Kitchen & Dining</h4>
-                <p>Kitchen Storage</p>
-                <p>Cookware & Bakeware</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Beauty & Health
-          <div class="subMenu">
-            <div id="beautyAndHealth" class="submenuList">
-              <div class="column">
-                <h4>Make up</h4>
-                <p>Face</p>
-                <p>Eyes</p>
-                <p>Lips</p>
-                <p>Nails</p>
-              </div>
-              <div class="column">
-                <h4>Wellness</h4>
-                <p>Sanitizers</p>
-                <p>Oral Care</p>
-                <p>Feminine Hygiene</p>
-              </div>
-              <div class="column">
-                <h4>Skincare</h4>
-                <p>Deodorants</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Jewellery & Accessories
-          <div class="subMenu">
-            <div id="JewelleryAndAccessories" class="submenuList">
-              <div class="column">
-                <h4>Jewellery</h4>
-                <p>Jewellery Set</p>
-                <p>Earrings</p>
-                <p>Mangalsutras</p>
-                <p>Studs</p>
-                <p>Bangles</p>
-                <p>Necklaces</p>
-                <p>Rings</p>
-                <p>Anklets</p>
-              </div>
-              <div class="column">
-                <h4>Women Accessory</h4>
-                <p>Bags</p>
-                <p>Watches</p>
-                <p>Hair Accessories</p>
-                <p>Sunglasses</p>
-                <p>Socks</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Bags & Footwear
-          <div class="subMenu">
-            <div id="BagsFootWarId" class="submenuList">
-              <div class="column">
-                <h4>Women Bags</h4>
-                <p>All Women Bags</p>
-                <p>Handbags</p>
-                <p>Clutches</p>
-                <p>Slingbags</p>
-              </div>
-              <div class="column">
-                <h4>Men Bags</h4>
-                <p>All Men Bags</p>
-                <p>Men Wallets</p>
-                <p>Feminine Hygiene</p>
-              </div>
-              <div class="column">
-                <h4>Men Footwear</h4>
-                <p>Sports Shoes</p>
-                <p>Casual Shoes</p>
-                <p>Formal Shoes</p>
-                <p>Sandals</p>
-              </div>
-              <div class="column">
-                <h4>Women Footwear</h4>
-                <p>Flatss</p>
-                <p>Bellies</p>
-                <p>Juttis</p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          Electronics
-          <div class="subMenu">
-            <div id="ElectronicsId" class="submenuList">
-              <div class="column">
-                <h4>Mobile & Accessories</h4>
-                <p>All Mobile & Accessories</p>
-                <p>Smartwatches</p>
-                <p>Mobile Holders</p>
-                <p>Mobile cases and covers</p>
-              </div>
-              <div class="column">
-                <h4>Appliances</h4>
-                <p>All Appliances</p>
-                <p>Grooming</p>
-                <p>Home Appliances</p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- lowestPriceBanner -->
-    <div class="lowestPriceContainer">
-      <div class="letLowestPriceContainer">
-        <h1>Lowest Prices</h1>
-        <h1>Best Quality Shopping</h1>
-        <div class="lowestPriceBanner">
-          <div class="lowestPriceImageBanner">
-            <img
-              src="https://images.meesho.com/images/pow/freeDelivery.svg"
-              alt=""
-            />
-            <span>Free Delivery</span>
-          </div>
-          <div class="lowestPriceImageBanner">
-            <img src="https://images.meesho.com/images/pow/cod.svg" alt="" />
-            <span>Cash On Delivery</span>
-          </div>
-          <div class="lowestPriceImageBanner">
-            <img
-              src="https://images.meesho.com/images/pow/easyReturns.svg"
-              alt=""
-            />
-            <span>Easy Returns</span>
-          </div>
-        </div>
-        <div class="downloadPlayButton">
-          <picture>
-            <img
-              src="https://images.meesho.com/images/pow/playstoreSmallIcon.webp"
-              alt=""
-            />
-          </picture>
-          <span>Download the Iskra App</span>
-        </div>
-      </div>
-      <div class="rightlowestPricePoster">
-        <img
-          src="https://images.meesho.com/images/marketing/1631722939962.webp"
-          alt="imgage"
-        />
       </div>
     </div>
+    <div class="headerRight">
+      <div class="downloadContainer">
+        <div class="mobileIcon">
+          <img src="./img/mobile.png" alt="" />
+        </div>
+        <p>Download App</p>
+        <div class="downloadHoverBtnContainer">
+          <h3>Download From</h3>
 
-    <!-- Top Categories to Choose From -->
-    <div class="topCategoriesHeader">
-      <div class="stch-line"></div>
-      <span>Top Categories to choose from</span>
-      <div class="stch-line"></div>
-    </div>
-
-    <div class="topCategoriesBanner">
-      <div class="topCategoriesBigPoster">
-        <img
-          src="https://images.meesho.com/images/marketing/1649760442043.webp"
-          alt=""
-        />
+          <a href="https://play.google.com/store/apps/details?id=com.meesho.supply&pid=pow_website&c=pow"
+            class="downloadBtn">
+            <img src="https://images.meesho.com/images/pow/playstore-icon-big.webp" alt="playstore" />
+          </a>
+          <a href="https://apps.apple.com/us/app/meesho/id1457958492" class="downloadBtn">
+            <img src="https://images.meesho.com/images/pow/appstore-icon-big.webp" alt="appStore" />
+          </a>
+        </div>
       </div>
-      <div class="topCategoriesSmallPoster">
+      <div class="sellerContainer">
+        <p>Become a Supplier</p>
+      </div>
+
+      <div class="profileCartContainer">
+        <div class="profileContainer">
+          <div class="profileIcon">
+            <img src="./img/user.png" alt="" />
+          </div>
+          <p>Profile</p>
+          <div class="profileHoverContainer">
+            <h3>Hello User</h3>
+            <p>To access your iskra account</p>
+            <div class="profileSignUpBtn">
+              <a href="signup.html">
+                <button>Sign Up</button>
+              </a>
+            </div>
+            <h3 id="cart">
+              <i class="fa-solid fa-bag-shopping" id="bag"></i>My Orders
+            </h3>
+          </div>
+        </div>
+        <div class="cartContainer">
+          <div class="cartIcon">
+            <img src="./img/cart.png" alt="" />
+          </div>
+          <p>Cart</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- navigation code -->
+  <nav>
+    <ul>
+      <li>
+        Women Ethnic
+        <div class="subMenu">
+          <div id="womenEthic" class="submenuList">
+            <div class="column">
+              <h4>All Women Ethnic</h4>
+              <p><a href="./viewall.html">View All</a></p>
+            </div>
+            <div class="column">
+              <h4>Sarees</h4>
+              <p>All Sarees</p>
+              <p>Silk Sarees</p>
+              <p>Cotton Silk Sarees</p>
+              <p>Cotton Sarees</p>
+              <p>Georgette Sarees</p>
+              <p>Chiffon Sarees</p>
+              <p>Satin Sarees</p>
+              <p>Embroidered Sarees</p>
+            </div>
+            <div class="column">
+              <h4>Kurtis</h4>
+              <p>All Kurtis</p>
+              <p>Anarkali</p>
+              <p>Kurtis</p>
+              <p>Rayon Kurtis</p>
+              <p>Cotton Kurtis</p>
+              <p>Embroidered Kurtis</p>
+            </div>
+            <div class="column">
+              <h4>Kurta Sets</h4>
+              <p>All Kurta Sets</p>
+            </div>
+            <div class="column">
+              <h4>Other Ethnic</h4>
+              <p>All Suits & Dress Material</p>
+              <p>Cotton Suits</p>
+              <p>Embroidered Suits</p>
+              <p>Chanderi Suits</p>
+            </div>
+            <div class="column">
+              <h4>Suits & Dress Material</h4>
+              <p>Blouses</p>
+              <p>Dupattas</p>
+              <p>Lehanga</p>
+              <p>Gown</p>
+              <p>Ethnic Bottomwear</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Women Western
+        <div class="subMenu">
+          <div id="womenWestern" class="submenuList">
+            <div class="column">
+              <h4>Topwear</h4>
+              <p>Tops</p>
+              <p>Dresses</p>
+              <p>Sweaters</p>
+              <p>Jumpsuits</p>
+            </div>
+            <div class="column">
+              <h4>Bottomwear</h4>
+              <p>Jeans</p>
+              <p>Jeggings</p>
+              <p>Palazzos</p>
+              <p>Shorts</p>
+              <p>Skirts</p>
+            </div>
+            <div class="column">
+              <h4>Innerwear</h4>
+              <p>Bra</p>
+              <p>Briefs</p>
+            </div>
+            <div class="column">
+              <h4>Sleepwear</h4>
+              <p>Nightsuits</p>
+              <p>Babydolls</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Men
+        <div class="subMenu">
+          <div id="men" class="submenuList">
+            <div class="column">
+              <h4>Top Wear</h4>
+              <p>All Top Wear</p>
+              <p>Tshirts</p>
+              <p>Shirts</p>
+            </div>
+            <div class="column">
+              <h4>Bottom Wear</h4>
+              <p>Track Pants</p>
+              <p>Jeans</p>
+              <p>Trousers</p>
+            </div>
+            <div class="column">
+              <h4>Men Accessories</h4>
+              <p>All Men Accessories</p>
+              <p>Watches</p>
+              <p>Belts</p>
+              <p>Wallets</p>
+              <p>Jewellery</p>
+              <p>Sunglasses</p>
+              <p>Bags</p>
+            </div>
+            <div class="column">
+              <h4>Men Footwear</h4>
+              <p>Casual Shoes</p>
+              <p>Sports Shoes</p>
+              <p>Sandals</p>
+              <p>Formal Shoes</p>
+            </div>
+            <div class="column">
+              <h4>Ethnic Wear</h4>
+              <p>Men Kurtas</p>
+              <p>Ethnic Jackets</p>
+            </div>
+            <div class="column">
+              <h4>Inner & Sleep Wear</h4>
+              <p>All Inner & Sleep Wear</p>
+              <p>Vests</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Kids
+        <div class="subMenu">
+          <div id="kids" class="submenuList">
+            <div class="column">
+              <h4>Boys & Girls 2+ Years</h4>
+              <p>Dresses</p>
+            </div>
+            <div class="column">
+              <h4>Infant 0-2 Years</h4>
+              <p>Rompers</p>
+            </div>
+            <div class="column">
+              <h4>Toys & Accessories</h4>
+              <p>Soft Toys</p>
+              <p>Footwear</p>
+              <p>Stationery</p>
+              <p>Watches</p>
+              <p>Bags & Backpacks</p>
+            </div>
+            <div class="column">
+              <h4>Baby Care</h4>
+              <p>All Baby Care</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Home & Kitchen
+        <div class="subMenu">
+          <div id="HomeAndKitchen" class="submenuList">
+            <div class="column">
+              <h4>Home Furnishing</h4>
+              <p>Bedsheets</p>
+              <p>Doormats</p>
+              <p>Curtains & Sheers</p>
+              <p>Cushions & Cushion Covers</p>
+              <p>Mattress Protectors</p>
+            </div>
+            <div class="column">
+              <h4>Home Decor</h4>
+              <p>All Home Decor</p>
+              <p>Doormats</p>
+              <p>Stickers</p>
+              <p>Clocks</p>
+              <p>Showpieces</p>
+            </div>
+            <div class="column">
+              <h4>Kitchen & Dining</h4>
+              <p>Kitchen Storage</p>
+              <p>Cookware & Bakeware</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Beauty & Health
+        <div class="subMenu">
+          <div id="beautyAndHealth" class="submenuList">
+            <div class="column">
+              <h4>Make up</h4>
+              <p>Face</p>
+              <p>Eyes</p>
+              <p>Lips</p>
+              <p>Nails</p>
+            </div>
+            <div class="column">
+              <h4>Wellness</h4>
+              <p>Sanitizers</p>
+              <p>Oral Care</p>
+              <p>Feminine Hygiene</p>
+            </div>
+            <div class="column">
+              <h4>Skincare</h4>
+              <p>Deodorants</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Jewellery & Accessories
+        <div class="subMenu">
+          <div id="JewelleryAndAccessories" class="submenuList">
+            <div class="column">
+              <h4>Jewellery</h4>
+              <p>Jewellery Set</p>
+              <p>Earrings</p>
+              <p>Mangalsutras</p>
+              <p>Studs</p>
+              <p>Bangles</p>
+              <p>Necklaces</p>
+              <p>Rings</p>
+              <p>Anklets</p>
+            </div>
+            <div class="column">
+              <h4>Women Accessory</h4>
+              <p>Bags</p>
+              <p>Watches</p>
+              <p>Hair Accessories</p>
+              <p>Sunglasses</p>
+              <p>Socks</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Bags & Footwear
+        <div class="subMenu">
+          <div id="BagsFootWarId" class="submenuList">
+            <div class="column">
+              <h4>Women Bags</h4>
+              <p>All Women Bags</p>
+              <p>Handbags</p>
+              <p>Clutches</p>
+              <p>Slingbags</p>
+            </div>
+            <div class="column">
+              <h4>Men Bags</h4>
+              <p>All Men Bags</p>
+              <p>Men Wallets</p>
+              <p>Feminine Hygiene</p>
+            </div>
+            <div class="column">
+              <h4>Men Footwear</h4>
+              <p>Sports Shoes</p>
+              <p>Casual Shoes</p>
+              <p>Formal Shoes</p>
+              <p>Sandals</p>
+            </div>
+            <div class="column">
+              <h4>Women Footwear</h4>
+              <p>Flatss</p>
+              <p>Bellies</p>
+              <p>Juttis</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        Electronics
+        <div class="subMenu">
+          <div id="ElectronicsId" class="submenuList">
+            <div class="column">
+              <h4>Mobile & Accessories</h4>
+              <p>All Mobile & Accessories</p>
+              <p>Smartwatches</p>
+              <p>Mobile Holders</p>
+              <p>Mobile cases and covers</p>
+            </div>
+            <div class="column">
+              <h4>Appliances</h4>
+              <p>All Appliances</p>
+              <p>Grooming</p>
+              <p>Home Appliances</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- lowestPriceBanner -->
+  <div class="lowestPriceContainer">
+    <div class="letLowestPriceContainer">
+      <h1>Lowest Prices</h1>
+      <h1>Best Quality Shopping</h1>
+      <div class="lowestPriceBanner">
+        <div class="lowestPriceImageBanner">
+          <img src="https://images.meesho.com/images/pow/freeDelivery.svg" alt="" />
+          <span>Free Delivery</span>
+        </div>
+        <div class="lowestPriceImageBanner">
+          <img src="https://images.meesho.com/images/pow/cod.svg" alt="" />
+          <span>Cash On Delivery</span>
+        </div>
+        <div class="lowestPriceImageBanner">
+          <img src="https://images.meesho.com/images/pow/easyReturns.svg" alt="" />
+          <span>Easy Returns</span>
+        </div>
+      </div>
+      <div class="downloadPlayButton">
+        <picture>
+          <img src="https://images.meesho.com/images/pow/playstoreSmallIcon.webp" alt="" />
+        </picture>
+        <span>Download the Iskra App</span>
+      </div>
+    </div>
+    <div class="rightlowestPricePoster">
+      <img src="https://images.meesho.com/images/marketing/1631722939962.webp" alt="imgage" />
+    </div>
+  </div>
+
+  <!-- Top Categories to Choose From -->
+  <div class="topCategoriesHeader">
+    <div class="stch-line"></div>
+    <span>Top Categories to choose from</span>
+    <div class="stch-line"></div>
+  </div>
+
+  <div class="topCategoriesBanner">
+    <div class="topCategoriesBigPoster">
+      <img src="https://images.meesho.com/images/marketing/1649760442043.webp" alt="" />
+    </div>
+    <div class="topCategoriesSmallPoster">
+      <div>
+        <img src="https://images.meesho.com/images/marketing/1649760423313.webp" alt="" />
+      </div>
+      <div>
+        <img src="https://images.meesho.com/images/marketing/1649759799809.webp" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Esentials Items -->
+  <div class="esentialItemContainer">
+    <div class="esenntialIitemViewBtn">
+      <div>
+        <img src="https://images.meesho.com/images/marketing/1664368165450.webp" alt="" />
+      </div>
+    </div>
+    <div class="esenntialProductSection">
+      <div>
+        <img src="https://images.meesho.com/images/marketing/1649760808952.webp" alt="" />
         <div>
-          <img
-            src="https://images.meesho.com/images/marketing/1649760423313.webp"
-            alt=""
-          />
+          <img src="https://images.meesho.com/images/marketing/1664364866805.webp" alt="" />
         </div>
+      </div>
+      <div>
+        <img src="https://images.meesho.com/images/marketing/1649760703179.webp" alt="" />
         <div>
-          <img
-            src="https://images.meesho.com/images/marketing/1649759799809.webp"
-            alt=""
-          />
+          <img src="https://images.meesho.com/images/marketing/1664364917657.webp" alt="" />
+        </div>
+      </div>
+
+      <div>
+        <img src="https://images.meesho.com/images/marketing/1649760786763.webp" alt="" />
+        <div>
+          <img src="https://images.meesho.com/images/marketing/1664364898513.webp" alt="" />
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Esentials Items -->
-    <div class="esentialItemContainer">
-      <div class="esenntialIitemViewBtn">
-        <div>
-          <img
-            src="https://images.meesho.com/images/marketing/1664368165450.webp"
-            alt=""
-          />
+  <!-- Become a Seller -->
+  <div class="donwloadBannerWrapper">
+    <img src="https://images.meesho.com/images/pow/downloadBannerDesktop.webp" alt="" />
+    <div class="downloadBannerContent">
+      <h4>Become a Reseller and</h4>
+      <h1>Start Your Online Business</h1>
+      <h1>with Zero Investment</h1>
+      <div class="downloadBannerBtnWrapper">
+        <div id="playStore">
+          <img src="https://images.meesho.com/images/pow/playstoreIcon.webp" alt="" />
         </div>
-      </div>
-      <div class="esenntialProductSection">
-        <div>
-          <img
-            src="https://images.meesho.com/images/marketing/1649760808952.webp"
-            alt=""
-          />
-          <div>
-            <img
-              src="https://images.meesho.com/images/marketing/1664364866805.webp"
-              alt=""
-            />
-          </div>
-        </div>
-        <div>
-          <img
-            src="https://images.meesho.com/images/marketing/1649760703179.webp"
-            alt=""
-          />
-          <div>
-            <img
-              src="https://images.meesho.com/images/marketing/1664364917657.webp"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div>
-          <img
-            src="https://images.meesho.com/images/marketing/1649760786763.webp"
-            alt=""
-          />
-          <div>
-            <img
-              src="https://images.meesho.com/images/marketing/1664364898513.webp"
-              alt=""
-            />
-          </div>
+        <div id="appStore">
+          <img src="https://images.meesho.com/images/pow/appstoreIcon.webp" alt="" />
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Become a Seller -->
-    <div class="donwloadBannerWrapper">
-      <img
-        src="https://images.meesho.com/images/pow/downloadBannerDesktop.webp"
-        alt=""
-      />
-      <div class="downloadBannerContent">
-        <h4>Become a Reseller and</h4>
-        <h1>Start Your Online Business</h1>
-        <h1>with Zero Investment</h1>
-        <div class="downloadBannerBtnWrapper">
-          <div id="playStore">
-            <img
-              src="https://images.meesho.com/images/pow/playstoreIcon.webp"
-              alt=""
-            />
-          </div>
-          <div id="appStore">
-            <img
-              src="https://images.meesho.com/images/pow/appstoreIcon.webp"
-              alt=""
-            />
-          </div>
+  <!-- Messho Selller Section -->
+  <div class="supplierBannerContainer">
+    <img src="https://images.meesho.com/images/pow/supplyBannerDesktop.webp" alt="" />
+    <div class="content">
+      <span class="title"> Register as a Iskra Supplier</span>
+      <p class="subtitle">
+        Sell your products to crores of customers at 0% commission
+      </p>
+      <div class="text">
+        <span class="supplerBanner">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
+            alt="" />
+          <p>Grow your business 10x</p>
+        </span>
+        <span class="supplerBanner">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
+            alt="" />
+          <p>Enjoy 100% Profit</p>
+        </span>
+        <span class="supplerBanner">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
+            alt="" />
+          <p>Sell all over India</p>
+        </span>
+      </div>
+      <div class="supplierSignUpBtn">Sign up now</div>
+    </div>
+  </div>
+
+  <!-- Product Section -->
+  <div class="productPageContainer">
+    <div class="leftFuncnalityContainer">
+      <div class="sortContainer">
+        <label for="sort">Sort by:</label>
+        <select name="sort" id="sorting">
+          <option value="">Relevance</option>
+          <option value="New Arrivals">New Arrivals</option>
+          <option value="l2h">Price(Low to High)</option>
+          <option value="h2l">Price(High to Low)</option>
+          <option value="">Ratings</option>
+          <option value="">Discount</option>
+        </select>
+      </div>
+      <div class="filterContainer">
+        <h3>FILTERS</h3>
+        <p style="font-size: 12px; color: grey">1000+Products</p>
+        <div>
+          <!-- category section -->
+          <h3>Category</h3>
+          <input type="checkbox" id="saree" class="category" value="Sarees" />
+          <span class="itemName">Saree</span>
+          <br />
+          <input type="checkbox" id="menswear" class="category" value="Mens Top Were" />
+          <span class="itemName">Mens Top Wear</span>
+          <br />
+          <input type="checkbox" id="beauty&Health" value="Beauty and health" class="category" />
+          <span class="itemName">Beauty and health</span>
+          <br />
+          <input type="checkbox" id="bags&Footwear" value="Bags and Footwear" class="category" />
+          <span class="itemName">Bags and Footwear</span>
+          <br />
+          <input type="checkbox" class="category" id="dresses" value="Dresses" />
+          <span class="itemName">Dresses</span>
+          <br />
+          <input type="checkbox" class="category" id="jewellery" value="Jewellery" />
+          <span class="itemName">Jewellery</span>
+          <br />
+          <!-- fabricSection -->
+          <h3>Fabric</h3>
+          <input type="checkbox" id="chiffon" value="Chiffon" />
+          <span class="itemName">Chiffon</span>
+          <br />
+          <input type="checkbox" id="brass" value="Brass" />
+          <span class="itemName">Brass</span>
+          <br />
+          <input type="checkbox" id="cotton" value="Cotton" />
+          <span class="itemName">Cotton</span>
+          <br />
+          <input type="checkbox" id="deodrent" value="Deodrent" />
+          <span class="itemName">Deodrent</span>
+          <br />
+          <input type="checkbox" id="leather" value="Sweat Leather" />
+          <span class="itemName">Sweat Leather</span>
+          <br />
+          <!-- priceSection -->
+          <h3>Price</h3>
+          <input type="checkbox" id="u149" value="149" />
+          <span class="itemName">Under 149</span>
+          <br />
+          <input type="checkbox" id="u199" value="199" />
+          <span class="itemName">Under 199</span>
+          <br />
+          <input type="checkbox" id="u249" value="249" />
+          <span class="itemName">Under 249</span>
+          <br />
+          <input type="checkbox" id="u399" value="399" />
+          <span class="itemName">Under 399</span>
+          <br />
+          <input type="checkbox" id="u499" value="499" />
+          <span class="itemName">Under 499</span>
+          <br />
+          <input type="checkbox" id="a500" value="500" />
+          <span class="itemName">Above 500+</span>
+          <br />
+          <h3>Rating</h3>
+          <input type="checkbox" id="rating2.0" value="2.0" />
+          <span class="itemName">2.0 and above</span>
+          <br />
+          <input type="checkbox" id="rating3.0" value="3.0" />
+          <span class="itemName">3.0 and above</span>
+          <br />
+          <input type="checkbox" id="rating3.5" value="3.5" />
+          <span class="itemName">3.5 and above</span>
+          <br />
+          <input type="checkbox" id="rating4.0" value="4.0" />
+          <span class="itemName">4.0 and above</span>
+          <br />
         </div>
       </div>
     </div>
+    <div class="productscard-container"></div>
+  </div>
 
-    <!-- Messho Selller Section -->
-    <div class="supplierBannerContainer">
-      <img
-        src="https://images.meesho.com/images/pow/supplyBannerDesktop.webp"
-        alt=""
-      />
-      <div class="content">
-        <span class="title"> Register as a Iskra Supplier</span>
-        <p class="subtitle">
-          Sell your products to crores of customers at 0% commission
-        </p>
-        <div class="text">
-          <span class="supplerBanner">
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
-              alt=""
-            />
-            <p>Grow your business 10x</p>
-          </span>
-          <span class="supplerBanner">
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
-              alt=""
-            />
-            <p>Enjoy 100% Profit</p>
-          </span>
-          <span class="supplerBanner">
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
-              alt=""
-            />
-            <p>Sell all over India</p>
-          </span>
-        </div>
-        <div class="supplierSignUpBtn">Sign up now</div>
-      </div>
-    </div>
-
-    <!-- Product Section -->
-    <div class="productPageContainer">
-      <div class="leftFuncnalityContainer">
-        <div class="sortContainer">
-          <label for="sort">Sort by:</label>
-          <select name="sort" id="sorting">
-            <option value="">Relevance</option>
-            <option value="New Arrivals">New Arrivals</option>
-            <option value="l2h">Price(Low to High)</option>
-            <option value="h2l">Price(High to Low)</option>
-            <option value="">Ratings</option>
-            <option value="">Discount</option>
-          </select>
-        </div>
-        <div class="filterContainer">
-          <h3>FILTERS</h3>
-          <p style="font-size: 12px; color: grey">1000+Products</p>
-          <div>
-            <!-- category section -->
-            <h3>Category</h3>
-            <input type="checkbox" id="saree" class="category" value="Sarees" />
-            <span class="itemName">Saree</span>
-            <br />
-            <input
-              type="checkbox"
-              id="menswar"
-              class="category"
-              value="Mens Top Were"
-            />
-            <span class="itemName">Mens Top Were</span>
-            <br />
-            <input
-              type="checkbox"
-              id="beauty&Health"
-              value="Beauty and health"
-              class="category"
-            />
-            <span class="itemName">Mens Top Were</span>
-            <br />
-            <input
-              type="checkbox"
-              id="bags&Footwear"
-              value="Bags and Footwear"
-              class="category"
-            />
-            <span class="itemName">Bags and Footwear</span>
-            <br />
-            <input
-              type="checkbox"
-              class="category"
-              id="dresses"
-              value="Dresses"
-            />
-            <span class="itemName">Dresses</span>
-            <br />
-            <input
-              type="checkbox"
-              class="category"
-              id="jewellery"
-              value="Jewellery"
-            />
-            <span class="itemName">Jewellery</span>
-            <br />
-            <!-- fabricSection -->
-            <h3>Fabric</h3>
-            <input type="checkbox" id="chiffon" value="Chiffon" />
-            <span class="itemName">Chiffon</span>
-            <br />
-            <input type="checkbox" id="brass" value="Brass" />
-            <span class="itemName">Brass</span>
-            <br />
-            <input type="checkbox" id="cotton" value="Cotton" />
-            <span class="itemName">Cotton</span>
-            <br />
-            <input type="checkbox" id="deodrent" value="Deodrent" />
-            <span class="itemName">Deodrent</span>
-            <br />
-            <input type="checkbox" id="leather" value="Sweat Leather" />
-            <span class="itemName">Sweat Leather</span>
-            <br />
-            <!-- priceSection -->
-            <h3>Price</h3>
-            <input type="checkbox" id="u149" value="149" />
-            <span class="itemName">Under 149</span>
-            <br />
-            <input type="checkbox" id="u199" value="199" />
-            <span class="itemName">Under 199</span>
-            <br />
-            <input type="checkbox" id="u249" value="249" />
-            <span class="itemName">Under 249</span>
-            <br />
-            <input type="checkbox" id="u399" value="399" />
-            <span class="itemName">Under 399</span>
-            <br />
-            <input type="checkbox" id="u499" value="499" />
-            <span class="itemName">Under 499</span>
-            <br />
-            <input type="checkbox" id="a500" value="500" />
-            <span class="itemName">Above 500+</span>
-            <br />
-            <h3>Rating</h3>
-            <input type="checkbox" id="rating2.0" value="2.0" />
-            <span class="itemName">2.0 and above</span>
-            <br />
-            <input type="checkbox" id="rating3.0" value="3.0" />
-            <span class="itemName">3.0 and above</span>
-            <br />
-            <input type="checkbox" id="rating3.5" value="3.5" />
-            <span class="itemName">3.5 and above</span>
-            <br />
-            <input type="checkbox" id="rating4.0" value="4.0" />
-            <span class="itemName">4.0 and above</span>
-            <br />
-          </div>
-        </div>
-      </div>
-      <div class="productscard-container"></div>
-    </div>
-
-<!-- footer section -->
-<div class="footerContainer">
+  <!-- footer section -->
+  <div class="footerContainer">
     <div class="detailContainer1">
       <h1>Shop Non-Stop on Meesho</h1>
       <p>Trusted by more than 1 Crore Indians</p>
@@ -761,18 +659,19 @@
     <div class="detailsContainer5">
       <h3>Contact us</h3>
       <p>Fashnear Technologies Private Limited,
-        <p> CIN: U74900KA2015PTC082263</p>
-        <p>  06-105-B, 06-102, (138 Wu) </p>
-       <p>  Vaishnavi Signature, No. 78/9, </p>
-      <p>    Outer Ring Road, Bellandur, </p>
+      <p> CIN: U74900KA2015PTC082263</p>
+      <p> 06-105-B, 06-102, (138 Wu) </p>
+      <p> Vaishnavi Signature, No. 78/9, </p>
+      <p> Outer Ring Road, Bellandur, </p>
       <p> Varthur Hobli, Bengaluru-560103, </p>
-    <p> Karnataka, India</p>
-    <p> E-mail address:</p>
-   <p> query@meesho.com</p>
-   <p> © 2015-2022 Meesho.com</p>
+      <p> Karnataka, India</p>
+      <p> E-mail address:</p>
+      <p> query@meesho.com</p>
+      <p> © 2015-2022 Meesho.com</p>
     </div>
-</div>
+  </div>
 
-    <script src="./scripts/script.js" type=""></script>
-  </body>
+  <script src="./scripts/script.js" type=""></script>
+</body>
+
 </html>

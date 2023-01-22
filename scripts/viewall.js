@@ -165,7 +165,174 @@ function sorted() {
 
 }
 
+function categoryfilter(){
 
+    let saree=document.getElementById("saree");
+    let menswear=document.getElementById("menswear");
+    let beautyHealth=document.getElementById("beauty&Health");
+    let bagsFootwear=document.getElementById("bags&Footwear");
+    let dresses=document.getElementById("dresses");
+    let jewellery=document.getElementById("jewellery");
+
+    saree.addEventListener("change", () => {
+        console.log(productData)
+        if (saree.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Sarees") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    menswear.addEventListener("change", () => {
+        if (menswear.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Menswear") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    beautyHealth.addEventListener("change", () => {
+        if (beautyHealth.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Beauty&Health") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    bagsFootwear.addEventListener("change", () => {
+        if (bagsFootwear.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Bags&Footwear") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    dresses.addEventListener("change", () => {
+        if (dresses.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Dresses") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    jewellery.addEventListener("change", () => {
+        if (jewellery.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Jewellery") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+
+}
+
+function pricefilter(){
+
+    let under149 = document.getElementById("u149");
+    let under199 = document.getElementById("u199");
+    let under249 = document.getElementById("u249");
+    let under399 = document.getElementById("u399");
+    let under499 = document.getElementById("u499");
+    let above500 = document.getElementById("a500");
+
+    under149.addEventListener("change", () => {
+        console.log(productData)
+        if (under149.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 149) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under199.addEventListener("change", () => {
+        if (under199.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 199) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under249.addEventListener("change", () => {
+        if (under249.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 249) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under399.addEventListener("change", () => {
+        if (under399.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 399) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under499.addEventListener("change", () => {
+        if (under499.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 499) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    above500.addEventListener("change", () => {
+        if (above500.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price > 499) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+}
 
 function ratingfilter() {
 
@@ -220,4 +387,7 @@ function ratingfilter() {
         else { showData(productData) }
     })
 }
-ratingfilter()
+
+ratingfilter();
+pricefilter();
+categoryfilter();
