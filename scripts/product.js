@@ -1,5 +1,6 @@
 let products = JSON.parse(localStorage.getItem("products")) || [];
 let cart=JSON.parse(localStorage.getItem("cart"))||[];
+let directPayment=JSON.parse(localStorage.getItem("buynow"))||[];           
 let item={}
 let product = products[0];
 fetch(`https://sleepy-puce-greyhound.cyclic.app/products/${product}`)
@@ -24,7 +25,7 @@ function showProduct(data) {
             <div class="atcBtn">
               <button id="addto-cart"><i class="fa-solid fa-cart-shopping"></i>Add to Cart</button>
             </div>
-            <div class="buyNowBtn">
+            <div id="buyNowBtn">
               <button><i class="fa-solid fa-angles-right"></i>Buy Now</button>
             </div>
           </div>
@@ -63,8 +64,6 @@ document.querySelector(".cartContainer").addEventListener("click",()=>{
 })
 
 
-// let price =document.getElementsByName("prating")
-// console.log(price);
 
 // cart functionality 
 setTimeout(() => {
@@ -93,10 +92,16 @@ setTimeout(() => {
            }
         }
        
-        
-          
-      
       }
+      localStorage.setItem("page","true");
+  })
 
+
+  // direct payment
+  document.getElementById("buyNowBtn").addEventListener("click",()=>{
+      directPayment.push(item);
+      localStorage.setItem("buynow",JSON.stringify(directPayment))
+      localStorage.setItem("page","false");
+      location.href="payment.html";
   })
 }, 2000)
