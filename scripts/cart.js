@@ -50,4 +50,8 @@ function showCarttotal(){
 
 
 }
+
+document.getElementById("continue").addEventListener("click",()=>{
+    location.href="address.html"
+})
 showCarttotal();

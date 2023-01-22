@@ -108,4 +108,27 @@ nav {
     background-color: #f43397;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+#add-add{
+  border: 0px ;
+  background-color: white;
+  color: #f43397  ;
+}
+.show{
+  border: 1px solid gray;
+  width: 80%;
+  margin-bottom: 80px;
+  border-radius: 5px;
+}
+#continue{
+  border: 0px ;
+  background-color: #f43397;
+  color:white  ;
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
 }

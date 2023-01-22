@@ -39,7 +39,7 @@ border: 1px solid grey;
   border-radius: 5px;
   cursor: pointer;
 }
-.buyNowBtn button{
+#buyNowBtn button{
   background-color: #f43397;
   color: white;
   border: none;

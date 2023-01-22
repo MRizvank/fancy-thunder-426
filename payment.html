@@ -111,8 +111,8 @@
     let mydiscount= document.getElementById("discount");
     let mydiscount2=document.getElementById("discount2")
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-
+    let abc=JSON.parse(localStorage.getItem("page"))
+    let directPayment=JSON.parse(localStorage.getItem("buynow"))||[];   
     btn.addEventListener("click", () => {
 
         alert("Processing")
@@ -120,6 +120,10 @@
             alert("Order Placed  Successfully")
             window.location.href = "index.html" 
         }, 2000)
+       cart.forEach((element,index)=>{
+        cart.splice(index,1)
+        localStorage.setItem("cart",JSON.stringify(cart));
+       })
     })
 
 
@@ -144,10 +148,20 @@
     function price() {
         let total = 0;
         
-        cart.forEach(element => {
+        if(abc==true){
+            cart.forEach(element => {
             total += element.original_price * element.user_qty;
         });
-        subtotal.innerText = "₹" + total;
+        
+        }else{
+            directPayment.forEach((element,index) => {
+            total += element.original_price;
+            directPayment.splice(index,1);
+            localStorage.setItem("buynow",JSON.stringify(directPayment))
+        });
+
+        }
+        subtotal.innerText = "₹" + total;   
 
         let discount= 0.1*total;
         
