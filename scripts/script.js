@@ -6,6 +6,7 @@ let serachClose = document.getElementById("searchClose")
 let formInput = document.getElementById("form")
 let recentSearchList = document.querySelector(".recentSerchList")
 let recentSrearch = [];
+var productData = []
 
 let singleProduct = JSON.parse(localStorage.getItem("products")) || []
 
@@ -47,6 +48,7 @@ fetch("https://sleepy-puce-greyhound.cyclic.app/products?_page=3&_limit=10")//?_
         showData(data)
         // showDataOnCategory(data)
         // renderCards(data)
+        productData = data;
     })
 
 function showData(data) {
@@ -180,68 +182,293 @@ cartBtn.addEventListener("click", () => {
 
 
 
-let category = document.querySelectorAll(".category")
-for (let item of category) {
-    // function showDataOnCategory(data) {
-    item.addEventListener("change", () => {
-        if (item.checked) {
-            console.log(item.value)
-            let cards = document.querySelector(".productscard-container").innerHTML;
-            cards = null;
-            data.forEach((element, index) => {
-                if (element.category == item.value) {
-                    data.forEach((element, index) => {
-                        let card = `
-                    <div class="Rcard" data-id="${element.id}">
-                    <img src="${element.images[0]}" alt="${element.images[0]}">
-                    <p class="product-title">${element.title ? element.title.substr(0, 20) : "No tittle"}</p>
-                    <p class="price">
-                    <span class="price">₹</span>
-                    <span class="price">${element.original_price}</span>
-                    </p>
-                    <div class="delivery">Free Delivery</div>
-                    <div class="rating">${element.rating}<i class="fa-solid fa-star"></i></div>
-                    </div>
-                    `;
-                        cards += card
-                    });
+// let category = document.querySelectorAll(".category")
+// for (let item of category) {
+//     // function showDataOnCategory(data) {
+//     item.addEventListener("change", () => {
+//         if (item.checked) {
+//             console.log(item.value)
+//             let cards = document.querySelector(".productscard-container").innerHTML;
+//             cards = null;
+//             data.forEach((element, index) => {
+//                 if (element.category == item.value) {
+//                     data.forEach((element, index) => {
+//                         let card = `
+//                     <div class="Rcard" data-id="${element.id}">
+//                     <img src="${element.images[0]}" alt="${element.images[0]}">
+//                     <p class="product-title">${element.title ? element.title.substr(0, 20) : "No tittle"}</p>
+//                     <p class="price">
+//                     <span class="price">₹</span>
+//                     <span class="price">${element.original_price}</span>
+//                     </p>
+//                     <div class="delivery">Free Delivery</div>
+//                     <div class="rating">${element.rating}<i class="fa-solid fa-star"></i></div>
+//                     </div>
+//                     `;
+//                         cards += card
+//                     });
 
 
-                    let rating = document.querySelectorAll(".rating");
-                    for (let item of rating) {
-                        if (+item.textContent >= 4.0) {
-                            item.style.backgroundColor = "#038d63"
-                        } else if (+item.textContent >= 3.4 && +item.textContent < 4.0) {
-                            item.style.backgroundColor = "#23bb75"
-                        } else if (+item.textContent >= 2.4 && +item.textContent < 3.4) {
-                            item.style.backgroundColor = "#f4b619"
-                        } else {
-                            item.style.backgroundColor = "#ee7212"
-                        }
-                    }
-                    let divs = document.querySelectorAll(".Rcard")
-                    for (let item of divs) {
-                        item.addEventListener("click", (e) => {
-                            e.preventDefault();
-                            if (userLogin) {
-                                if (e.target.dataset.id != undefined) {
-                                    singleProduct.unshift(e.target.dataset.id)
-                                    console.log(singleProduct)
-                                    localStorage.setItem("products", JSON.stringify(singleProduct))
-                                    window.location.replace("./product.html");
-                                }
-                            } else {
-                                location.href = "signup.html"
-                            }
-                        })
-                    }
+//                     let rating = document.querySelectorAll(".rating");
+//                     for (let item of rating) {
+//                         if (+item.textContent >= 4.0) {
+//                             item.style.backgroundColor = "#038d63"
+//                         } else if (+item.textContent >= 3.4 && +item.textContent < 4.0) {
+//                             item.style.backgroundColor = "#23bb75"
+//                         } else if (+item.textContent >= 2.4 && +item.textContent < 3.4) {
+//                             item.style.backgroundColor = "#f4b619"
+//                         } else {
+//                             item.style.backgroundColor = "#ee7212"
+//                         }
+//                     }
+//                     let divs = document.querySelectorAll(".Rcard")
+//                     for (let item of divs) {
+//                         item.addEventListener("click", (e) => {
+//                             e.preventDefault();
+//                             if (userLogin) {
+//                                 if (e.target.dataset.id != undefined) {
+//                                     singleProduct.unshift(e.target.dataset.id)
+//                                     console.log(singleProduct)
+//                                     localStorage.setItem("products", JSON.stringify(singleProduct))
+//                                     window.location.replace("./product.html");
+//                                 }
+//                             } else {
+//                                 location.href = "signup.html"
+//                             }
+//                         })
+//                     }
+//                 }
+//             })
+//         } else {
+//             console.error("not")
+//         }
+
+//     })
+//     // }
+// }
+
+function categoryfilter(){
+
+    let saree=document.getElementById("saree");
+    let menswear=document.getElementById("menswear");
+    let beautyHealth=document.getElementById("beauty&Health");
+    let bagsFootwear=document.getElementById("bags&Footwear");
+    let dresses=document.getElementById("dresses");
+    let jewellery=document.getElementById("jewellery");
+
+    saree.addEventListener("change", () => {
+        if (saree.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Sarees") {
+                    return element;
                 }
             })
-        } else {
-            console.error("not")
+            showData(abcd)
         }
-
+        else { showData(productData) }
     })
-    // }
+
+    menswear.addEventListener("change", () => {
+        if (menswear.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Menswear") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    beautyHealth.addEventListener("change", () => {
+        if (beautyHealth.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Beauty&Health") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    bagsFootwear.addEventListener("change", () => {
+        if (bagsFootwear.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Bags&Footwear") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    dresses.addEventListener("change", () => {
+        if (dresses.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Dresses") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    jewellery.addEventListener("change", () => {
+        if (jewellery.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Jewellery") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+
 }
+
+function pricefilter(){
+
+    let under149 = document.getElementById("u149");
+    let under199 = document.getElementById("u199");
+    let under249 = document.getElementById("u249");
+    let under399 = document.getElementById("u399");
+    let under499 = document.getElementById("u499");
+    let above500 = document.getElementById("a500");
+
+    under149.addEventListener("change", () => {
+        if (under149.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 149) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under199.addEventListener("change", () => {
+        if (under199.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 199) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under249.addEventListener("change", () => {
+        if (under249.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 249) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under399.addEventListener("change", () => {
+        if (under399.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 399) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under499.addEventListener("change", () => {
+        if (under499.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 499) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    above500.addEventListener("change", () => {
+        if (above500.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price > 499) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+}
+
+function ratingfilter() {
+
+    let rating20 = document.getElementById("rating2.0");
+    let rating30 = document.getElementById("rating3.0");
+    let rating35 = document.getElementById("rating3.5");
+    let rating40 = document.getElementById("rating4.0");
+
+
+    rating20.addEventListener("change", () => {
+        if (rating20.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 2) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+    rating30.addEventListener("change", () => {
+        if (rating30.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 3) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+    rating35.addEventListener("change", () => {
+        if (rating35.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 3.5) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+    rating40.addEventListener("change", () => {
+        if (rating40.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.rating >= 4) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+}
+
+categoryfilter();
+pricefilter();
+ratingfilter()
 

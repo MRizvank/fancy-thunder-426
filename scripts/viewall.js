@@ -1,6 +1,5 @@
-// accesing local storage
-let userLogin = JSON.parse(localStorage.getItem("login"));
 
+let userLogin = JSON.parse(localStorage.getItem("login"));
 
 let backtoHOme = document.getElementById("logo-container")
 backtoHOme.addEventListener("click", () => {
@@ -87,16 +86,16 @@ document.querySelector(".sellerContainer").addEventListener("click", () => {
 })
 
 //filtering
-let category = document.querySelectorAll(".category")
-for (let item of category) {
-    item.addEventListener("change", () => {
-        if (item.checked) {
-            console.log(item.value)
-        } else {
-            console.error("not")
-        }
-    })
-}
+// let category = document.querySelectorAll(".category")
+// for (let item of category) {
+//     item.addEventListener("change", () => {
+//         if (item.checked) {
+//             console.log(item.value)
+//         } else {
+//             console.error("not")
+//         }
+//     })
+// }
 
 // cart
 document.querySelector(".cartContainer").addEventListener("click", () => {
@@ -219,6 +218,223 @@ function sorted() {
 
 
 
+
+//checking for login
+
+document.querySelector(".cartContainer").addEventListener("click", () => {
+    if (userLogin) {
+        location.href = "cart.html"
+    } else {
+        location.href = "signup.html"
+    }
+
+})
+
+let phone = JSON.parse(localStorage.getItem("Phn"));
+let myValue = JSON.parse(localStorage.getItem("enteredvalue"));
+let password = JSON.parse(localStorage.getItem("myotp"));
+let profileLoginContainer = document.querySelector(".profileHoverContainer");
+if (userLogin == true && password[password.length - 1] == myValue) {
+    profileLoginContainer.innerHTML = `
+           <h4 id="rkhello" >Hello User</h4>
+              <ph3 id="rkaccess">${phone}</h3>
+              <div class="profileSignUpBtn">
+                  <button id="rksignup">Log Out</button>
+              </div>
+              <h3 id="cart">
+                <i class="fa-solid fa-bag-shopping" id="bag"></i> My Cart
+              </h3>
+    `
+}
+if (userLogin) {
+    let logOutBtn = document.querySelector("#rksignup")
+    logOutBtn.addEventListener("click", () => {
+        userLogin = false;
+        location.href = "index.html"
+        localStorage.setItem("login", JSON.stringify(userLogin))
+    })
+
+}
+
+// access to cart
+let cartBtn = document.getElementById("cart")
+cartBtn.addEventListener("click", () => {
+    if (userLogin) {
+        location.href = "cart.html"
+    } else {
+        location.href = "signup.html"
+    }
+})
+
+
+
+function categoryfilter(){
+
+    let saree=document.getElementById("saree");
+    let menswear=document.getElementById("menswear");
+    let beautyHealth=document.getElementById("beauty&Health");
+    let bagsFootwear=document.getElementById("bags&Footwear");
+    let dresses=document.getElementById("dresses");
+    let jewellery=document.getElementById("jewellery");
+
+    saree.addEventListener("change", () => {
+        if (saree.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Sarees") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    menswear.addEventListener("change", () => {
+        if (menswear.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Menswear") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    beautyHealth.addEventListener("change", () => {
+        if (beautyHealth.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Beauty&Health") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    bagsFootwear.addEventListener("change", () => {
+        if (bagsFootwear.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Bags&Footwear") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    dresses.addEventListener("change", () => {
+        if (dresses.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Dresses") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    jewellery.addEventListener("change", () => {
+        if (jewellery.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.category == "Jewellery") {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+
+}
+
+function pricefilter(){
+
+    let under149 = document.getElementById("u149");
+    let under199 = document.getElementById("u199");
+    let under249 = document.getElementById("u249");
+    let under399 = document.getElementById("u399");
+    let under499 = document.getElementById("u499");
+    let above500 = document.getElementById("a500");
+
+    under149.addEventListener("change", () => {
+        if (under149.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 149) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under199.addEventListener("change", () => {
+        if (under199.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 199) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under249.addEventListener("change", () => {
+        if (under249.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 249) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under399.addEventListener("change", () => {
+        if (under399.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 399) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    under499.addEventListener("change", () => {
+        if (under499.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price < 499) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+    above500.addEventListener("change", () => {
+        if (above500.checked) {
+            let abcd = productData.filter((element) => {
+                if (element.original_price > 499) {
+                    return element;
+                }
+            })
+            showData(abcd)
+        }
+        else { showData(productData) }
+    })
+
+}
+
 function ratingfilter() {
 
     let rating20 = document.getElementById("rating2.0");
@@ -272,4 +488,7 @@ function ratingfilter() {
         else { showData(productData) }
     })
 }
-ratingfilter()
+
+ratingfilter();
+pricefilter();
+categoryfilter();
