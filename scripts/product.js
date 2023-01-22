@@ -103,7 +103,7 @@ setTimeout(() => {
       directPayment.push(item);
       localStorage.setItem("buynow",JSON.stringify(directPayment))
       localStorage.setItem("page","false");
-      location.href="payment.html";
+      location.href="address.html";
   })
 }, 2000)
 

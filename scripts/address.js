@@ -40,12 +40,12 @@ function showAddress(data){
   let addrr="";
   data.forEach(element => {
     let add=`
-    <div>
-      <h3>${element.name}</h3>
+    <div class="individual-address">
+      <p>${element.name}</p>
       <p>${element.house},${element.road},${element.nearby? element.nearbylocation:""},${element.city}</p>
       <p>${element.state}-${element.pinCode}</p>
       <p>${element.phn}</p>
-      <button id="continue">Continue</button>
+      <button id="continue">Deliver to this Address</button>
       </div>`
       addrr+=add
   });

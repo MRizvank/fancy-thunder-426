@@ -55,6 +55,10 @@ nav {
 }
 .leftInputContainer h3{
     margin-left: 70px;
+    width: 50%;
+}
+.individual-address{
+  padding-left: 15px;
 }
 .formDetailsContainer{
     border: 1px solid black;
