@@ -3,7 +3,7 @@ This project is a clone of meesho.com web application. Meesho is an online Shopp
 
 Tech stack we used in this project <br>
 
-HTML|CSS|Javascript|JSON Server |
+HTML | CSS | Javascript |JSON Server |
 
 <br>
 netlify link<a href="https://iskra-meesho-clone.netlify.app/index.html">click here</a> <br>
