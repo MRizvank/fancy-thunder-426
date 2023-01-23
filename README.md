@@ -10,16 +10,16 @@ netlify link<a href="https://iskra-meesho-clone.netlify.app/index.html">  click 
 
 cyclic deployment link <a href="https://sleepy-puce-greyhound.cyclic.app/">  click here </a>
 
-<h3>Landing page</h3>
+<h3>Landing page.html</h3>
 
 ![landing page](https://user-images.githubusercontent.com/94932577/213989745-14478705-0d16-4458-ab3b-d59e89e8bf4b.png)
 
 
-<h3>Login page</h3>
+<h3>Login page.html</h3>
 
 ![Login page](https://user-images.githubusercontent.com/94932577/213989861-cad6fbbd-e22c-4fed-b6a1-de08b5fe18e0.png)
 
-<h3>view all</h3>
+<h3>view all.html</h3>
 <!-- ![viwe all page ](https://user-images.githubusercontent.com/94932577/213989968-c8402313-c469-47f9-96e9-d4435ffa1091.png) -->
 <img src="https://user-images.githubusercontent.com/94932577/213989968-c8402313-c469-47f9-96e9-d4435ffa1091.png">
 
@@ -27,16 +27,16 @@ cyclic deployment link <a href="https://sleepy-puce-greyhound.cyclic.app/">  cli
 <!-- ![Product page](https://user-images.githubusercontent.com/94932577/213990037-2c06565e-8e1c-4c79-9592-9cc1cdbe1f34.png) -->
 <img src="https://user-images.githubusercontent.com/94932577/213990037-2c06565e-8e1c-4c79-9592-9cc1cdbe1f34.png">
 
-<h3>Cart Page</h3>
+<h3>Cart Page.html</h3>
 <!-- ![cart page](https://user-images.githubusercontent.com/94932577/213990107-c521742c-a1f6-4d6b-896f-d7dfb1c19e49.png) -->
 <img src="https://user-images.githubusercontent.com/94932577/213990107-c521742c-a1f6-4d6b-896f-d7dfb1c19e49.png">
 
-<h3>Address Page</h3>
+<h3>Address Page.html</h3>
 <!-- ![Address page](https://user-images.githubusercontent.com/94932577/213990188-bd4d7879-be3e-42cc-af41-c73acda293b5.png) -->
 <img src="https://user-images.githubusercontent.com/94932577/213990188-bd4d7879-be3e-42cc-af41-c73acda293b5.png">
 
 
-<h3>Payment Page </h3>
+<h3>Payment Page.html </h3>
 <!-- ![Payment page](https://user-images.githubusercontent.com/94932577/213990259-06b22fa7-1c9a-4f0c-b5d1-6140a7005257.png) -->
 <img src="https://user-images.githubusercontent.com/94932577/213990259-06b22fa7-1c9a-4f0c-b5d1-6140a7005257.png">
 
