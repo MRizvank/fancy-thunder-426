@@ -21,6 +21,7 @@ cyclic deployment link <a href="https://sleepy-puce-greyhound.cyclic.app/">  cli
 
 <h3>view all</h3>
 ![viwe all page ](https://user-images.githubusercontent.com/94932577/213989968-c8402313-c469-47f9-96e9-d4435ffa1091.png)
+<img src="https://user-images.githubusercontent.com/94932577/213989968-c8402313-c469-47f9-96e9-d4435ffa1091.png">
 
 <h3>Product page </h3>
 ![Product page](https://user-images.githubusercontent.com/94932577/213990037-2c06565e-8e1c-4c79-9592-9cc1cdbe1f34.png)
