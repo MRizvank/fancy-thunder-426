@@ -14,7 +14,7 @@ btn.addEventListener("click", () => {
 
     alert("Processing")
     setTimeout(() => {
-        alert("Order Placed  Successfully")
+        alert("Payment Successfull")
         window.location.href = "index.html" 
     }, 2000)
    cart.forEach((element,index)=>{
