@@ -532,9 +532,10 @@
       <div class="filterContainer">
         <h3>FILTERS</h3>
         <p style="font-size: 12px; color: grey">1000+Products</p>
-        <div>
+        <hr>
+        <details id="category">
           <!-- category section -->
-          <h3>Category</h3>
+          <summary> Category</summary>
           <input type="checkbox" id="saree" class="category" value="Sarees" />
           <span class="itemName">Saree</span>
           <br />
@@ -553,8 +554,11 @@
           <input type="checkbox" class="category" id="jewellery" value="Jewellery" />
           <span class="itemName">Jewellery</span>
           <br />
-          <!-- fabricSection -->
-          <h3>Fabric</h3>
+        </details>
+        <hr>
+        <!-- fabricSection -->
+        <details id="fabric">
+          <summary>Fabric</summary>
           <input type="checkbox" id="chiffon" value="Chiffon" />
           <span class="itemName">Chiffon</span>
           <br />
@@ -570,8 +574,11 @@
           <input type="checkbox" id="leather" value="Sweat Leather" />
           <span class="itemName">Sweat Leather</span>
           <br />
-          <!-- priceSection -->
-          <h3>Price</h3>
+        </details>
+        <hr>
+        <!-- priceSection -->
+        <details>
+          <summary>Price</summary>
           <input type="checkbox" id="u149" value="149" />
           <span class="itemName">Under 149</span>
           <br />
@@ -590,7 +597,10 @@
           <input type="checkbox" id="a500" value="500" />
           <span class="itemName">Above 500+</span>
           <br />
-          <h3>Rating</h3>
+        </details>
+        <hr>
+        <details>
+          <summary>Rating</summary>
           <input type="checkbox" id="rating2.0" value="2.0" />
           <span class="itemName">2.0 and above</span>
           <br />
@@ -603,10 +613,13 @@
           <input type="checkbox" id="rating4.0" value="4.0" />
           <span class="itemName">4.0 and above</span>
           <br />
-        </div>
+        </details>
+        <hr>
       </div>
+
     </div>
-    <div class="productscard-container"></div>
+    <div class="productscard-container">
+    </div>
   </div>
 
   <!-- footer section -->

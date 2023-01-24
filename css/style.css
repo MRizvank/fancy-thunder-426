@@ -515,13 +515,12 @@ nav ul li:hover .subMenu {
 /****  R*****/
 
 .productPageContainer {
-  width: 70%;
+  width: 60%;
   /* border: 1px solid red; */
-  display: grid;
+  display: flex;
   margin: auto;
   margin-top: 80px;
-  gap: 10px 10px;
-
+  gap: 10px ;
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -544,11 +543,21 @@ nav ul li:hover .subMenu {
 }
 .product-title {
   color: #8c8c8c;
+
 }
 .price {
   font-weight: bold;
-  font-size: 23px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
+}
+.og{
+  text-decoration: line-through;
+  font-family:"Roboto", sans-serif; 
+font-size: medium;
+}
+.offer{
+  font-size: medium;
+  color: forestgreen;
 }
 .delivery {
   border-radius: 8px;
@@ -587,13 +596,19 @@ span,
   margin-top: 100px;
   
 }
+#sorting{
+  width: 150px;
+  height: 35px;
+}
 .leftFuncnalityContainer {
   padding: 5px;
+  width: 20%;
 }
   .sortContainer option{
   font-size: 20px;
 }
 .productscard-container {
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -641,6 +656,9 @@ padding-right: 10px;
 .detailsContainer2,.detailsContainer3{
   margin-top: 25px;
 }
+.detailsContainer2 p:hover,.detailsContainer3 p:hover{
+  color: var(--hoverTextColor);
+}
 .detailsContainer2,.detailsContainer3 p{
   font-weight: 500 ;
  padding: 5px;
@@ -654,10 +672,25 @@ padding-right: 10px;
   color: var(--hoverTextColor);
   margin: 0;
 }
+@media screen and (min-width: 801px) and (max-width: 1405px) {
+  .productscard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .price{
+    font-size: 1rem;
+  }
+}
 @media screen and (min-width: 451px) and (max-width: 800px) {
   .productscard-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .productPageContainer{
+    flex-direction: column;
+  }
+  .leftFuncnalityContainer{
+    width: 80%;
   }
 }
 @media screen and (max-width: 450px) {
