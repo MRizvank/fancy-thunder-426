@@ -35,7 +35,7 @@ function showProduct(data) {
           <div class="aboutDetails">
             <h3>${data.title}</h3>
             <h1 class="price">₹${data.original_price}</h1>
-            <h3 class="prating">${data.rating}</h3>
+            <div class="prating">${data.rating}<i class="fa-solid fa-star"></i></div>
             <p class="productDelivery">Free delivery</p>
           </div>
           <div class="sizeDetails">
@@ -144,3 +144,21 @@ cartBtn.addEventListener("click", () => {
         location.href = "signup.html"
     }
 })
+
+
+// rating bg color part 
+
+
+  let rating = document.querySelectorAll(".prating");
+  for (let item of rating) {
+      if (+item.textContent >= 4.0) {
+          item.style.backgroundColor = "#038d63"
+
+      } else if (+item.textContent >= 3.4 && +item.textContent < 4.0) {
+          item.style.backgroundColor = "#23bb75"
+      } else if (+item.textContent >= 2.4 && +item.textContent < 3.4) {
+          item.style.backgroundColor = "#f4b619"
+      } else {
+          item.style.backgroundColor = "#ee7212"
+      }
+  }

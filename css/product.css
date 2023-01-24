@@ -61,6 +61,14 @@ border: 1px solid grey;
   padding: 25px;
   margin-bottom: 5px;
 }
+.prating{
+  color: black;
+  border: 0px;
+  border-radius: 18px;
+  width: 55px;
+  height: 25px;
+  background-color: #ffff;
+}
 
 
 
