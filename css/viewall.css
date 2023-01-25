@@ -482,10 +482,25 @@ padding-right: 10px;
 }
 
 
+@media screen and (min-width: 801px) and (max-width: 1405px) {
+  .Rproducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .price{
+    font-size: 1rem;
+  }
+}
 @media screen and (min-width: 451px) and (max-width: 800px) {
   .Rproducts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .productPageContainer{
+    flex-direction: column;
+  }
+  .leftFuncnalityContainer{
+    width: 80%;
   }
 }
 @media screen and (max-width: 450px) {
