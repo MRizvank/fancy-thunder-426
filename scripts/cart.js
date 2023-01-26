@@ -10,8 +10,6 @@ if(cart.length==0){
 }else{
     showCartData(cart)
 }
-
-
 //showing into the dom 
 
 function showCartData(data){
