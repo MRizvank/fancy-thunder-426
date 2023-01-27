@@ -65,10 +65,15 @@ nav {
   width:40% ;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-top: 55px;
+  margin-left: 20px;
   height: 250px;
   padding-left: 10px;
-  /* text-align: center; */
 
+
+}
+.rightPaymentPage div{
+  justify-content: space-between;
+  display: flex;
 }
 .individual-address{
   padding-left: 15px;

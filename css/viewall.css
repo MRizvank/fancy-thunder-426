@@ -480,6 +480,15 @@ padding-right: 10px;
   font-weight: 500 ;
  padding: 5px;
 }
+.og{
+  text-decoration: line-through;
+  font-family:"Roboto", sans-serif; 
+font-size: medium;
+}
+.offer{
+  font-size: medium;
+  color: forestgreen;
+}
 
 
 @media screen and (min-width: 801px) and (max-width: 1405px) {

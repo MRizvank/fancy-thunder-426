@@ -34,7 +34,7 @@ function showProduct(data) {
         <div class="productDetailsArea">
           <div class="aboutDetails">
             <h3>${data.title}</h3>
-            <h1 class="price">₹${data.original_price}</h1>
+            <h1 class="price">₹${data.discounted_price}</h1>
             <div class="prating">${data.rating}<i class="fa-solid fa-star"></i></div>
             <p class="productDelivery">Free delivery</p>
           </div>
