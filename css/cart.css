@@ -89,3 +89,8 @@ img {
 #click p{
     margin-top: 5px;
 }
+#add,#rem{
+    width: 20px;
+    height: 20px;
+   justify-content: center;
+}

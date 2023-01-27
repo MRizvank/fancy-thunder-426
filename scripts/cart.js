@@ -16,11 +16,12 @@ function showCartData(data){
     let cards="";
     data.forEach((element) => {
         let card=`
-        <div class="card-item"> 
+        <div class="card-item" > 
         <div class="card-image"> <img src="${element.images[0]}" alt=""></div>
         <div class="details" >
         <p>${element.title}</p>
-        <p>Size:${element.sizes[0]} &nbsp&nbsp Qty:${element.user_qty}</p>
+        <p>Size:${element.sizes[0]} &nbsp&nbsp <button id="add">+</button>  ${element.user_qty} <button id="rem">-</button></p>
+
         <p>₹${element.original_price}</p>
         <button id="remove" data-id=${element.id}>REMOVE</button>
         </div>
@@ -28,7 +29,6 @@ function showCartData(data){
         <div>Supplier: ABC &nbsp Free delivery</div>
         </div>
         `
-        // let btn=document.createElement("button")
 
         cards+=card;
         
@@ -75,6 +75,12 @@ setTimeout(()=>{
             }
         })
         
+    })
+
+    document.getElementById("add").addEventListener("click",(e)=>{
+        e.preventDefault()
+      
+
     })
 })
 showCarttotal();
