@@ -489,6 +489,11 @@ font-size: medium;
   font-size: medium;
   color: forestgreen;
 }
+#sorting{
+  width: 150px;
+  height: 40px;
+}
+
 
 
 @media screen and (min-width: 801px) and (max-width: 1405px) {
